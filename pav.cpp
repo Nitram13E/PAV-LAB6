@@ -1,1 +1,0 @@
-#include "el yona.pla"
