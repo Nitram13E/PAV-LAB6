@@ -1,6 +1,5 @@
 ### Programación avanzada - Laboratorio 6
 
-```
 Progreso:
 
 ➢ Alta de usuario - [ ]
@@ -12,7 +11,7 @@ Progreso:
 ➢ Envío de mensaje - [ ]
 ➢ Eliminación de asignatura - [ ]
 ➢ Listado de Clases - [ ]
-```
+
 ## DUDAS:
 
 - Id generadas automaticamente - DtIniciarClaseFull
