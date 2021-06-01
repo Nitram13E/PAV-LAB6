@@ -11,10 +11,13 @@ obj = src/main.o \
 all: $(obj)
 	@ mkdir -p ./obj
 	@ mv $(obj) ./obj
-	g++ obj/*.o -o $(exec)
+	g++ obj/*.o -g -o $(exec)
 	@ echo "\nEjecutar con: ./$(exec)"
 
 $(obj): %.o: %.cpp
+
+debug:
+	g++ *.o -g -o $(exec)
 
 clean:
 	@ rm -f obj/*.o $(exec)
