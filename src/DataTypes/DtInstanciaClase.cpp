@@ -1,6 +1,5 @@
 #include "header/DtInstanciaClase.h"
 
-
 DtInstanciaClase::DtInstanciaClase(){}
 
 DtInstanciaClase::DtInstanciaClase(bool teorico, bool practico, bool monitoreo)
@@ -16,6 +15,7 @@ bool DtInstanciaClase::getTeorico()
 {  
     return this -> teorico;
 }
+
 
 bool DtInstanciaClase::getPractico()
 {

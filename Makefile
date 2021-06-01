@@ -6,7 +6,15 @@ obj = src/main.o \
 	  src/DataTypes/DtLog.o \
 	  src/DataTypes/DtPerfil.o \
 	  src/DataTypes/DtTimeStamp.o \
-	  src/DataTypes/DtInstanciaClase.o 
+	  src/DataTypes/DtInstanciaClase.o \
+	  src/DataTypes/DtAsignatura.o \
+	  src/DataTypes/DtInfoClase.o \
+	  src/DataTypes/DtInfoTeorico.o \
+	  src/DataTypes/DtInfoMonitoreo.o \
+	  src/DataTypes/DtIniciarClase.o \
+	  src/DataTypes/DtIniciarClaseFull.o \
+	  src/DataTypes/DtIniciarMonitoreo.o \
+	  src/DataTypes/DtParticipacion.o 
 
 all: $(obj)
 	@ mkdir -p ./obj
