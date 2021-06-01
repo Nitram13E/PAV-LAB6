@@ -2,7 +2,6 @@
 #define DTTIMESTAMP
 
 #include "DtFecha.h"
-
 class DtTimeStamp
 {
     private: 
