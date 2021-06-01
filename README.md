@@ -1,4 +1,4 @@
-### Programación avanzada - Laboratorio 6
+## Programación avanzada - Laboratorio 6
 
 Progreso:
 
@@ -12,7 +12,7 @@ Progreso:
 - [ ] ➢ Eliminación de asignatura
 - [ ] ➢ Listado de Clases
 
-## DUDAS:
+### DUDAS:
 
 - Id generadas automaticamente - DtIniciarClaseFull
 
