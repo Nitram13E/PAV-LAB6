@@ -2,20 +2,18 @@
 
 Progreso:
 
-- [ ] ➢ Alta de usuario
-- [ ] ➢ Alta de asignatura
-- [ ] ➢ Asignación de docentes a una asignatura
-- [ ] ➢ Inscripción a las asignaturas
-- [ ] ➢ Inicio de clase
-- [ ] ➢ Asistencia a clase en vivo
-- [ ] ➢ Envío de mensaje
-- [ ] ➢ Eliminación de asignatura
-- [ ] ➢ Listado de Clases
+- [ ] ➢ Alta de usuario - Lucas
+- [ ] ➢ Alta de asignatura - Martin
+- [ ] ➢ Asignación de docentes a una asignatura - Equipo
+- [ ] ➢ Inscripción a las asignaturas - Felipe
+- [ ] ➢ Inicio de clase - Equipo
+- [ ] ➢ Asistencia a clase en vivo - Lucia
+- [ ] ➢ Envío de mensaje - Angel
+- [ ] ➢ Eliminación de asignatura - Equipo
+- [ ] ➢ Listado de Clases - Cristian
 
 ### DUDAS:
 
-- Falta add en Monitoreo
-- Falta listar y add en Docente
-- Faltan Manejadores
-- Faltan los cpp de los controladores
-- Falta singleton y fabrica
+- Faltan los cpp e interfaces de los controladores(controllers)
+- Falta singleton y fabrica(Factory)
+- Preguntar sobre virtual en destructores(destroyers)

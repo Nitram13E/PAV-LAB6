@@ -1,6 +1,8 @@
 #ifndef ASISTEDIFERIDO
 #define ASISTEDIFERIDO
 
+class Estudiante;
+
 #include "../../DataTypes/header/DtLog.h"
 #include "Estudiante.h"
 

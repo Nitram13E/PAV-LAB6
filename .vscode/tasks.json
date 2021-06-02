@@ -6,7 +6,10 @@
             "command": "/usr/bin/g++",
             "args": [
                 "-g",
-                "${workspaceFolder}/*.cpp",
+                "${workspaceFolder}/src/Class/*.cpp",
+                "${workspaceFolder}/src/DataTypes/*.cpp",
+                "${workspaceFolder}/src/Handlers/*.cpp",
+                "${workspaceFolder}/src/main.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

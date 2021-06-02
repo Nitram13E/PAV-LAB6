@@ -11,3 +11,7 @@ std::list<Estudiante*> Monitoreo::getHabilitados()
 {
     return this -> habilitados;
 }
+void Monitoreo::addHabilitados(Estudiante* estudiante)
+{
+    this -> habilitados.push_back(estudiante);
+}

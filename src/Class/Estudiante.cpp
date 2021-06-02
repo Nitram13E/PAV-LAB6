@@ -8,7 +8,7 @@ Estudiante::Estudiante(std::string nombre, std::string imagenURL, std::string pa
 }
 Estudiante::~Estudiante(){}
 
-void Estudiante::setDocumento(std::string)
+void Estudiante::setDocumento(std::string documento)
 {
     this -> documento = documento;
 }

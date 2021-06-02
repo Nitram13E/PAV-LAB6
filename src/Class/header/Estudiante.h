@@ -1,8 +1,12 @@
 #ifndef ESTUDIANTE
 #define ESTUDIANTE
 
+class Asignatura;
+
 #include "Perfil.h"
 #include "Asignatura.h"
+
+#include <list>
 
 class Estudiante: public Perfil
 {
