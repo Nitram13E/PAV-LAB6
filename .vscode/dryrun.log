@@ -1,4 +1,4 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/mnt/c/PAV/PAV-LAB6'
 g++    -c -o src/main.o src/main.cpp
 g++    -c -o src/Class/Asignatura.o src/Class/Asignatura.cpp
@@ -22,9 +22,7 @@ g++    -c -o src/DataTypes/DtPerfil.o src/DataTypes/DtPerfil.cpp
 g++    -c -o src/DataTypes/DtTimeStamp.o src/DataTypes/DtTimeStamp.cpp
  
 g++    -c -o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtInstanciaClase.cpp
- 
 g++    -c -o src/DataTypes/DtAsignatura.o src/DataTypes/DtAsignatura.cpp
- 
 g++    -c -o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoClase.cpp
  
 g++    -c -o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoTeorico.cpp
@@ -32,7 +30,6 @@ g++    -c -o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoTeorico.cpp
 g++    -c -o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtInfoMonitoreo.cpp
  
 g++    -c -o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClase.cpp
- 
 g++    -c -o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarClaseFull.cpp
  
 g++    -c -o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtIniciarMonitoreo.cpp
