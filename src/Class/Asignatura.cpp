@@ -2,6 +2,7 @@
 
 Asignatura::Asignatura(){}
 
+
 Asignatura::Asignatura(std::string codigo, std::string nombre)
 {
       this -> codigo = codigo;
@@ -28,4 +29,13 @@ std::string Asignatura::getNombre()
 void Asignatura::setNombre(std::string nombre)
 {
     this -> nombre = nombre;
+}
+
+void Asignatura::addClases(Clase* clase)
+{
+    this -> clases.push_back(clase);
+}
+std::list<Clase*> Asignatura::getClases()
+{
+    return this -> clases;
 }

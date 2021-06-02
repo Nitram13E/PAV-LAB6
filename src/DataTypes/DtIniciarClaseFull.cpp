@@ -3,10 +3,9 @@
 
 DtIniciarClaseFull::DtIniciarClaseFull(){}
 
-DtIniciarClaseFull::DtIniciarClaseFull(std::string codigo, std::string nombre, DtTimeStamp fechahora) : DtIniciarClase(codigo, nombre, fechahora)
+DtIniciarClaseFull::DtIniciarClaseFull(int id, std::string codigo, std::string nombre, DtTimeStamp fechahora) : DtIniciarClase(codigo, nombre, fechahora)
 {
-    //Falta asignacion de id por el sistema
-    //this -> id = randID();
+    this -> id = id;
 }
 
 DtIniciarClaseFull::~DtIniciarClaseFull()

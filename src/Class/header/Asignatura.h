@@ -23,6 +23,10 @@ class Asignatura
 
         std::string getNombre();
         void setNombre(std::string);
+
+        void addClases(Clase*);
+        std::list<Clase*> getClases();
+
 };
 
 #endif

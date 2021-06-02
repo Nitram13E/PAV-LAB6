@@ -1,21 +1,21 @@
 #ifndef DTINICIARMONITOREO
 #define DTINICIARMONITOREO
 
-#define MAX_HABILITADOS 15
-
 #include "DtIniciarClaseFull.h"
+
+#include <list>
 
 class DtIniciarMonitoreo : public DtIniciarClaseFull
 {
     private:
-        std::string habilitados[MAX_HABILITADOS];
+        std::list<std::string> habilitados;
 
     public:
         DtIniciarMonitoreo();
-        DtIniciarMonitoreo(std::string codigo, std::string nombre, DtTimeStamp fechahora, std::string*);
+        DtIniciarMonitoreo(int id, std::string codigo, std::string nombre, DtTimeStamp fechahora, std::list<std::string>);
         ~DtIniciarMonitoreo();
 
-        std::string * getHabilitados();
+        std::list<std::string> getHabilitados();
     
 };
 
