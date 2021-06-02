@@ -14,10 +14,8 @@ Progreso:
 
 ### DUDAS:
 
-- Id generadas automaticamente - DtIniciarClaseFull
-
-- Habilitados - DtIniciarMonitoreo
-
-- VA o NO VA - DtAsistir
-
-- virtual ~Perfil() / ~Clase()
+- Falta add en Monitoreo
+- Falta listar y add en Docente
+- Faltan Manejadores
+- Faltan los cpp de los controladores
+- Falta singleton y fabrica

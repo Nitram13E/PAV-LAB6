@@ -4,6 +4,8 @@
 class Docente;
 
 #include "../../DataTypes/header/DtTimeStamp.h"
+#include "AsisteEnVivo.h"
+#include "AsisteDiferido.h"
 #include "Docente.h"
 #include "Participacion.h"
 
@@ -13,6 +15,8 @@ class Docente;
 class Clase
 {
     private:
+        static int idActual;
+
         int id;
         std::string nombre;
         DtTimeStamp inicio;
@@ -21,14 +25,19 @@ class Clase
 
         std::list<Docente*> docentes;
         std::list<Participacion*> participaciones;
+        std::list<AsisteEnVivo*> asisteVivo;
+        std::list<AsisteDiferido*> asisteDiferido;
+
+        void incrementarIdActual();
 
     public:
         Clase();
-        Clase(int, std::string, DtTimeStamp, DtTimeStamp, std::string);
-        virtual ~Clase() = 0;
+        Clase(std::string, DtTimeStamp, DtTimeStamp, std::string);
+        virtual ~Clase();
+
+        static int getIdActual();
 
         int getID();
-        void setID(int);
 
         std::string getNombre();
         void setNombre(std::string);
@@ -41,6 +50,18 @@ class Clase
 
         std::string getRutaVideo();
         void setRutaVideo(std::string);
+
+        void addDocentes(Docente*);
+        std::list<Docente*> getDocentes();
+
+        void addParticipacion(Participacion*);
+        std::list<Participacion*> getParticipaciones();
+
+        void addAsisteEnVivo(AsisteEnVivo*);
+        std::list<AsisteEnVivo*> getAsisteVivo();
+
+        void addAsisteDiferido(AsisteDiferido*);
+        std::list<AsisteDiferido*> getAsisteDiferido();
 };
 
 #endif

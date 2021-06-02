@@ -18,8 +18,11 @@ std::string Estudiante::getDocumento()
     return this -> documento;
 }
 
-DtPerfil* Estudiante::getDtPerfil()
+void Estudiante::addAsignaturas(Asignatura* asignatura)
 {
-    DtPerfil * newDtPerfil = new DtPerfil;
-    return newDtPerfil;
+    this -> asignaturas.push_back(asignatura);
+}
+std::list<Asignatura*> Estudiante::getAsignaturas()
+{
+    return this -> asignaturas;
 }

@@ -2,14 +2,14 @@
 
 DtIniciarMonitoreo::DtIniciarMonitoreo(){}
 
-DtIniciarMonitoreo::DtIniciarMonitoreo(std::string codigo, std::string nombre, DtTimeStamp fechahora, std::string * habilitados) : DtIniciarClaseFull(codigo, nombre, fechahora)
+DtIniciarMonitoreo::DtIniciarMonitoreo(int id, std::string codigo, std::string nombre, DtTimeStamp fechahora, std::list<std::string> habilitados) : DtIniciarClaseFull(id, codigo, nombre, fechahora)
 {
-    //this -> habilitados = habilitados;
+    this -> habilitados = habilitados;
 }
 
 DtIniciarMonitoreo::~DtIniciarMonitoreo(){}
 
-std::string * DtIniciarMonitoreo::getHabilitados()
+std::list<std::string> DtIniciarMonitoreo::getHabilitados()
 {
     return this -> habilitados;
 }
