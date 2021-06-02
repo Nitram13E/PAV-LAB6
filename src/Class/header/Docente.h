@@ -23,8 +23,6 @@ class Docente : public Perfil
 
         void setInstituto(std::string);
         std::string getInstituto();
-
-        DtPerfil* getDtPerfil();
 };
 
 #endif 

@@ -4,7 +4,6 @@
 #include "../../DataTypes/header/DtPerfil.h"
 
 #include <iostream>
-#include <string>
 
 class Perfil
 {
@@ -18,7 +17,7 @@ class Perfil
 
         Perfil();
         Perfil(std::string, std::string, std::string, std::string);
-        ~Perfil();
+        virtual ~Perfil();
 
         void setNombre(std::string);
         std::string getNombre();
@@ -31,8 +30,6 @@ class Perfil
         
         void setPassword(std::string);
         std::string getPassword();
-
-        virtual DtPerfil* getDtPerfil() = 0;
         
     };
 

@@ -10,7 +10,7 @@ class DtIniciarClaseFull : public DtIniciarClase
 
     public:
         DtIniciarClaseFull();
-        DtIniciarClaseFull(std::string codigo, std::string nombre, DtTimeStamp fechahora);
+        DtIniciarClaseFull(int, std::string codigo, std::string nombre, DtTimeStamp fechahora);
         ~DtIniciarClaseFull();
 
         int getId();

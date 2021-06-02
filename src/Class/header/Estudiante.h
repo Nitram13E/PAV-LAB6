@@ -4,11 +4,11 @@
 #include "Perfil.h"
 #include "Asignatura.h"
 
-class Estudiante: Perfil
+class Estudiante: public Perfil
 {
     private: 
         std::string documento;
-        std::list<Asignatura> asignaturas;
+        std::list<Asignatura*> asignaturas;
         
     public:
         Estudiante();
@@ -18,7 +18,8 @@ class Estudiante: Perfil
         void setDocumento(std::string);
         std::string getDocumento();
 
-        DtPerfil* getDtPerfil();
+        void addAsignaturas(Asignatura*);
+        std::list<Asignatura*> getAsignaturas();
 };
 
-#endif 
+#endif
