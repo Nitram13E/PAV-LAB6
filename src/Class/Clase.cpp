@@ -91,12 +91,12 @@ std::list<Participacion*> Clase::getParticipaciones()
     return this -> participaciones;
 }
 
-void Clase::addAsisteEnVivo(AsisteEnVivo* asistencia)
+void Clase::addAsisteEnVivo(AsisteVivo* asistencia)
 {
     this -> asisteVivo.push_back(asistencia);
 }
 
-std::list<AsisteEnVivo*> Clase::getAsisteVivo()
+std::list<AsisteVivo*> Clase::getAsisteVivo()
 {
     return this -> asisteVivo;
 }

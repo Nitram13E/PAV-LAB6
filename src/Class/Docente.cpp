@@ -19,3 +19,12 @@ std::string Docente::getInstituto()
 {
     return this -> instituto;
 }
+
+void Docente::addRol(Rol* rol)
+{
+    this -> roles.push_back(rol);
+}
+std::list<Rol*> Docente::getRoles()
+{
+    return this -> roles;
+}

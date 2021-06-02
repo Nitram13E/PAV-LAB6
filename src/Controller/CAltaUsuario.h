@@ -1,10 +1,9 @@
 #ifndef C_ALTAUSUARIO
 #define C_ALTAUSUARIO
 
-#include "../DataTypes/header/DtPerfil.h"
-#include "../DataTypes/header/tipoPerfil.h"
+#include "../Interfaces/IAltaUsuario.h"
 
-class CAltaUsuario
+class CAltaUsuario : public IAltaUsuario
 {
     private: 
         DtPerfil datosUsuario;
