@@ -9,11 +9,15 @@ obj = src/main.o \
 	  src/Class/Participacion.o \
 	  src/Class/Perfil.o \
 	  src/Class/Rol.o \
-	  src/Class/AsisteEnVivo.o \
-	  src/Class/AsisteEnDiferido.o \
+	  src/Class/AsisteVivo.o \
+	  src/Class/AsisteDiferido.o \
 	  src/Class/Monitoreo.o \
 	  src/Class/Practico.o \
 	  src/Class/Teorico.o \
+	  \
+	  src/Handlers/ManejadorAsignatura.o \
+	  src/Handlers/ManejadorClase.o \
+	  src/Handlers/ManejadorPerfil.o \
 	  \
 	  src/DataTypes/DtFecha.o \
 	  src/DataTypes/DtLog.o \
@@ -38,12 +42,11 @@ all: $(obj)
 $(obj): %.o: %.cpp
 
 debug:
-	g++ *.o -g -o $(exec)
-
-	# g++ -g -c src/DataTypes/*.cpp
-	# g++ -g -c src/Class/*.cpp
-	# g++ -g -c src/main.cpp
+	g++ -g -c src/DataTypes/*.cpp
+	g++ -g -c src/Class/*.cpp
+	g++ -g -c src/main.cpp
 
 clean:
 	@ rm -f obj/*.o $(exec)
+	@ rm -f ./*.o
 	@ echo "archivos de compilacion eliminados."

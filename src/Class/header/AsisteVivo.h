@@ -1,12 +1,14 @@
-#ifndef ASISTEENVIVO
-#define ASISTEENVIVO
+#ifndef ASISTEVIVO
+#define ASISTEVIVO
+
+class Estudiante;
 
 class Estudiante;
 
 #include "../../DataTypes/header/DtTimeStamp.h"
 #include "Estudiante.h"
 
-class AsisteEnVivo
+class AsisteVivo
 {
     private:
         DtTimeStamp inicio;
@@ -14,9 +16,9 @@ class AsisteEnVivo
         Estudiante * estudiante;
         
     public:
-        AsisteEnVivo();
-        AsisteEnVivo(DtTimeStamp, DtTimeStamp);
-        ~AsisteEnVivo();
+        AsisteVivo();
+        AsisteVivo(DtTimeStamp, DtTimeStamp);
+        ~AsisteVivo();
 
         void setInicio(DtTimeStamp);
         DtTimeStamp getInicio(); 

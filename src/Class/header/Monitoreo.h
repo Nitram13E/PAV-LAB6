@@ -16,6 +16,8 @@ class Monitoreo: public Clase
         ~Monitoreo();
 
         std::list<Estudiante*> getHabilitados();
+
+        void addHabilitados(Estudiante *);
 };
 
 #endif

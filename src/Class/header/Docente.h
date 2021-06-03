@@ -23,6 +23,9 @@ class Docente : public Perfil
 
         void setInstituto(std::string);
         std::string getInstituto();
+
+        void addRol(Rol*);
+        std::list<Rol*> getRoles();
 };
 
 #endif 
