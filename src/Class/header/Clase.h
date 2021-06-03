@@ -2,6 +2,7 @@
 #define CLASE
 
 class Docente;
+class AsisteEnVivo;
 
 #include "../../DataTypes/header/DtTimeStamp.h"
 #include "AsisteEnVivo.h"

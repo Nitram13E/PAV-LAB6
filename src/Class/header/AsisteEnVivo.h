@@ -1,6 +1,8 @@
 #ifndef ASISTEENVIVO
 #define ASISTEENVIVO
 
+class Estudiante;
+
 #include "../../DataTypes/header/DtTimeStamp.h"
 #include "Estudiante.h"
 
