@@ -5,8 +5,8 @@ Asignatura::Asignatura(){}
 
 Asignatura::Asignatura(std::string codigo, std::string nombre)
 {
-      this -> codigo = codigo;
-      this -> nombre = nombre;
+    this -> codigo = codigo;
+    this -> nombre = nombre;
 }
 
 Asignatura::~Asignatura(){}

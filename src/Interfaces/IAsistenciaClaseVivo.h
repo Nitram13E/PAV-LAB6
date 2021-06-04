@@ -2,6 +2,10 @@
 #define IASISTENCIACLASEVIVO
 
 #include "../DataTypes/header/DtAsistir.h"
+#include "../Class/header/Estudiante.h"
+#include "../Handlers/header/ManejadorPerfil.h"
+#include "../Handlers/header/ManejadorAsignatura.h"
+
 #include <list>
 
 class IAsistenciaClaseVivo
@@ -11,7 +15,7 @@ class IAsistenciaClaseVivo
 
         virtual std::list<int> clasesOnlineDisponibles(std::string) = 0;
 
-        virtual DtAsistir selectClase(int) = 0;
+        virtual DtAsistir* selectClase(int) = 0;
 
         virtual void asistirClaseVivo() = 0;
 
