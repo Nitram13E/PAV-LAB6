@@ -1,10 +1,13 @@
 #ifndef C_INSCRIPCIONASIGNATURAS
 #define C_INSCRIPCIONASIGNATURAS
 
+#include "../Interfaces/IInscripcionAsignaturas.h"
+
 #include <iostream>
 #include <list>
+#include <iterator>
 
-class CInscripcionAsignaturas
+class CInscripcionAsignaturas : public IInscripcionesAsignaturas
 {
     private:
         std::string codigo;
@@ -13,11 +16,11 @@ class CInscripcionAsignaturas
         CInscripcionAsignaturas();
         ~CInscripcionAsignaturas();
 
-        std::list<std::string> asignaturasNoInscriptos();
+        std::list<std::string> asignaturasNoInscriptos(std::string);
 
         void selectAsignatura(std::string);
 
-        void inscribir();
+        void inscribir(std::string);
 
         void cancelar();
 };
