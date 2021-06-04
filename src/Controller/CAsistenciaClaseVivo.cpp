@@ -44,12 +44,19 @@ DtAsistir* CAsistenciaClaseVivo::selectClase(int id)
 
 void CAsistenciaClaseVivo::asistirClaseVivo()
 {
+    ManejadorClase* mc = ManejadorClase::getInstancia();
+    Clase* clase = mc -> buscarClase(this -> idClase);
 
+    DtTimeStamp iTime; // TENGO QUE CONSEGUIR LA FECHA Y HORA DEL SISTEMA;
+    AsisteVivo* av = new AsisteVivo(iTime, NULL);
+    av -> setEstudiante(this -> estudiante);
+
+    clase -> addAsisteEnVivo(av);  
 }
 
 void CAsistenciaClaseVivo::cancelar()
 {
-
+    delete this -> estudiante;
 }
 
 bool CAsistenciaClaseVivo::esEstudiante(std::string mail)

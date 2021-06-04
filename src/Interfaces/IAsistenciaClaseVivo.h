@@ -4,6 +4,7 @@
 #include "../DataTypes/header/DtAsistir.h"
 #include "../Class/header/Estudiante.h"
 #include "../Handlers/header/ManejadorPerfil.h"
+#include "../Handlers/header/ManejadorClase.h"
 #include "../Handlers/header/ManejadorAsignatura.h"
 
 #include <list>
