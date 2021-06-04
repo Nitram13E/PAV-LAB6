@@ -1,7 +1,7 @@
 #ifndef C_ASISTENCIACLASEVIVO
 #define C_ASISTENCIACLASEVIVO
 
-#include "../DataTypes/header/DtAsistir.h"
+#include "../../DataTypes/header/DtAsistir.h"
 #include <list>
 
 class CAsistenciaClaseVivo

@@ -15,6 +15,8 @@ obj = src/main.o \
 	  src/Class/Practico.o \
 	  src/Class/Teorico.o \
 	  \
+	  src/Controller/CAltaAsignatura.o \
+	  \
 	  src/Handlers/ManejadorAsignatura.o \
 	  src/Handlers/ManejadorClase.o \
 	  src/Handlers/ManejadorPerfil.o \
@@ -34,19 +36,11 @@ obj = src/main.o \
 	  src/DataTypes/DtParticipacion.o
 	  
 all: $(obj)
-	@ mkdir -p ./obj
-	@ mv $(obj) ./obj
-	g++ obj/*.o -o $(exec)
-	@ echo "\nEjecutar con: ./$(exec)"
+	g++ $(obj) -o $(exec)
+	@ echo "\n\nEjecutar con: ./$(exec)\n\n"
 
 $(obj): %.o: %.cpp
 
-debug:
-	g++ -g -c src/DataTypes/*.cpp
-	g++ -g -c src/Class/*.cpp
-	g++ -g -c src/main.cpp
-
 clean:
-	@ rm -f obj/*.o $(exec)
-	@ rm -f ./*.o
+	@ rm -f $(obj)
 	@ echo "archivos de compilacion eliminados."

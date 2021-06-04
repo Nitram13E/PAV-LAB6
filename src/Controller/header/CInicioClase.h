@@ -1,8 +1,8 @@
 #ifndef C_INICIOCLASE
 #define C_INICIOCLASE
 
-#include "../DataTypes/header/DtIniciarClase.h"
-#include "../DataTypes/header/DtPerfil.h"
+#include "../../DataTypes/header/DtIniciarClase.h"
+#include "../../DataTypes/header/DtPerfil.h"
 
 #include <list>
 
