@@ -11,8 +11,11 @@ std::list<std::string> CInscripcionAsignaturas::asignaturasNoInscriptos(std::str
 {
     ManejadorAsignatura * asignaturas = asignaturas -> getInstancia();
 
+    //Creo la lista de asignaturas a devolver
+    std::list<std::string> result;
+
     //Traigo todas las asignaturas existentes
-    std::list<Asignatura*> listaAsignaturas = asignaturas -> listarAsignatura();
+    std::map<std::string,Asignatura*> listaAsignaturas = asignaturas -> listarMapAsignatura();
 
     ManejadorPerfil *  usuarios = usuarios -> getInstancia();
 
@@ -20,43 +23,36 @@ std::list<std::string> CInscripcionAsignaturas::asignaturasNoInscriptos(std::str
     Perfil * usuario = usuarios -> buscarPerfil(email);
     Estudiante * estudiante = dynamic_cast<Estudiante*>(usuario);
 
-    if(estudiante == NULL) return;
+    if(estudiante == NULL)
+    {
+        throw std::invalid_argument("Usuario no encontrado\n");
+    }
 
     //Traigo las asignaturas en las cuales el estudiante esta inscripto
     std::list<Asignatura*> asignaturasEstudiante = estudiante -> getAsignaturas();
 
     //Creo el iterador para recorrer las listas de asignatura
-    std::list<Asignatura*>::iterator iteradorAsig = listaAsignaturas.begin();
+    std::map<std::string,Asignatura*>::iterator iteradorAsig;
 
-    std::list<Asignatura*>::iterator iteradorAsigestudiante = asignaturasEstudiante.begin();
+    std::list<Asignatura*>::iterator iteradorAsigestudiante;
 
-    //Creo la lista de asignaturas a devolver
-    std::list<std::string> result;
+    //Algoritmo de busqueda
 
-    //Algoritmo para comparar asignaturas
-    while (iteradorAsig != listaAsignaturas.end()) // Mientras no haya terminado de comprobar todas las asignaturas
+    for (iteradorAsigestudiante = asignaturasEstudiante.begin(); iteradorAsigestudiante != asignaturasEstudiante.end(); iteradorAsigestudiante++)
     {
-        //Si ambos iteradores son iguales quiere decir que ya esta inscripto por lo tanto paso a otra materia
-        //SI NO son iguales entonces quiere decir que tengo que seguir comprobando por lo tanto avanzo el iterador de estudiante 
-        if((*iteradorAsig) -> getCodigo() == (*iteradorAsigestudiante) -> getCodigo())
-        {
-            iteradorAsig++;
-            iteradorAsigestudiante = asignaturasEstudiante.begin();
-        }
-        else
-        {
-            iteradorAsigestudiante++;
-        }
+        iteradorAsig = listaAsignaturas.find((*iteradorAsigestudiante) -> getCodigo());
 
-        //Si llego al final de la lista de asignaturas de estudiante y todavia quedan asignaturas, lo ingresamos porque es una asignatura que no existe en estudiante
-        if(iteradorAsigestudiante == asignaturasEstudiante.end() && iteradorAsig != listaAsignaturas.end())
+        if(iteradorAsig != listaAsignaturas.end())
         {
-            result.push_back((*iteradorAsig) -> getCodigo());
-
-            iteradorAsigestudiante = asignaturasEstudiante.begin();
-
-            iteradorAsig++;
+            listaAsignaturas.erase(iteradorAsig);
         }
+    }
+
+    //Copiar lo que quedo del mapa a una lista de strings
+    
+    for(iteradorAsig = listaAsignaturas.begin(); iteradorAsig != listaAsignaturas.end(); iteradorAsig++)
+    {
+        result.push_back(iteradorAsig -> first);
     }
     
     return result;
@@ -71,10 +67,7 @@ void CInscripcionAsignaturas::inscribir(std::string email)
 {
     ManejadorAsignatura * asignaturas = asignaturas -> getInstancia();
 
-    std::string codigoAsignatura = this -> codigo;
-
-    Asignatura * asignaturaAIncribir = asignaturas -> buscarAsignatura(codigoAsignatura);
-
+    Asignatura * asignaturaAIncribir = asignaturas -> buscarAsignatura(this -> codigo);
 
     //Busco si existe un estudiante con ese mail
     ManejadorPerfil *  usuarios = usuarios -> getInstancia();
@@ -90,7 +83,10 @@ void CInscripcionAsignaturas::inscribir(std::string email)
 }
 
 //En cancelar no se borra nada, ya que no se creo ninguna instancia de ningun objeto porque no paso por la funcion inscribir()
-void CInscripcionAsignaturas::cancelar(){}
+void CInscripcionAsignaturas::cancelar()
+{
+    //FIXME:delete this -> codigo;
+}
 
 
 
