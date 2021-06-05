@@ -1,7 +1,7 @@
 #ifndef C_ENVIOMENSAJE
 #define C_ENVIOMENSAJE
 
-#include "../DataTypes/header/DtParticipacion.h"
+#include "../../DataTypes/header/DtParticipacion.h"
 
 #include <list>
 
