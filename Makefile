@@ -19,6 +19,8 @@ obj = src/main.o \
 	  src/Handlers/ManejadorClase.o \
 	  src/Handlers/ManejadorPerfil.o \
 	  \
+	  src/Controller/CAsistenciaClaseVivo.o\
+	  \
 	  src/DataTypes/DtFecha.o \
 	  src/DataTypes/DtLog.o \
 	  src/DataTypes/DtPerfil.o \
@@ -31,7 +33,8 @@ obj = src/main.o \
 	  src/DataTypes/DtIniciarClase.o \
 	  src/DataTypes/DtIniciarClaseFull.o \
 	  src/DataTypes/DtIniciarMonitoreo.o \
-	  src/DataTypes/DtParticipacion.o
+	  src/DataTypes/DtParticipacion.o \
+	  src/DataTypes/DtAsistir.o 
 	  
 all: $(obj)
 	@ mkdir -p ./obj
@@ -44,6 +47,8 @@ $(obj): %.o: %.cpp
 debug:
 	g++ -g -c src/DataTypes/*.cpp
 	g++ -g -c src/Class/*.cpp
+	g++ -g -c src/Controller/*.cpp
+	g++ -g -c src/Handlers/*.cpp
 	g++ -g -c src/main.cpp
 
 clean:

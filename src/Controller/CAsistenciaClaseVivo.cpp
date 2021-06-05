@@ -1,18 +1,26 @@
 /*Tendria que ingresar como Estudiante para acceder al Controlador
 */
 #include "header/CAsistenciaClaseVivo.h"
+#include "../Handlers/header/ManejadorPerfil.h"
+#include "../Handlers/header/ManejadorClase.h"
+#include "../Handlers/header/ManejadorAsignatura.h"
+#include<ctime> 
 
 CAsistenciaClaseVivo::CAsistenciaClaseVivo(){}
 CAsistenciaClaseVivo::~CAsistenciaClaseVivo(){}
 
 std::list<std::string> CAsistenciaClaseVivo::asignaturasInscriptos()
 {
-    std::list<Asignatura *> lista = this -> estudiante->getAsignaturas();
+    std::list<std::string> lista;
 
-    for(std::list<Asignatura *>::iterator it = lista.begin(); it != lista.end(); ++it)
+    std::list<Asignatura *> asig = this -> estudiante->getAsignaturas();
+
+    for(std::list<Asignatura *>::iterator it = asig.begin(); it != asig.end(); ++it)
     {
-        std::cout << *it << std::endl; //TENGO QUE HACER LA SOBRECARGA PARA IMPRIMIR LAS ASIGNATURAS
+        lista.push_back((*it)->getCodigo());
     }
+
+    return lista;
 }
 
 std::list<int> CAsistenciaClaseVivo::clasesOnlineDisponibles(std::string codigoAsig)
@@ -35,9 +43,9 @@ std::list<int> CAsistenciaClaseVivo::clasesOnlineDisponibles(std::string codigoA
 
 DtAsistir* CAsistenciaClaseVivo::selectClase(int id)
 {
-    this -> idClase =id;
+    this -> idClase = id;
 
-    DtAsistir* datos = new DtAsistir(this -> codAsig, this -> idClase);
+   DtAsistir* datos = new DtAsistir(this -> codAsig, this -> idClase);
 
     return datos;
 }
@@ -47,7 +55,12 @@ void CAsistenciaClaseVivo::asistirClaseVivo()
     ManejadorClase* mc = ManejadorClase::getInstancia();
     Clase* clase = mc -> buscarClase(this -> idClase);
 
-    DtTimeStamp iTime; // TENGO QUE CONSEGUIR LA FECHA Y HORA DEL SISTEMA;
+    std::time_t tt;
+    time(&tt); //Se usa para encontrar la hora actual
+    struct tm * time = localtime(&tt);
+    DtFecha fecha = DtFecha(time -> tm_mday, time -> tm_mon, time -> tm_year);
+    DtTimeStamp iTime = DtTimeStamp(fecha, time -> tm_hour, time -> tm_min, time ->tm_sec); 
+
     AsisteVivo* av = new AsisteVivo(iTime, NULL);
     av -> setEstudiante(this -> estudiante);
 
