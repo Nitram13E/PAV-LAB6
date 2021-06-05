@@ -1,15 +1,14 @@
 #ifndef C_ASISTENCIACLASEVIVO
 #define C_ASISTENCIACLASEVIVO
 
-#include "../../Interfaces/IAsistenciaClaseVivo.h"
-#include "../../Class/header/Estudiante.h"
+#include "../../DataTypes/header/DtAsistir.h"
+#include <list>
 
-class CAsistenciaClaseVivo : public IAsistenciaClaseVivo
+class CAsistenciaClaseVivo
 {
     private:
-        std::string codAsig;
-        int idClase;
-        Estudiante* estudiante;
+        std::string cod;
+        std::string id;
 
     public:
         CAsistenciaClaseVivo();
@@ -19,13 +18,11 @@ class CAsistenciaClaseVivo : public IAsistenciaClaseVivo
 
         std::list<int> clasesOnlineDisponibles(std::string);
 
-        DtAsistir* selectClase(int);
+        DtAsistir selectClase(int);
 
         void asistirClaseVivo();
 
         void cancelar();
-
-        bool esEstudiante(std::string);  //La funcion aux la tengo que agregar a la interfaz Tambien?
 
 };
 

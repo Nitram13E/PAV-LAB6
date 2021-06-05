@@ -4,7 +4,7 @@
 #include <iostream>
 #include <list>
 
-#include "../DataTypes/header/tipoRol.h"
+#include "../../DataTypes/header/tipoRol.h"
 
 class CAsignacionDocenteAsignatura
 {
