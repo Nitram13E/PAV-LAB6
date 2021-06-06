@@ -1,11 +1,15 @@
 #include "header/CIniciarSesion.h"
+#include "../Handlers/header/ManejadorPerfil.h"
+#include <list>
+#include "../Class/header/Perfil.h"
+#include "../Class/header/Sesion.h"
+#include "../Class/header/Estudiante.h"
+#include "../Class/header/Docente.h"
+
 
 CIniciarSesion::CIniciarSesion(){}
 
-CIniciarSesion::~CIniciarSesion(){}
-
-void CIniciarSesion::ingresarEmail(std::string email)
-{
+void CIniciarSesion::ingresarEmail(std::string email){
     this->email = email;
 }
 
@@ -40,4 +44,4 @@ void CIniciarSesion::inciarSesion()
         }
     }
 }
-
+CIniciarSesion::~CIniciarSesion(){}

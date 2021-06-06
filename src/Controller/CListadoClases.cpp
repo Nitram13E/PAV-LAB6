@@ -1,9 +1,8 @@
 #include "header/CListadoClases.h"
-
 CListadoClases::CListadoClases(){}
 CListadoClases::~CListadoClases(){}
 
-/*std::list<std::string> CListadoClases::asignaturasAsignadas(){
+std::list<std::string> CListadoClases::asignaturasAsignadas(){
     Sesion* session = Sesion::getInstancia();
     Perfil * p = session->getPerfil();
     if(session->getTipoPerfil() == DOCENTE){
@@ -19,11 +18,10 @@ CListadoClases::~CListadoClases(){}
             std::cout << error.what() << std::endl;
         }
     }
-}*/
-
-/*std::list<DtInfoClase> CListadoClases::selectAsignatura(std::string codigoAsignatura){
+}
+std::list<DtInfoClase> CListadoClases::selectAsignatura(std::string codigoAsignatura){
     
 
 
-}*/
+}
 
