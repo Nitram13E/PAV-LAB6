@@ -1,5 +1,5 @@
-#ifndef DOCENTE 
-#define DOCENTE
+#ifndef DOCENTE_H 
+#define DOCENTE_H
 
 class Rol;
 

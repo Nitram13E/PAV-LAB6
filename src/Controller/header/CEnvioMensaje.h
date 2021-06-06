@@ -5,7 +5,7 @@
 #include "../../Handlers/header/ManejadorPerfil.h"
 #include "../../Handlers/header/ManejadorClase.h"
 #include "../../Class/header/Estudiante.h"
-
+#include "../../Class/header/Sesion.h"
 
 #include <list>
 

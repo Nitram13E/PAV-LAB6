@@ -18,3 +18,11 @@ Progreso:
 - Faltan los cpp e interfaces de los controladores(controllers)
 - Falta singleton y fabrica(Factory)
 - Preguntar sobre virtual en destructores(destroyers)
+
+
+- Creacion de CEnvioMensaje
+- Creacion de ICEnvioMensaje
+- Creacion de id automatica para Participacion
+- Modificacion de atributos en CEnvioMensaje.h
+    -Se cambio el DtParticipacion por atributos convencionales.
+
