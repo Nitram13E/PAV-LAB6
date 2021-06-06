@@ -1,11 +1,10 @@
-#ifndef DOCENTE 
-#define DOCENTE
+#ifndef DOCENTE_H
+#define DOCENTE_H
 
 class Rol;
 
 #include "Perfil.h"
 #include "Rol.h"
-
 #include <list>
 #include <iterator>
 
@@ -26,6 +25,7 @@ class Docente : public Perfil
 
         void addRol(Rol*);
         std::list<Rol*> getRoles();
+        std::list <std::string> listarAsignaturas();
 };
 
 #endif 
