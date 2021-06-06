@@ -12,6 +12,7 @@ Progreso:
 - [ ] ➢ Eliminación de asignatura - Equipo
 - [ ] ➢ Listado de Clases - Cristian
 
+
 ### DUDAS:
 
 - Preguntar si DtInstanciaClase tipoClases en Asignatura

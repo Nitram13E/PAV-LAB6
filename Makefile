@@ -25,6 +25,8 @@ obj = src/main.o \
 	  src/Handlers/ManejadorClase.o \
 	  src/Handlers/ManejadorPerfil.o \
 	  \
+	  src/Controller/CAsistenciaClaseVivo.o\
+	  \
 	  src/DataTypes/DtFecha.o \
 	  src/DataTypes/DtLog.o \
 	  src/DataTypes/DtAsistir.o \
@@ -38,7 +40,8 @@ obj = src/main.o \
 	  src/DataTypes/DtIniciarClase.o \
 	  src/DataTypes/DtIniciarClaseFull.o \
 	  src/DataTypes/DtIniciarMonitoreo.o \
-	  src/DataTypes/DtParticipacion.o
+	  src/DataTypes/DtParticipacion.o \
+	  src/DataTypes/DtAsistir.o 
 	  
 all: $(obj)
 	g++ $(obj) -o $(exec)
