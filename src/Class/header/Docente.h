@@ -25,7 +25,7 @@ class Docente : public Perfil
 
         void addRol(Rol*);
         std::list<Rol*> getRoles();
-        std::list <std::string> asignaturas();
+        std::list <std::string> listarAsignaturas();
 };
 
 #endif 

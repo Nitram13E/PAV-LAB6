@@ -3,7 +3,5 @@
 
 int main()
 {
-    tipoPerfil e = ESTUDIANTE;
-    return 0;
 }
 

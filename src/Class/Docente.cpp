@@ -28,7 +28,7 @@ std::list<Rol*> Docente::getRoles()
 {
     return this -> roles;
 }
-std::list<std::string> Docente::asignaturas(){
+std::list<std::string> Docente::listarAsignaturas(){
     std::list<Rol*>::iterator it;
     std::list<std::string> list;
     std::string cod;

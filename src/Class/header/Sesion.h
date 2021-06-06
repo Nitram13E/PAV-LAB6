@@ -15,6 +15,4 @@ class Sesion{
         tipoPerfil getTipoPerfil();
         ~Sesion();
 };
-tipoPerfil e = ESTUDIANTE;
-
 #endif
