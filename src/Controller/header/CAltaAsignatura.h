@@ -1,9 +1,9 @@
 #ifndef C_ALTAASIGNATURA
 #define C_ALTAASIGNATURA
 
-#include "../DataTypes/header/DtAsignatura.h"
+#include "../../Interfaces/IAltaAsignatura.h"
 
-class CAltaAsignatura
+class CAltaAsignatura : public IAltaAsignatura
 {
     private:
         DtAsignatura* datosAsignatura;
@@ -12,7 +12,7 @@ class CAltaAsignatura
         CAltaAsignatura();
         ~CAltaAsignatura();
         
-        DtAsignatura ingresar(DtAsignatura);
+        DtAsignatura* ingresar(DtAsignatura*);
         void altaAsignatura();
         void cancelar();
 };

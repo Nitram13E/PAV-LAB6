@@ -29,3 +29,6 @@ Asignatura* Rol::getAsignatura()
 {
     return this -> asignatura;
 }
+std::string Rol::getCodigoAsignatura(){
+    return this->asignatura->getCodigo();
+}

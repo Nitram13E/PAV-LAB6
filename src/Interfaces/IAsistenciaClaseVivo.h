@@ -2,7 +2,6 @@
 #define IASISTENCIACLASEVIVO
 
 #include "../DataTypes/header/DtAsistir.h"
-#include "../Class/header/Estudiante.h"
 
 #include <list>
 

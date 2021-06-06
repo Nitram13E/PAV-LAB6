@@ -14,8 +14,12 @@ obj = src/main.o \
 	  src/Class/Monitoreo.o \
 	  src/Class/Practico.o \
 	  src/Class/Teorico.o \
+	  src/Class/Sesion.o \
 	  \
 	  src/Controller/CAsistenciaClaseVivo.o \
+	  src/Controller/CAltaAsignatura.o \
+	  src/Controller/CIniciarSesion.o \
+	  src/Controller/CListadoClases.o \
 	  \
 	  src/Handlers/ManejadorAsignatura.o \
 	  src/Handlers/ManejadorClase.o \

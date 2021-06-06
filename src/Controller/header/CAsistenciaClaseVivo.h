@@ -2,6 +2,9 @@
 #define C_ASISTENCIACLASEVIVO
 
 #include "../../Interfaces/IAsistenciaClaseVivo.h"
+#include "../../Class/header/Estudiante.h"
+
+#include <list>
 
 class CAsistenciaClaseVivo : public IAsistenciaClaseVivo
 {
@@ -24,7 +27,7 @@ class CAsistenciaClaseVivo : public IAsistenciaClaseVivo
 
         void cancelar();
 
-        bool esEstudiante(std::string);  //La funcion aux la tengo que agregar a la interfaz Tambien?
+        bool esEstudiante(std::string);
 
 };
 

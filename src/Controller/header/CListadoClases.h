@@ -1,7 +1,7 @@
 #ifndef C_LISTADOCLASES
 #define C_LISTADOCLASES
 
-#include "../DataTypes/header/DtInfoClase.h"
+#include "../../DataTypes/header/DtInfoClase.h"
 
 #include <list>
 
@@ -15,6 +15,7 @@ class CListadoClases
 
         std::list<std::string> asignaturasAsignadas();
         std::list<DtInfoClase> selectAsignatura(std::string);
+        
 };
 
 #endif
