@@ -1,16 +1,11 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/mnt/c/PAV/PAV-LAB6'
+make: Entering directory '/home/nitram13/PAV-LAB6'
 g++    -c -o src/main.o src/main.cpp
- 
 g++    -c -o src/Class/Asignatura.o src/Class/Asignatura.cpp
- 
 g++    -c -o src/Class/Clase.o src/Class/Clase.cpp
 g++    -c -o src/Class/Docente.o src/Class/Docente.cpp
- 
 g++    -c -o src/Class/Estudiante.o src/Class/Estudiante.cpp
- 
 g++    -c -o src/Class/Participacion.o src/Class/Participacion.cpp
- 
 g++    -c -o src/Class/Perfil.o src/Class/Perfil.cpp
 g++    -c -o src/Class/Rol.o src/Class/Rol.cpp
 g++    -c -o src/Class/AsisteVivo.o src/Class/AsisteVivo.cpp
@@ -37,5 +32,5 @@ g++    -c -o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtIniciarMonitoreo
 g++    -c -o src/DataTypes/DtParticipacion.o src/DataTypes/DtParticipacion.cpp
 g++ src/main.o src/Class/Asignatura.o src/Class/Clase.o src/Class/Docente.o src/Class/Estudiante.o src/Class/Participacion.o src/Class/Perfil.o src/Class/Rol.o src/Class/AsisteVivo.o src/Class/AsisteDiferido.o src/Class/Monitoreo.o src/Class/Practico.o src/Class/Teorico.o src/Controller/CAltaAsignatura.o src/Handlers/ManejadorAsignatura.o src/Handlers/ManejadorClase.o src/Handlers/ManejadorPerfil.o src/DataTypes/DtFecha.o src/DataTypes/DtLog.o src/DataTypes/DtPerfil.o src/DataTypes/DtTimeStamp.o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtAsignatura.o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtParticipacion.o -o exec 
 echo "\n\nEjecutar con: ./exec \n\n"
-make: Leaving directory '/mnt/c/PAV/PAV-LAB6'
+make: Leaving directory '/home/nitram13/PAV-LAB6'
  
