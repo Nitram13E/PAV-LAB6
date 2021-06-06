@@ -7,7 +7,7 @@ Progreso:
 - [ ] ➢ Asignación de docentes a una asignatura - Equipo
 - [ ] ➢ Inscripción a las asignaturas - Felipe
 - [ ] ➢ Inicio de clase - Equipo
-- [ ] ➢ Asistencia a clase en vivo - Lucia
+- [x] ➢ Asistencia a clase en vivo - Lucia
 - [ ] ➢ Envío de mensaje - Angel
 - [ ] ➢ Eliminación de asignatura - Equipo
 - [ ] ➢ Listado de Clases - Cristian

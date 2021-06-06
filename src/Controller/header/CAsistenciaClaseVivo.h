@@ -1,7 +1,7 @@
 #ifndef C_ASISTENCIACLASEVIVO
 #define C_ASISTENCIACLASEVIVO
 
-#include "../Interfaces/IAsistenciaClaseVivo.h"
+#include "../../Interfaces/IAsistenciaClaseVivo.h"
 
 class CAsistenciaClaseVivo : public IAsistenciaClaseVivo
 {
