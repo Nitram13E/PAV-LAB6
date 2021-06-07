@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jun  4 15:18:28 2021
+# Make data base, printed on Mon Jun  7 13:07:16 2021
 
 # Variables
 
@@ -55,7 +55,7 @@ XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-2905160f-adc8-42ca-8c27-f5de8e4ba3a8.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-a07a9d06-11d1-483a-8466-a5c213db2695.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -63,7 +63,7 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = 192.168.208.1:0.0
+DISPLAY = 172.19.32.1:0.0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -71,7 +71,7 @@ PWD = /mnt/c/PAV/PAV-LAB6
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/11_interop
+WSL_INTEROP = /run/WSL/57_interop
 # environment
 PULSE_SERVER = /mnt/wslg/PulseServer
 # environment
@@ -190,7 +190,7 @@ src/DataTypes/DtInfoClase.o: src/DataTypes/DtInfoClase.cpp
 # Not a target:
 src/Controller/CAltaAsignatura.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-04 00:32:10.3602585
+#  Last modified 2021-06-04 19:11:25.0437642
 #  File has been updated.
 #  Successfully updated.
 
@@ -264,6 +264,7 @@ src/DataTypes/DtAsignatura.o: src/DataTypes/DtAsignatura.cpp
 #  File does not exist.
 #  File has been updated.
 #  Successfully updated.
+ 
 
 # Not a target:
 src/Class/Clase.cpp:
@@ -306,7 +307,6 @@ Makefile:
 #  File has been updated.
 #  Successfully updated.
 
- 
 # Not a target:
 src/Class/Docente.cpp:
 #  Implicit rule search has been done.
@@ -520,7 +520,7 @@ src/Class/Docente.o: src/Class/Docente.cpp
 # Not a target:
 src/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-03 19:30:46.9482361
+#  Last modified 2021-06-04 16:06:31.0829312
 #  File has been updated.
 #  Successfully updated.
 
@@ -545,6 +545,7 @@ src/DataTypes/DtInfoTeorico.cpp:
 #  File has been updated.
 #  Successfully updated.
 
+ 
 src/Handlers/ManejadorAsignatura.o: src/Handlers/ManejadorAsignatura.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Handlers/ManejadorAsignatura'
@@ -586,7 +587,6 @@ src/Class/Monitoreo.cpp:
 #  Last modified 2021-06-03 19:30:46.7265178
 #  File has been updated.
 #  Successfully updated.
- 
 
 src/Class/AsisteVivo.o: src/Class/AsisteVivo.cpp
 #  Implicit rule search has been done.
@@ -665,6 +665,6 @@ src/DataTypes/DtTimeStamp.cpp:
 # strcache performance: lookups = 175 / hit rate = 38%
 # hash-table stats:
 # Load=107/8192=1%, Rehash=0, Collisions=10/175=6%
-# Finished Make data base on Fri Jun  4 15:18:28 2021
+# Finished Make data base on Mon Jun  7 13:07:16 2021
 
  
