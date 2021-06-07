@@ -3,6 +3,7 @@
 
 #include "../../DataTypes/header/DtInfoClase.h"
 #include "CIniciarSesion.h"
+#include "../../Handlers/header/ManejadorAsignatura.h"
 
 #include <list>
 

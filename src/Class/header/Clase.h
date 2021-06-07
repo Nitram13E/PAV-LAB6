@@ -10,6 +10,7 @@ class AsisteDiferido;
 #include "AsisteDiferido.h"
 #include "Docente.h"
 #include "Participacion.h"
+#include "../../DataTypes/header/DtInfoClase.h"
 
 #include <list>
 #include <iterator>
@@ -64,6 +65,8 @@ class Clase
 
         void addAsisteDiferido(AsisteDiferido*);
         std::list<AsisteDiferido*> getAsisteDiferido();
+
+        virtual DtInfoClase getDtInfoClase() = 0;
 };
 
 #endif
