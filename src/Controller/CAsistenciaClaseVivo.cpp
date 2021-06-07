@@ -1,5 +1,3 @@
-/*Tendria que ingresar como Estudiante para acceder al Controlador
-*/
 #include "header/CAsistenciaClaseVivo.h"
 #include "../Handlers/header/ManejadorPerfil.h"
 #include "../Handlers/header/ManejadorClase.h"
