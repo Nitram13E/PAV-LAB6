@@ -6,7 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
+<<<<<<< HEAD
 # Make data base, printed on Mon Jun  7 18:41:06 2021
+=======
+# Make data base, printed on Sun Jun  6 00:09:16 2021
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 
 # Variables
 
@@ -15,147 +19,253 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up
+PAPERSIZE = a4
+# environment
+DESKTOP_SESSION = cinnamon
 # default
 .SHELLFLAGS := -c
 # environment
-VSCODE_AGENT_FOLDER = /home/nitram/.vscode-server
+XDG_SESSION_CLASS = user
+# environment
+XDG_SESSION_TYPE = x11
 # environment
 VSCODE_LOG_NATIVE = false
+# environment
+GTK3_MODULES = xapp-gtk3-module
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
-# automatic
-@F = $(notdir $@)
-# makefile
-CURDIR := /mnt/c/PAV/PAV-LAB6
 # environment
-GDK_SCALE = 2
+XAUTHORITY = /home/nitram13/.Xauthority
+# environment
+GDMSESSION = cinnamon
+# default
+MAKE_VERSION := 4.2.1
+# makefile
+CURDIR := /home/nitram13/PAV-LAB6
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
+GDM_LANG = es_MX
 # environment
-_ = /home/nitram/.vscode-server/bin/054a9295330880ed74ceaedda236253b4f39a335/node
+VTE_VERSION = 6003
+# environment
+VSCODE_NLS_CONFIG = {"locale":"es-419","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/code
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-cinnamon:/etc/xdg
+# environment
+GTK_OVERLAY_SCROLLING = 1
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_NODE_CACHED_DATA_DIR = /home/nitram13/.config/Code/CachedData/054a9295330880ed74ceaedda236253b4f39a335
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
+MAKELEVEL := 0
+# environment
+XDG_DATA_DIRS = /usr/share/cinnamon:/usr/share/gnome:/home/nitram13/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_CWD = /mnt/c/Users/marti/AppData/Local/Programs/Microsoft VS Code
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+LC_NAME = es_MX.UTF-8
+# environment
+VSCODE_CWD = /home/nitram13
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/nitram/.vscode-server/bin/054a9295330880ed74ceaedda236253b4f39a335/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/marti/Anaconda3:/mnt/c/Users/marti/Anaconda3/Library/mingw-w64/bin:/mnt/c/Users/marti/Anaconda3/Library/usr/bin:/mnt/c/Users/marti/Anaconda3/Library/bin:/mnt/c/Users/marti/Anaconda3/Scripts:/mnt/c/Users/marti/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/marti/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/marti/AppData/Local/GitHubDesktop/bin:/mnt/c/Program Files/JetBrains/PyCharm 2020.2/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/marti/Anaconda3:/mnt/c/Users/marti/Anaconda3/Library/mingw-w64/bin:/mnt/c/Users/marti/Anaconda3/Library/usr/bin:/mnt/c/Users/marti/Anaconda3/Library/bin:/mnt/c/Users/marti/Anaconda3/Scripts:/mnt/c/Users/marti/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/marti/AppData/Local/GitHubDesktop/bin:/mnt/c/Program Files/JetBrains/PyCharm 2020.2/bin:/mnt/c/platform-tools:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2020.2.3/bin:/mnt/c/Users/marti/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/marti/AppData/Local/Programs/Microsoft VS Code/bin
+PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # environment
-XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+SESSION_MANAGER = local/nitram13-Lulu:@/tmp/.ICE-unix/1303,unix/nitram13-Lulu:/tmp/.ICE-unix/1303
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
 # environment
 VSCODE_LOG_STACK = false
 # environment
+<<<<<<< HEAD
 VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-0a3668a4-5d5a-4279-b6a5-d7d5a4740ceb.sock
+=======
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=155f51b4-9d00-4e88-bc91-daff4c16be97&iid=155f51b4-9d00-4e88-bc91-daff4c16be97&sid=155f51b4-9d00-4e88-bc91-daff4c16be97","uploadToServer":true}
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/nitram13
+# environment
 LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# environment
+INSIDE_NEMO_PYTHON = 
+# environment
+XDG_SESSION_DESKTOP = cinnamon
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # automatic
 %F = $(notdir $%)
 # environment
+<<<<<<< HEAD
 DISPLAY = 172.18.128.1:0.0
+=======
+DISPLAY = :0
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /mnt/c/PAV/PAV-LAB6
+PWD = /home/nitram13/PAV-LAB6
+# environment
+QT_QPA_PLATFORMTHEME = qt5ct
 # default
 .LOADED := 
 # environment
+<<<<<<< HEAD
 WSL_INTEROP = /run/WSL/64_interop
+=======
+XDG_SEAT = seat0
 # environment
-PULSE_SERVER = /mnt/wslg/PulseServer
+SSH_AGENT_PID = 1372
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/server/remoteExtensionHostProcess
+ORIGINAL_XDG_CURRENT_DESKTOP = X-Cinnamon
 # environment
-HOME = /home/nitram
+GTK_MODULES = gail:atk-bridge
 # environment
-LOGNAME = nitram
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
+# environment
+HOME = /home/nitram13
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+VSCODE_CLI = 1
+# environment
+LOGNAME = nitram13
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
++F = $(notdir $+)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # makefile (from 'Makefile', line 3)
 obj = src/main.o src/Class/Asignatura.o src/Class/Clase.o src/Class/Docente.o src/Class/Estudiante.o src/Class/Participacion.o src/Class/Perfil.o src/Class/Rol.o src/Class/AsisteVivo.o src/Class/AsisteDiferido.o src/Class/Monitoreo.o src/Class/Practico.o src/Class/Teorico.o src/Class/Sesion.o src/Controller/CAsistenciaClaseVivo.o src/Controller/CAltaAsignatura.o src/Controller/CIniciarSesion.o src/Controller/CListadoClases.o src/Controller/CInscripcionAsignaturas.o src/Handlers/ManejadorAsignatura.o src/Handlers/ManejadorClase.o src/Handlers/ManejadorPerfil.o src/DataTypes/DtFecha.o src/DataTypes/DtLog.o src/DataTypes/DtAsistir.o src/DataTypes/DtPerfil.o src/DataTypes/DtTimeStamp.o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtAsignatura.o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtParticipacion.o 
 # environment
-MAKELEVEL := 0
+XDG_VTNR = 7
+# environment
+LC_TIME = es_MX.UTF-8
+# environment
+COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 0
-# default
-MAKE_VERSION := 4.2.1
+SHLVL = 1
 # environment
-USER = nitram
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-809bcace-f825-4899-8692-78f545197283.sock
+# environment
+XDG_SESSION_ID = c2
+# environment
+USER = nitram13
+# environment
+LC_MONETARY = es_MX.UTF-8
 # makefile
 .DEFAULT_GOAL := all
 # environment
-NAME = DESKTOP-T39194T
+XDG_CURRENT_DESKTOP = X-Cinnamon
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/marti/.vscode/extensions/ms-vscode-remote.remote-wsl-0.56.4
+LC_TELEPHONE = es_MX.UTF-8
 # default
 MAKE_COMMAND := make
 # default
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
+# environment
+LANGUAGE = es_MX
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-97a201e3-1.56.2-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
 MFLAGS = -pqrR
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
+# environment
+BREAKPAD_DUMP_LOCATION = /home/nitram13/.config/Code/exthost Crash Reports
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
-# automatic
-+F = $(notdir $+)
+# environment
+GDK_BACKEND = x11
+# environment
+LC_PAPER = es_MX.UTF-8
+# environment
+CINNAMON_VERSION = 4.8.6
+# environment
+LC_IDENTIFICATION = es_MX.UTF-8
+# environment
+QT_ACCESSIBILITY = 1
 # default
 MAKEFILES := 
+# environment
+LC_NUMERIC = es_MX.UTF-8
 # automatic
 <F = $(notdir $<)
 # environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+LC_MEASUREMENT = es_MX.UTF-8
+# environment
 LC_ALL = C
 # environment
-HOSTTYPE = x86_64
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/c9dcafdf_dd5e_434c_97a6_8b3d4ece1f9a
 # makefile (from 'Makefile', line 1)
 exec = exec 
 # automatic
 ^F = $(notdir $^)
+# environment
+GNOME_TERMINAL_SERVICE = :1.119
 # default
 SUFFIXES := 
 # environment
-WAYLAND_DISPLAY = wayland-0
+CHROME_DESKTOP = code-url-handler.desktop
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
-VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /home/nitram/.vscode-server/bin/054a9295330880ed74ceaedda236253b4f39a335/remote/node_modules
+GJS_DEBUG_OUTPUT = stderr
 # default
 .RECIPEPREFIX := 
+# environment
+LC_ADDRESS = es_MX.UTF-8
 # environment
 LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_EXTHOST_WILL_SEND_SOCKET = true
-# environment
-WSL_DISTRO_NAME = Debian
+VSCODE_PID = 7492
 # variable set hash-table stats:
-# Load=72/1024=7%, Rehash=0, Collisions=4/105=4%
+# Load=119/1024=12%, Rehash=0, Collisions=16/152=11%
 
 # Pattern-specific Variable Values
 
@@ -163,7 +273,11 @@ WSL_DISTRO_NAME = Debian
 
 # Directories
 
+<<<<<<< HEAD
 # . (device 64, inode 6192449488293441): 8 files, no impossibilities.
+=======
+# . (device 2050, inode 3680981): 9 files, no impossibilities.
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 
 # 8 files, no impossibilities in 1 directories.
 
@@ -183,10 +297,15 @@ src/DataTypes/DtAsistir.o: src/DataTypes/DtAsistir.cpp
 # Not a target:
 src/Class/Estudiante.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:02:41.6752205
+=======
+#  Last modified 2021-06-06 00:08:24.078277221
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
+ 
 src/DataTypes/DtInfoClase.o: src/DataTypes/DtInfoClase.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtInfoClase'
@@ -197,7 +316,11 @@ src/DataTypes/DtInfoClase.o: src/DataTypes/DtInfoClase.cpp
 # Not a target:
 src/Controller/CAltaAsignatura.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:28:51.6874171
+=======
+#  Last modified 2021-06-06 00:08:24.110278801
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
@@ -240,7 +363,7 @@ src/DataTypes/DtParticipacion.o: src/DataTypes/DtParticipacion.cpp
 # Not a target:
 src/DataTypes/DtInstanciaClase.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-01 20:29:34.8453591
+#  Last modified 2021-06-06 00:08:24.110278801
 #  File has been updated.
 #  Successfully updated.
 
@@ -254,7 +377,11 @@ src/DataTypes/DtIniciarClase.o: src/DataTypes/DtIniciarClase.cpp
 # Not a target:
 src/Handlers/ManejadorPerfil.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:02:42.029224
+=======
+#  Last modified 2021-06-06 00:08:24.110278801
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
@@ -275,22 +402,30 @@ src/DataTypes/DtAsignatura.o: src/DataTypes/DtAsignatura.cpp
 # Not a target:
 src/Class/Clase.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
  
 #  Last modified 2021-06-07 14:02:41.6672217
+=======
+#  Last modified 2021-06-06 00:08:24.078277221
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/DataTypes/DtIniciarClaseFull.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:02:41.8872203
+=======
+#  Last modified 2021-06-06 00:08:24.110278801
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/DataTypes/DtLog.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-05-31 16:15:36.4133949
+#  Last modified 2021-06-06 00:08:24.110278801
 #  File has been updated.
 #  Successfully updated.
 
@@ -324,14 +459,22 @@ src/Controller/CListadoClases.cpp:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:02:41.6452217
+=======
+#  Last modified 2021-06-06 00:08:24.058276234
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Class/Docente.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 13:10:42.177293
+=======
+#  Last modified 2021-06-06 00:08:24.078277221
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
@@ -359,7 +502,11 @@ src/Controller/CIniciarSesion.o: src/Controller/CIniciarSesion.cpp
 # Not a target:
 src/Class/Perfil.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:02:41.6905246
+=======
+#  Last modified 2021-06-06 00:08:24.078277221
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
@@ -408,35 +555,51 @@ src/DataTypes/DtTimeStamp.o: src/DataTypes/DtTimeStamp.cpp
 # Not a target:
 src/Handlers/ManejadorAsignatura.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:02:42.0122199
+=======
+#  Last modified 2021-06-06 00:08:24.110278801
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Class/Rol.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 13:10:42.1872934
+=======
+#  Last modified 2021-06-06 00:08:24.078277221
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Class/AsisteVivo.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:02:41.6592196
+=======
+#  Last modified 2021-06-06 00:08:24.078277221
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/DataTypes/DtPerfil.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-05-31 16:15:36.4214288
+#  Last modified 2021-06-06 00:08:24.110278801
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Handlers/ManejadorClase.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:02:42.0202205
+=======
+#  Last modified 2021-06-06 00:08:24.110278801
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
@@ -457,21 +620,29 @@ src/Class/Sesion.cpp:
 # Not a target:
 src/Class/Asignatura.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:26:26.710495
+=======
+#  Last modified 2021-06-06 00:08:24.078277221
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Class/Participacion.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:02:41.6832218
+=======
+#  Last modified 2021-06-06 00:08:24.078277221
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/DataTypes/DtFecha.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-01 20:29:37.1724184
+#  Last modified 2021-06-06 00:08:24.110278801
 #  File has been updated.
 #  Successfully updated.
 
@@ -493,6 +664,7 @@ src/Handlers/ManejadorPerfil.o: src/Handlers/ManejadorPerfil.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Handlers/ManejadorPerfil'
 #  File does not exist.
+ 
 #  File has been updated.
 #  Successfully updated.
 
@@ -526,7 +698,11 @@ src/DataTypes/DtIniciarClaseFull.o: src/DataTypes/DtIniciarClaseFull.cpp
 # Not a target:
 src/DataTypes/DtInfoClase.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:02:41.85522
+=======
+#  Last modified 2021-06-06 00:08:24.110278801
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
@@ -540,7 +716,11 @@ src/DataTypes/DtLog.o: src/DataTypes/DtLog.cpp
 # Not a target:
 src/DataTypes/DtParticipacion.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:02:41.9032203
+=======
+#  Last modified 2021-06-06 00:08:24.110278801
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
@@ -555,6 +735,7 @@ clean:
 # Not a target:
 src/DataTypes/DtIniciarClase.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:02:41.8792234
 #  File has been updated.
 #  Successfully updated.
@@ -563,6 +744,9 @@ src/Controller/CListadoClases.o: src/Controller/CListadoClases.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Controller/CListadoClases'
 #  File does not exist.
+=======
+#  Last modified 2021-06-06 00:08:24.110278801
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
@@ -576,15 +760,23 @@ src/Class/Docente.o: src/Class/Docente.cpp
 # Not a target:
 src/main.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:48:01.7393911
+=======
+#  Last modified 2021-06-06 00:08:24.110278801
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/DataTypes/DtAsignatura.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
  
 #  Last modified 2021-06-07 14:22:02.8364435
+=======
+#  Last modified 2021-06-06 00:08:24.110278801
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
@@ -605,7 +797,11 @@ src/Controller/CAsistenciaClaseVivo.cpp:
 # Not a target:
 src/DataTypes/DtInfoTeorico.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:02:41.8702196
+=======
+#  Last modified 2021-06-06 00:08:24.110278801
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
@@ -619,14 +815,18 @@ src/Handlers/ManejadorAsignatura.o: src/Handlers/ManejadorAsignatura.cpp
 # Not a target:
 src/DataTypes/DtInfoMonitoreo.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:02:41.8632213
+=======
+#  Last modified 2021-06-06 00:08:24.110278801
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Class/Teorico.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-02 17:32:21.6033237
+#  Last modified 2021-06-06 00:08:24.078277221
 #  File has been updated.
 #  Successfully updated.
 
@@ -647,14 +847,18 @@ src/Controller/CIniciarSesion.cpp:
 # Not a target:
 src/DataTypes/DtIniciarMonitoreo.cpp:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2021-06-07 14:02:41.8952201
+=======
+#  Last modified 2021-06-06 00:08:24.110278801
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Class/Monitoreo.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-03 19:30:46.7265178
+#  Last modified 2021-06-06 00:08:24.078277221
 #  File has been updated.
 #  Successfully updated.
 
@@ -710,14 +914,14 @@ src/Controller/CInscripcionAsignaturas.cpp:
 # Not a target:
 src/Class/AsisteDiferido.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-02 17:32:21.5252338
+#  Last modified 2021-06-06 00:08:24.078277221
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Class/Practico.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-02 17:32:21.5933524
+#  Last modified 2021-06-06 00:08:24.078277221
 #  File has been updated.
 #  Successfully updated.
 
@@ -731,7 +935,7 @@ src/DataTypes/DtFecha.o: src/DataTypes/DtFecha.cpp
 # Not a target:
 src/DataTypes/DtTimeStamp.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-05-31 16:15:36.4374307
+#  Last modified 2021-06-06 00:08:24.110278801
 #  File has been updated.
 #  Successfully updated.
 
@@ -748,7 +952,12 @@ src/DataTypes/DtTimeStamp.cpp:
 
 # strcache performance: lookups = 204 / hit rate = 39%
 # hash-table stats:
+<<<<<<< HEAD
 # Load=124/8192=2%, Rehash=0, Collisions=11/204=5%
 # Finished Make data base on Mon Jun  7 18:41:06 2021
+=======
+# Load=107/8192=1%, Rehash=0, Collisions=10/175=6%
+# Finished Make data base on Sun Jun  6 00:09:16 2021
+>>>>>>> 0c25945fed7f6aab0127ff79d0e6618d842e5d1b
 
  
