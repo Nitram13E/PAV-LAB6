@@ -1,7 +1,8 @@
 #ifndef C_INSCRIPCIONASIGNATURAS
 #define C_INSCRIPCIONASIGNATURAS
 
-#include "../Interfaces/IInscripcionAsignaturas.h"
+#include "../../Interfaces/IInscripcionAsignaturas.h"
+#include "../../Class/header/Sesion.h"
 
 #include <iostream>
 #include <list>
@@ -16,11 +17,11 @@ class CInscripcionAsignaturas : public IInscripcionesAsignaturas
         CInscripcionAsignaturas();
         ~CInscripcionAsignaturas();
 
-        std::list<std::string> asignaturasNoInscriptos(std::string);
+        std::list<std::string> asignaturasNoInscriptos();
 
         void selectAsignatura(std::string);
 
-        void inscribir(std::string);
+        void inscribir();
 
         void cancelar();
 };

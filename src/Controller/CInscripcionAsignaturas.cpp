@@ -7,7 +7,7 @@ CInscripcionAsignaturas::CInscripcionAsignaturas(){}
 
 CInscripcionAsignaturas::~CInscripcionAsignaturas(){}
 
-std::list<std::string> CInscripcionAsignaturas::asignaturasNoInscriptos(std::string email)
+std::list<std::string> CInscripcionAsignaturas::asignaturasNoInscriptos()
 {
     ManejadorAsignatura * asignaturas = asignaturas -> getInstancia();
 
@@ -18,15 +18,12 @@ std::list<std::string> CInscripcionAsignaturas::asignaturasNoInscriptos(std::str
     std::map<std::string,Asignatura*> listaAsignaturas = asignaturas -> listarMapAsignatura();
 
     ManejadorPerfil *  usuarios = usuarios -> getInstancia();
+    Sesion * sesion = sesion -> getInstancia();
 
-    //Busco si existe un estudiante con ese mail
-    Perfil * usuario = usuarios -> buscarPerfil(email);
-    Estudiante * estudiante = dynamic_cast<Estudiante*>(usuario);
+    //Obtengo estudiante con asignaturas de sesion
+    Estudiante * estudiante = dynamic_cast<Estudiante*>(sesion -> getPerfil());
 
-    if(estudiante == NULL)
-    {
-        throw std::invalid_argument("Usuario no encontrado\n");
-    }
+    if(estudiante == NULL)  throw std::invalid_argument("Usuario no encontrado\n");
 
     //Traigo las asignaturas en las cuales el estudiante esta inscripto
     std::list<Asignatura*> asignaturasEstudiante = estudiante -> getAsignaturas();
@@ -42,10 +39,7 @@ std::list<std::string> CInscripcionAsignaturas::asignaturasNoInscriptos(std::str
     {
         iteradorAsig = listaAsignaturas.find((*iteradorAsigestudiante) -> getCodigo());
 
-        if(iteradorAsig != listaAsignaturas.end())
-        {
-            listaAsignaturas.erase(iteradorAsig);
-        }
+        if(iteradorAsig != listaAsignaturas.end())  listaAsignaturas.erase(iteradorAsig);
     }
 
     //Copiar lo que quedo del mapa a una lista de strings
@@ -63,20 +57,19 @@ void CInscripcionAsignaturas::selectAsignatura(std::string asignatura)
     this -> codigo = asignatura;
 }
 
-void CInscripcionAsignaturas::inscribir(std::string email)
+void CInscripcionAsignaturas::inscribir()
 {
     ManejadorAsignatura * asignaturas = asignaturas -> getInstancia();
+    Sesion * sesion = sesion -> getInstancia();
 
     Asignatura * asignaturaAIncribir = asignaturas -> buscarAsignatura(this -> codigo);
 
     //Busco si existe un estudiante con ese mail
     ManejadorPerfil *  usuarios = usuarios -> getInstancia();
 
-    Perfil * usuario = usuarios -> buscarPerfil(email);
+    Estudiante * estudiante = dynamic_cast<Estudiante*>(sesion -> getPerfil());
 
-    Estudiante * estudiante = dynamic_cast<Estudiante*>(usuario);
-
-    if(estudiante == NULL) return;
+    if(estudiante == NULL)  throw std::invalid_argument("Usuario no encontrado\n");
 
     //Lo inscribo a esa asignatura
     estudiante -> addAsignaturas(asignaturaAIncribir);
