@@ -3,9 +3,9 @@
 Progreso:
 
 - [ ] ➢ Alta de usuario - Lucas
-- [x] ➢ Alta de asignatura - Martin
+- [X] ➢ Alta de asignatura - Martin
 - [ ] ➢ Asignación de docentes a una asignatura - Equipo
-- [ ] ➢ Inscripción a las asignaturas - Felipe
+- [X] ➢ Inscripción a las asignaturas - Felipe
 - [ ] ➢ Inicio de clase - Equipo
 - [ ] ➢ Asistencia a clase en vivo - Lucia
 - [ ] ➢ Envío de mensaje - Angel
