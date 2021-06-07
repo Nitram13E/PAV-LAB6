@@ -19,6 +19,7 @@ obj = src/main.o \
 	  src/Controller/CAltaAsignatura.o \
 	  src/Controller/CIniciarSesion.o \
 	  src/Controller/CListadoClases.o \
+	  src/Controller/CInscripcionAsignaturas.o \
 	  \
 	  src/Handlers/ManejadorAsignatura.o \
 	  src/Handlers/ManejadorClase.o \
@@ -45,5 +46,5 @@ all: $(obj)
 $(obj): %.o: %.cpp
 
 clean:
-	@ rm -f $(obj)
+	@ rm -f $(obj) $(exec)
 	@ echo "archivos de compilacion eliminados."

@@ -9,7 +9,8 @@
 
 CIniciarSesion::CIniciarSesion(){}
 
-void CIniciarSesion::ingresarEmail(std::string email){
+void CIniciarSesion::ingresarEmail(std::string email)
+{
     this->email = email;
 }
 
@@ -32,16 +33,23 @@ void CIniciarSesion::inciarSesion()
 
     Perfil* p = mp->buscarPerfil(this->email);
 
-    if(p != NULL){
+    if(p != NULL)
+    {
         Estudiante * e = dynamic_cast<Estudiante*>(p);
-        if(e != NULL){
+        if(e != NULL)
+        {
             session->setPerfil((p),ESTUDIANTE);
-        }else{
+        }
+        else
+        {
             Docente *d = dynamic_cast<Docente*>(p);
-            if(d != NULL){
-            session->setPerfil((p),DOCENTE);
+
+            if(d != NULL)
+            {
+                session->setPerfil((p),DOCENTE);
             }
         }
     }
 }
+
 CIniciarSesion::~CIniciarSesion(){}
