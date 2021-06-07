@@ -13,6 +13,8 @@ class CAsistenciaClaseVivo : public IAsistenciaClaseVivo
         int idClase;
         Estudiante* estudiante;
 
+        void setEstudiante();
+
     public:
         CAsistenciaClaseVivo();
         ~CAsistenciaClaseVivo();
@@ -27,7 +29,6 @@ class CAsistenciaClaseVivo : public IAsistenciaClaseVivo
 
         void cancelar();
 
-        void setEstudiante();
 
 };
 

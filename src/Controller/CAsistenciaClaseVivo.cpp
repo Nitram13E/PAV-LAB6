@@ -4,7 +4,7 @@
 #include "../Handlers/header/ManejadorPerfil.h"
 #include "../Handlers/header/ManejadorClase.h"
 #include "../Handlers/header/ManejadorAsignatura.h"
-#include "header/CIniciarSesion.h"
+#include "../Class/header/Sesion.h"
 
 #include<ctime> 
 
