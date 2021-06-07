@@ -17,6 +17,7 @@ class CListadoClases
 
         std::list<std::string> asignaturasAsignadas();
         std::list<DtInfoClase> selectAsignatura(std::string);
+        
 };
 
 #endif

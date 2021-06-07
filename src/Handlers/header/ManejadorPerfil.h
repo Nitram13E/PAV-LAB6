@@ -22,7 +22,6 @@ class ManejadorPerfil
         void addPerfil(Perfil*);
         bool existePerfil(std::string);
         void removePerfil(std::string);
-        std::map<std::string, Perfil*> getPerfiles();
         std::list<Perfil*> listarPerfiles();
 };
 
