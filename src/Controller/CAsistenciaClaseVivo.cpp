@@ -1,12 +1,10 @@
-/*Tendria que ingresar como Estudiante para acceder al Controlador
-*/
 #include "header/CAsistenciaClaseVivo.h"
 #include "../Handlers/header/ManejadorPerfil.h"
 #include "../Handlers/header/ManejadorClase.h"
 #include "../Handlers/header/ManejadorAsignatura.h"
 #include "../Class/header/Sesion.h"
 
-#include<ctime> 
+#include <ctime>
 
 CAsistenciaClaseVivo::CAsistenciaClaseVivo(){}
 CAsistenciaClaseVivo::~CAsistenciaClaseVivo(){}
@@ -58,7 +56,7 @@ void CAsistenciaClaseVivo::asistirClaseVivo()
     Clase* clase = mc -> buscarClase(this -> idClase);
 
     std::time_t tt;
-    time(&tt); //Se usa para encontrar la hora actual
+    time(&tt); // Se usa para encontrar la hora actual
     struct tm * time = localtime(&tt);
     DtFecha fecha = DtFecha(time -> tm_mday, time -> tm_mon, time -> tm_year);
     DtTimeStamp iTime = DtTimeStamp(fecha, time -> tm_hour, time -> tm_min, time ->tm_sec); 
@@ -66,12 +64,7 @@ void CAsistenciaClaseVivo::asistirClaseVivo()
     AsisteVivo* av = new AsisteVivo(iTime, NULL);
     av -> setEstudiante(this -> estudiante);
 
-    clase -> addAsisteEnVivo(av);  
-}
-
-void CAsistenciaClaseVivo::cancelar()
-{
-    delete this -> estudiante;
+    clase -> addAsisteEnVivo(av);
 }
 
 void CAsistenciaClaseVivo::setEstudiante()
@@ -81,9 +74,15 @@ void CAsistenciaClaseVivo::setEstudiante()
     if(session -> getTipoPerfil() == ESTUDIANTE)
     {
         Estudiante* est = dynamic_cast<Estudiante*>(session -> getPerfil());
+        
         if(est != NULL)
         {
             this -> estudiante = est;
         }
     }
+}
+
+void CAsistenciaClaseVivo::cancelar()
+{
+    delete this -> estudiante;
 }

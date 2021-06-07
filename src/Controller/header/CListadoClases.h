@@ -5,7 +5,6 @@
 #include "CIniciarSesion.h"
 #include "../../Handlers/header/ManejadorAsignatura.h"
 
-
 #include <list>
 
 class CListadoClases
