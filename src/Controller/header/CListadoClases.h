@@ -4,7 +4,6 @@
 #include "../../DataTypes/header/DtInfoClase.h"
 #include "CIniciarSesion.h"
 
-
 #include <list>
 
 class CListadoClases

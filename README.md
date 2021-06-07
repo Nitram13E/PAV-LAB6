@@ -14,7 +14,5 @@ Progreso:
 
 ### DUDAS:
 
-- Preguntar si DtInstanciaClase tipoClases en Asignatura
 - Faltan los cpp e interfaces de los controladores(controllers)
 - Falta singleton y fabrica(Factory)
-- Preguntar sobre virtual en destructores(destroyers)

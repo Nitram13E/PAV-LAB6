@@ -9,7 +9,7 @@ DtAsignatura::DtAsignatura(std::string codigo, std::string nombre, DtInstanciaCl
     this -> tipoClases = tipo;
 }
 
-DtAsignatura::~DtAsignatura(){} 
+DtAsignatura::~DtAsignatura(){}
 
 std::string DtAsignatura::getCodigo()
 {
