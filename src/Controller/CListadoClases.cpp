@@ -1,4 +1,7 @@
 #include "header/CListadoClases.h"
+#include "../Class/header/Sesion.h"
+#include "../Handlers/header/ManejadorAsignatura.h"
+
 CListadoClases::CListadoClases(){}
 CListadoClases::~CListadoClases(){}
 
@@ -43,6 +46,4 @@ std::list<DtInfoClase> CListadoClases::selectAsignatura(std::string codigoAsigna
     list = a->getDtInfoClase();
 
     return list;
-
 }
-
