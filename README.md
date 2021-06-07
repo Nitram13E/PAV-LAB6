@@ -3,7 +3,7 @@
 Progreso:
 
 - [ ] ➢ Alta de usuario - Lucas
-- [ ] ➢ Alta de asignatura - Martin
+- [x] ➢ Alta de asignatura - Martin
 - [ ] ➢ Asignación de docentes a una asignatura - Equipo
 - [ ] ➢ Inscripción a las asignaturas - Felipe
 - [ ] ➢ Inicio de clase - Equipo
@@ -14,6 +14,7 @@ Progreso:
 
 ### DUDAS:
 
+- Preguntar si DtInstanciaClase tipoClases en Asignatura
 - Faltan los cpp e interfaces de los controladores(controllers)
 - Falta singleton y fabrica(Factory)
 - Preguntar sobre virtual en destructores(destroyers)

@@ -1,7 +1,9 @@
 #ifndef C_LISTADOCLASES
 #define C_LISTADOCLASES
 
-#include "../DataTypes/header/DtInfoClase.h"
+#include "../../DataTypes/header/DtInfoClase.h"
+#include "CIniciarSesion.h"
+
 
 #include <list>
 

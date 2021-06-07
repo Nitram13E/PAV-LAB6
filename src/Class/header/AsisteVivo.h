@@ -3,6 +3,8 @@
 
 class Estudiante;
 
+class Estudiante;
+
 #include "../../DataTypes/header/DtTimeStamp.h"
 #include "Estudiante.h"
 

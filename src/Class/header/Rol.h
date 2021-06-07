@@ -22,6 +22,7 @@ class Rol
 
         void setAsignatura(Asignatura*);
         Asignatura* getAsignatura();
+        std::string getCodigoAsignatura();
 };
 
 #endif
