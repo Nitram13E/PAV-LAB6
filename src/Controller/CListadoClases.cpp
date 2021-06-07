@@ -9,7 +9,7 @@ std::list<std::string> CListadoClases::asignaturasAsignadas(){
         try{
             Docente * d = dynamic_cast<Docente*>(p);
             if(d != NULL){
-                std::list<std::string> lista = d->asignaturas();
+                std::list<std::string> lista = d->listarAsignaturas();
                 return lista;
             }else{
                 throw std::invalid_argument("No se pudo listar las asignaturas asignadas");

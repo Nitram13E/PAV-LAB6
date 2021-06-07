@@ -4,6 +4,8 @@
 #include "../Handlers/header/ManejadorPerfil.h"
 #include "../Handlers/header/ManejadorClase.h"
 #include "../Handlers/header/ManejadorAsignatura.h"
+#include "header/CIniciarSesion.h"
+
 #include<ctime> 
 
 CAsistenciaClaseVivo::CAsistenciaClaseVivo(){}
@@ -72,16 +74,16 @@ void CAsistenciaClaseVivo::cancelar()
     delete this -> estudiante;
 }
 
-bool CAsistenciaClaseVivo::esEstudiante(std::string mail)
+void CAsistenciaClaseVivo::setEstudiante()
 {
-    ManejadorPerfil* mp = ManejadorPerfil::getInstancia();
-    Perfil* perf = mp -> buscarPerfil(mail);
-
-    Estudiante* est = dynamic_cast<Estudiante *>(perf);
-    if(est != NULL){
-        this -> estudiante = est;
-        return true;
-    } else {
-        return false;
+    Sesion* session = Sesion::getInstancia();
+    
+    if(session -> getTipoPerfil() == ESTUDIANTE)
+    {
+        Estudiante* est = dynamic_cast<Estudiante*>(session -> getPerfil());
+        if(est != NULL)
+        {
+            this -> estudiante = est;
+        }
     }
 }

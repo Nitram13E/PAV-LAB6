@@ -9,7 +9,10 @@
 
 CIniciarSesion::CIniciarSesion(){}
 
-void CIniciarSesion::ingresarEmail(std::string email){
+CIniciarSesion::~CIniciarSesion(){}
+
+void CIniciarSesion::ingresarEmail(std::string email)
+{
     this->email = email;
 }
 
@@ -44,4 +47,4 @@ void CIniciarSesion::inciarSesion()
         }
     }
 }
-CIniciarSesion::~CIniciarSesion(){}
+
