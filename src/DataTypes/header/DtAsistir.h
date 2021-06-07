@@ -17,6 +17,7 @@ class DtAsistir
         std::string getCodigo();
         int getId();
 
+        friend std::ostream& operator <<(std::ostream&, DtAsistir);
 };
 
 #endif

@@ -16,6 +16,9 @@ ManejadorAsignatura* ManejadorAsignatura::getInstancia()
 Asignatura* ManejadorAsignatura::buscarAsignatura(std::string codigo)
 {
     std::map<std::string,Asignatura*>::iterator iterador = this -> asignaturas.find(codigo);
+
+    if(iterador == this->asignaturas.end()) return NULL;
+
     return iterador -> second;
 }
 
@@ -46,9 +49,4 @@ std::list<Asignatura*> ManejadorAsignatura::listarAsignatura()
     }
 
     return lista;
-}
-
-std::map<std::string, Asignatura*> ManejadorAsignatura::listarMapAsignatura()
-{
-    return this -> asignaturas;
 }

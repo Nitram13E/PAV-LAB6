@@ -16,6 +16,9 @@ ManejadorClase* ManejadorClase::getInstancia()
 Clase* ManejadorClase::buscarClase(int id)
 {
     std::map<int, Clase*>::iterator it = this -> clases.find(id);
+
+    if(it == this->clases.end()) return NULL;
+
     return it -> second;
 }
 
