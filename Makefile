@@ -16,8 +16,10 @@ obj = src/main.o \
 	  src/Class/Teorico.o \
 	  src/Class/Sesion.o \
 	  \
-	  src/Controller/CEnvioMensaje.o \
+	  src/Controller/CAltaAsignatura.o \
 	  src/Controller/CIniciarSesion.o \
+	  src/Controller/CListadoClases.o \
+	  src/Controller/CEnvioMensaje.o \
 	  \
 	  src/Handlers/ManejadorAsignatura.o \
 	  src/Handlers/ManejadorClase.o \

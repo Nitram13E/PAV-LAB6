@@ -17,6 +17,9 @@ ManejadorPerfil* ManejadorPerfil::getInstancia()
 Perfil* ManejadorPerfil::buscarPerfil(std::string email)
 {
     std::map<std::string,Perfil*>::iterator it = this -> perfiles.find(email);
+    
+    if(it != this->perfiles.end()) return NULL;
+    
     return it -> second;
 }
 
@@ -48,4 +51,8 @@ std::list<Perfil*> ManejadorPerfil::listarPerfiles()
     }
 
     return lista;
+}
+std::map<std::string, Perfil*> ManejadorPerfil::getPerfiles()
+{
+    return this->perfiles;
 }

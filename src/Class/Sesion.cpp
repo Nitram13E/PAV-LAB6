@@ -13,4 +13,8 @@ void Sesion::setPerfil(Perfil* perfil,tipoPerfil tp){
 }
 Perfil* Sesion::getPerfil(){return this->p;}
 tipoPerfil Sesion::getTipoPerfil(){return this->tipoDePerfil;}
+<<<<<<< HEAD
 Sesion::~Sesion(){}
+=======
+Sesion::~Sesion(){}
+>>>>>>> e599c3b0f9ea9de4626693d4117509ee8ec5b6db
