@@ -39,7 +39,7 @@ obj = src/main.o \
 	  src/DataTypes/DtIniciarClase.o \
 	  src/DataTypes/DtIniciarClaseFull.o \
 	  src/DataTypes/DtIniciarMonitoreo.o \
-	  src/DataTypes/DtParticipacion.o 
+	  src/DataTypes/DtParticipacion.o
 	  
 all: $(obj)
 	g++ $(obj) -o $(exec)

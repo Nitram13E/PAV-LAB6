@@ -80,15 +80,3 @@ void CInscripcionAsignaturas::cancelar()
 {
     //FIXME:delete this -> codigo;
 }
-
-
-
-
-
-
-
-
-
-
-
-

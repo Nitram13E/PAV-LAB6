@@ -14,5 +14,6 @@ Progreso:
 
 ### DUDAS:
 
+- Preguntar sobre deletes en cancelar()
 - Faltan los cpp e interfaces de los controladores(controllers)
 - Falta singleton y fabrica(Factory)
