@@ -39,3 +39,16 @@ std::list<Clase*> Asignatura::getClases()
 {
     return this -> clases;
 }
+std::list<DtInfoClase> Asignatura::getDtInfoClase()
+{
+    std::list<DtInfoClase> lista;
+
+    std::list<Clase*>::iterator it ;
+
+    for(it = this->clases.begin(); it != this->clases.end();++it)
+    {
+        DtInfoClase infoClase = (*it)->getDtInfoClase();
+        lista.push_back(infoClase);
+    }
+    return lista;
+}

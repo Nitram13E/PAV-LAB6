@@ -5,6 +5,8 @@ class Clase;
 
 #include "Clase.h"
 #include <list>
+#include "../../DataTypes/header/DtInfoClase.h"
+#include "../../Handlers/header/ManejadorClase.h"
 
 class Asignatura
 {
@@ -12,7 +14,6 @@ class Asignatura
         std::string codigo;
         std::string nombre;
         std::list<Clase*> clases;
-    
     public:
         Asignatura();
         Asignatura(std::string, std::string);
@@ -26,6 +27,8 @@ class Asignatura
 
         void addClases(Clase*);
         std::list<Clase*> getClases();
+
+        std::list<DtInfoClase> getDtInfoClase();
 
 };
 
