@@ -2,7 +2,7 @@
 
 AsisteVivo::AsisteVivo(){}
 
-AsisteVivo::AsisteVivo(DtTimeStamp inicio, DtTimeStamp fin)
+AsisteVivo::AsisteVivo(DtTimeStamp inicio, DtTimeStamp* fin)
 {
     this -> inicio = inicio;
     this -> fin = fin;
@@ -19,11 +19,11 @@ DtTimeStamp AsisteVivo::getInicio()
     return this -> inicio;
 } 
 
-void AsisteVivo::setFin(DtTimeStamp fin)
+void AsisteVivo::setFin(DtTimeStamp* fin)
 {
     this -> fin = fin;
 }
-DtTimeStamp AsisteVivo::getFin()
+DtTimeStamp* AsisteVivo::getFin()
 {
     return this -> fin;
 } 

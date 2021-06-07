@@ -43,7 +43,7 @@ std::list<DtInfoClase> Asignatura::getDtInfoClase()
 {
     std::list<DtInfoClase> lista;
 
-    std::list<Clase*>::iterator it ;
+    std::list<Clase*>::iterator it ; 
 
     for(it = this->clases.begin(); it != this->clases.end();++it)
     {
