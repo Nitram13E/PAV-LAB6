@@ -1,13 +1,15 @@
 #ifndef CINICIARSESION_H
 #define CINICIARSESION_H
 
+#include "../../Interfaces/IiniciarSesion.h"
+
 #include "../../Class/header/Sesion.h"
 #include "../../Handlers/header/ManejadorPerfil.h"
 #include "../../Class/header/Estudiante.h"
 #include "../../Class/header/Docente.h"
-#include "../../DataTypes/header/tipoPerfil.h"
 
-class CIniciarSesion{
+class CIniciarSesion : public IiniciarSesion
+{
     private:
         std::string email;
 

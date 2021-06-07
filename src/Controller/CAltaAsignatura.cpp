@@ -14,7 +14,7 @@ DtAsignatura* CAltaAsignatura::ingresar(DtAsignatura* datosAsignatura)
 
 void CAltaAsignatura::altaAsignatura()
 {
-    Asignatura* newAsignatura = new Asignatura(this -> datosAsignatura -> getCodigo(), this -> datosAsignatura -> getNombre());
+    Asignatura* newAsignatura = new Asignatura(this -> datosAsignatura -> getCodigo(), this -> datosAsignatura -> getNombre(), this -> datosAsignatura -> getTipoClases());
 
     ManejadorAsignatura* handlerAsignatura = ManejadorAsignatura::getInstancia();
 
