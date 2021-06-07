@@ -28,3 +28,13 @@ std::list<Rol*> Docente::getRoles()
 {
     return this -> roles;
 }
+std::list<std::string> Docente::listarAsignaturas(){
+    std::list<Rol*>::iterator it;
+    std::list<std::string> list;
+    std::string cod;
+    for(it = roles.begin(); it != roles.end(); ++it){
+        cod = (*it)->getCodigoAsignatura();
+        list.push_back(cod);
+    }
+return list;
+}
