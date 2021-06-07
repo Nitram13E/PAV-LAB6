@@ -2,19 +2,31 @@
 CListadoClases::CListadoClases(){}
 CListadoClases::~CListadoClases(){}
 
-std::list<std::string> CListadoClases::asignaturasAsignadas(){
+std::list<std::string> CListadoClases::asignaturasAsignadas()
+{
     Sesion* session = Sesion::getInstancia();
+
     Perfil * p = session->getPerfil();
-    if(session->getTipoPerfil() == DOCENTE){
-        try{
+
+    if(session -> getTipoPerfil() == DOCENTE)
+    {
+        try
+        {
             Docente * d = dynamic_cast<Docente*>(p);
-            if(d != NULL){
-                std::list<std::string> lista = d->listarAsignaturas();
+
+            if(d != NULL)
+            {
+                std::list<std::string> lista = d -> listarAsignaturas();
                 return lista;
-            }else{
+            }
+            else
+            {
                 throw std::invalid_argument("No se pudo listar las asignaturas asignadas");
             }
-        }catch(std::invalid_argument& error){
+
+        }
+        catch(std::invalid_argument& error)
+        {
             std::cout << error.what() << std::endl;
         }
     }

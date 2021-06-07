@@ -1,13 +1,12 @@
 #include "header/Sesion.h"
-
 Sesion* Sesion::instancia = NULL;
 
 Sesion::Sesion(){}
-Sesion::~Sesion(){}
 
 Sesion* Sesion::getInstancia()
 {
-    if(instancia == NULL){
+    if(instancia == NULL)
+    {
         instancia = new Sesion();
     }
     return instancia;
@@ -15,16 +14,12 @@ Sesion* Sesion::getInstancia()
 
 void Sesion::setPerfil(Perfil* perfil,tipoPerfil tp)
 {
-    this->p = perfil;
-    this->tipoDePerfil = tp;
+    this -> p = perfil;
+    this -> tipoDePerfil = tp;
 }
 
-Perfil* Sesion::getPerfil()
-{
-    return this->p;
-}
+Perfil* Sesion::getPerfil() {return this->p;}
 
-tipoPerfil Sesion::getTipoPerfil()
-{
-    return this->tipoDePerfil;
-}
+tipoPerfil Sesion::getTipoPerfil()  {return this -> tipoDePerfil;}
+
+Sesion::~Sesion(){}
