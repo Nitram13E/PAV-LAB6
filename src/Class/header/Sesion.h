@@ -4,7 +4,8 @@
 #include "Perfil.h"
 #include "../../DataTypes/header/tipoPerfil.h"
 
-class Sesion{
+class Sesion
+{
     private: 
         static Sesion* instancia;
         Perfil* p;

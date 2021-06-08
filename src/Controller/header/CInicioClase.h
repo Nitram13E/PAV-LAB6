@@ -1,26 +1,27 @@
 #ifndef C_INICIOCLASE
 #define C_INICIOCLASE
 
-#include "../../DataTypes/header/DtIniciarClase.h"
-#include "../../DataTypes/header/DtPerfil.h"
+#include "../../Interfaces/IinicioClase.h"
 
 #include <list>
 
-class CInicioClase
+class CInicioClase : public IinicioClase
 {
     private:
         DtIniciarClase inicioClase;
-        std::list<std::string> habilitados;
+        std::string email;
         
     public:
         CInicioClase();
         ~CInicioClase();
 
-        void ingresarDatosPerfil(DtPerfil);
-        void ingresarEstudiante(std::string);
-        void ingresarDocente(std::string);
+        std::list<std::string> asignaturasAsignadas();
+        bool selectAsignatura(DtIniciarClase);
+        std::list<std::string> inscriptosAsignatura();
+        void habilitar(std::string);
+        DtIniciarClaseFull* datosIngresados();
 
-        void altaUsuario();
+        void iniciarClase();
         void cancelar();
 };
 
