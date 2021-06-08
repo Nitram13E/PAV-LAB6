@@ -13,7 +13,6 @@ class Sesion
         Sesion();
 
     public:
-
         static Sesion* getInstancia();
         void setPerfil(Perfil*,tipoPerfil);
         Perfil* getPerfil();

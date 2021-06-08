@@ -35,7 +35,7 @@ std::list<int> CAsistenciaClaseVivo::clasesOnlineDisponibles(std::string codigoA
 
     for(std::list<Clase *>::iterator it = clases.begin(); it != clases.end(); ++it)
     {
-        lista.push_back((*it)->getID());
+        lista.push_back((*it) -> getID());
     }
 
     return lista;
