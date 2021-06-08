@@ -7,7 +7,7 @@
 DtParticipacion * ctodtParticipacion(Participacion * par)
 {
       if (par == NULL) return NULL;
-
+      //acordarme de lo que me dijo el yona
       DtParticipacion * new_dtparticipacion = new DtParticipacion(par -> getId(),
                                                                   par -> getFecha(),
                                                                   par ->getMensaje(),

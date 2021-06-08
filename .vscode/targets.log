@@ -8,7 +8,7 @@ make: *** No rule to make target 'src/Controller/CAltaAsignatura.cpp', needed by
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jun  6 22:50:17 2021
+# Make data base, printed on Mon Jun  7 14:09:36 2021
 
 # Variables
 
@@ -19,15 +19,13 @@ LC_ALL = C
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2522fbe7-9a8b-47a9-9ab8-935a58ddadec.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f0fe2b27-5cad-432c-91cd-d33d8ad11058.sock
 # environment
 LC_NAME = es_UY.UTF-8
 # environment
 LC_NUMERIC = es_UY.UTF-8
 # environment
-VSCODE_CWD = /home/angel/Random/PAv/LAB6/PAV-LAB6
-# environment
-WINDOWID = 48234500
+VSCODE_CWD = /home/angel
 # environment
 WINDOWPATH = 2
 # environment
@@ -53,9 +51,9 @@ PWD = /home/angel/Random/PAv/LAB6/PAV-LAB6
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-XDG_DATA_DIRS = /usr/share/mate:/usr/share/mate:/usr/share/bspwm:/home/angel/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+XDG_DATA_DIRS = /usr/share/bspwm:/home/angel/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-OLDPWD = /home/angel/Random/PAv/LAB6/PAV-LAB6
+OLDPWD = /home/angel
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
@@ -83,11 +81,11 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+SSH_AUTH_SOCK = /tmp/ssh-vqM0EJKjnoD3/agent.2124
 # default
 .SHELLFLAGS := -c
 # environment
-XDG_CONFIG_DIRS = /etc/xdg/xdg-mate:/etc/xdg/xdg-bspwm:/etc/xdg
+XDG_CONFIG_DIRS = /etc/xdg/xdg-bspwm:/etc/xdg
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
@@ -103,25 +101,19 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 17394
+VSCODE_PID = 9198
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# environment
-SESSION_MANAGER = local/angelLab:@/tmp/.ICE-unix/13894,unix/angelLab:/tmp/.ICE-unix/13894
 # automatic
 *F = $(notdir $*)
-# environment
-QT_QPA_PLATFORMTHEME = gtk2
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
-# environment
-QT_SCALE_FACTOR = 1
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
@@ -135,7 +127,7 @@ MAKECMDGOALS := all
 # environment
 XMODIFIERS = @im=ibus
 # environment
-SHLVL = 2
+SHLVL = 0
 # environment
 MAKELEVEL := 0
 # default
@@ -153,15 +145,11 @@ LC_MONETARY = es_UY.UTF-8
 # environment
 SNAP_USER_COMMON = /home/angel/snap/code/common
 # environment
-MATE_DESKTOP_SESSION_ID = this-is-deprecated
-# environment
 LC_TIME = es_UY.UTF-8
 # environment
 SNAP = /snap/code/65
 # environment
 SNAP_REVISION = 65
-# environment
-COMPIZ_CONFIG_PROFILE = mate
 # environment
 SNAP_REAL_HOME = /home/angel
 # environment
@@ -178,18 +166,12 @@ exec = exec
 XDG_SEAT = seat0
 # environment
 GTK_IM_MODULE = ibus
-# environment
-XDG_CURRENT_DESKTOP = MATE
-# environment
-ALACRITTY_LOG = /tmp/Alacritty-16688.log
-# environment
-LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 # automatic
 +F = $(notdir $+)
 # environment
 DESKTOP_SESSION = bspwm
 # environment
-ORIGINAL_XDG_CURRENT_DESKTOP = MATE
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -203,11 +185,11 @@ XDG_VTNR = 2
 # makefile
 .DEFAULT_GOAL := all
 # environment
-DISPLAY = :0.0
+DISPLAY = :0
 # environment
 USER = angel
 # environment
-GTK_MODULES = gail:atk-bridge:appmenu-gtk-module:appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module:appmenu-gtk-module
+GTK_MODULES = gail:atk-bridge:appmenu-gtk-module
 # default
 MAKE_VERSION := 4.3
 # environment
@@ -219,7 +201,7 @@ SNAP_CONTEXT = MV_liglf61YdTwJkSPpGWibOua0kDbQ3xdotJkAKK7ZgBbNOLJpX
 # environment
 LC_MEASUREMENT = es_UY.UTF-8
 # environment
-SSH_AGENT_PID = 13994
+SSH_AGENT_PID = 2367
 # environment
 VSCODE_NODE_CACHED_DATA_DIR = /home/angel/.config/Code/CachedData/054a9295330880ed74ceaedda236253b4f39a335
 # environment
@@ -229,11 +211,7 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-COLORTERM = truecolor
-# environment
 GDK_PIXBUF_MODULE_FILE = /home/angel/snap/code/common/.cache/gdk-pixbuf-loaders.cache
-# environment
-GTK_OVERLAY_SCROLLING = 0
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -247,13 +225,11 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-f80804e1-1.56.2-main.sock
 # environment
-TERM = xterm-256color
-# environment
 SNAP_NAME = code
 # environment
 GSETTINGS_SCHEMA_DIR = /snap/code/65/usr/share/glib-2.0/schemas
 # environment
-XDG_SESSION_ID = 15
+XDG_SESSION_ID = 2
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -262,8 +238,6 @@ XDG_SESSION_ID = 15
 SNAP_VERSION = 054a9295
 # default
 SUFFIXES := 
-# environment
-QT_AUTO_SCREEN_SCALE_FACTOR = 0
 # environment
 VSCODE_CLI = 1
 # environment
@@ -276,7 +250,6 @@ SNAP_COMMON = /var/snap/code/common
 QT4_IM_MODULE = ibus
 # environment
 SNAP_USER_DATA = /home/angel/snap/code/65
- 
 # environment
 GDMSESSION = bspwm
 # environment
@@ -286,15 +259,10 @@ obj = src/main.o src/Class/Asignatura.o src/Class/Clase.o src/Class/Docente.o sr
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
- 
-# Load=136/1024=13%, Rehash=0, Collisions=9/168=5%
- 
+# Load=123/1024=12%, Rehash=0, Collisions=8/155=5%
 
- 
 # Pattern-specific Variable Values
- 
 
- 
 # No pattern-specific variable values.
 
 # Directories
@@ -310,6 +278,7 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 # Files
 
 # Not a target:
+ 
 src/DataTypes/DtIniciarClase.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -374,7 +343,6 @@ src/Controller/CEnvioMensaje.cpp:
 # Not a target:
 src/Class/Asignatura.cpp:
 #  Implicit rule search has been done.
- 
 #  Last modified 2021-06-05 17:19:49.463433
 #  File has been updated.
 #  Successfully updated.
@@ -568,7 +536,6 @@ src/DataTypes/DtInfoClase.cpp:
 src/DataTypes/DtFecha.o: src/DataTypes/DtFecha.cpp
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtFecha'
- 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -588,6 +555,7 @@ src/DataTypes/DtTimeStamp.cpp:
 src/Controller/CIniciarSesion.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
 #  File has not been updated.
 
 src/Class/Monitoreo.o: src/Class/Monitoreo.cpp
@@ -791,6 +759,6 @@ src/Handlers/ManejadorPerfil.o: src/Handlers/ManejadorPerfil.cpp
 # strcache performance: lookups = 193 / hit rate = 38%
 # hash-table stats:
 # Load=118/8192=1%, Rehash=0, Collisions=0/193=0%
-# Finished Make data base on Sun Jun  6 22:50:17 2021
+# Finished Make data base on Mon Jun  7 14:09:36 2021
 
  
