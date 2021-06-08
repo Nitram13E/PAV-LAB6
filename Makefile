@@ -20,7 +20,11 @@ obj = src/main.o \
 	  src/Controller/CAltaAsignatura.o \
 	  src/Controller/CIniciarSesion.o \
 	  src/Controller/CListadoClases.o \
+<<<<<<< HEAD
+	  src/Controller/CEnvioMensaje.o \
+=======
 	  src/Controller/CInscripcionAsignaturas.o \
+>>>>>>> ac28f01d4db01cceb35c7643caae7107476c218b
 	  \
 	  src/Handlers/ManejadorAsignatura.o \
 	  src/Handlers/ManejadorClase.o \
