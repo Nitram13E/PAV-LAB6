@@ -11,6 +11,7 @@ class IAltaUsuario
         virtual void ingresarEstudiante(std::string) = 0;
         virtual void ingresarDocente(std::string) = 0;
         virtual void altaUsuario() = 0;
+        virtual void setTipoPerfil(tipoPerfil) = 0;
         virtual void cancelar() = 0;
 };
 
