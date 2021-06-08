@@ -13,7 +13,7 @@ std::list<std::string> CAsistenciaClaseVivo::asignaturasInscriptos()
 {
     std::list<std::string> lista;
 
-    std::list<Asignatura *> asig = this -> estudiante->getAsignaturas();
+    std::list<Asignatura *> asig = this -> estudiante-> getAsignaturas();
 
     for(std::list<Asignatura *>::iterator it = asig.begin(); it != asig.end(); ++it)
     {
@@ -31,7 +31,7 @@ std::list<int> CAsistenciaClaseVivo::clasesOnlineDisponibles(std::string codigoA
     ManejadorAsignatura* ma = ManejadorAsignatura::getInstancia();
 
     Asignatura* asig = ma -> buscarAsignatura(codigoAsig);
-    std::list<Clase *> clases = asig->getClases();
+    std::list<Clase *> clases = asig -> getClases();
 
     for(std::list<Clase *>::iterator it = clases.begin(); it != clases.end(); ++it)
     {
