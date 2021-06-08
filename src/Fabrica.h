@@ -3,8 +3,11 @@
 
 #include "Interfaces/IAltaAsignatura.h"
 #include "Interfaces/IAltaUsuario.h"
+#include "Interfaces/IAsignacionDocenteAsignatura.h"
 #include "Interfaces/IAsistenciaClaseVivo.h"
+#include "Interfaces/IEliminarAsignatura.h"
 #include "Interfaces/IInscripcionAsignaturas.h"
+#include "Interfaces/IListadoClase.h"
 
 class Fabrica{
     private: 
