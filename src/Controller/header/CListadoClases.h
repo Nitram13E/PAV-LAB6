@@ -1,16 +1,12 @@
 #ifndef C_LISTADOCLASES
 #define C_LISTADOCLASES
 
-#include "../../DataTypes/header/DtInfoClase.h"
-#include "CIniciarSesion.h"
-
+#include "../../Interfaces/IListadoClase.h"
 
 #include <list>
 
-class CListadoClases
+class CListadoClases : public IListadoClases
 {
-    private:
-        
     public:
         CListadoClases();
         ~CListadoClases();

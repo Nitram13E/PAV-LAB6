@@ -4,7 +4,7 @@
 #include "../Handlers/header/ManejadorAsignatura.h"
 #include "../Class/header/Sesion.h"
 
-#include<ctime> 
+#include <ctime>
 
 CAsistenciaClaseVivo::CAsistenciaClaseVivo(){}
 CAsistenciaClaseVivo::~CAsistenciaClaseVivo(){}
@@ -56,7 +56,7 @@ void CAsistenciaClaseVivo::asistirClaseVivo()
     Clase* clase = mc -> buscarClase(this -> idClase);
 
     std::time_t tt;
-    time(&tt); //Se usa para encontrar la hora actual
+    time(&tt); // Se usa para encontrar la hora actual
     struct tm * time = localtime(&tt);
     DtFecha fecha = DtFecha(time -> tm_mday, time -> tm_mon, time -> tm_year);
     DtTimeStamp iTime = DtTimeStamp(fecha, time -> tm_hour, time -> tm_min, time ->tm_sec); 

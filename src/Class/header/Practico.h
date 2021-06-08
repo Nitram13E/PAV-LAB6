@@ -9,6 +9,7 @@ class Practico: public Clase
         Practico();
         Practico(std::string, DtTimeStamp, DtTimeStamp, std::string);
         ~Practico();
+        DtInfoClase getDtInfoClase();
 };
 
 #endif

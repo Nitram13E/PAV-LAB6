@@ -3,10 +3,11 @@
 Asignatura::Asignatura(){}
 
 
-Asignatura::Asignatura(std::string codigo, std::string nombre)
+Asignatura::Asignatura(std::string codigo, std::string nombre, DtInstanciaClase tipo)
 {
     this -> codigo = codigo;
     this -> nombre = nombre;
+    this -> tipoClases = tipo;
 }
 
 Asignatura::~Asignatura(){}
@@ -31,6 +32,16 @@ void Asignatura::setNombre(std::string nombre)
     this -> nombre = nombre;
 }
 
+DtInstanciaClase Asignatura::getTipoClases()
+{
+    return this -> tipoClases;
+}
+
+void Asignatura::setTipoClases(DtInstanciaClase tipo)
+{
+    this -> tipoClases = tipo;
+}
+
 void Asignatura::addClases(Clase* clase)
 {
     this -> clases.push_back(clase);
@@ -38,4 +49,17 @@ void Asignatura::addClases(Clase* clase)
 std::list<Clase*> Asignatura::getClases()
 {
     return this -> clases;
+}
+std::list<DtInfoClase> Asignatura::getDtInfoClase()
+{
+    std::list<DtInfoClase> lista;
+
+    std::list<Clase*>::iterator it ; 
+
+    for(it = this->clases.begin(); it != this->clases.end();++it)
+    {
+        DtInfoClase infoClase = (*it)->getDtInfoClase();
+        lista.push_back(infoClase);
+    }
+    return lista;
 }

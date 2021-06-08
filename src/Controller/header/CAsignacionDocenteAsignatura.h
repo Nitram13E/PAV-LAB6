@@ -1,12 +1,9 @@
 #ifndef C_ASIGNACIONDOCENTEASIGNATURA
 #define C_ASIGNACIONDOCENTEASIGNATURA
 
-#include <iostream>
-#include <list>
+#include "../../Interfaces/IAsignacionDocenteAsignatura.h"
 
-#include "../../DataTypes/header/tipoRol.h"
-
-class CAsignacionDocenteAsignatura
+class CAsignacionDocenteAsignatura : public IAsignacionDocenteAsignatura
 {
     private:
         std::string codigo;
