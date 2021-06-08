@@ -1,10 +1,14 @@
 #ifndef C_INSCRIPCIONASIGNATURAS
 #define C_INSCRIPCIONASIGNATURAS
 
+#include "../../Interfaces/IInscripcionAsignaturas.h"
+#include "../../Class/header/Sesion.h"
+
 #include <iostream>
 #include <list>
+#include <iterator>
 
-class CInscripcionAsignaturas
+class CInscripcionAsignaturas : public IInscripcionesAsignaturas
 {
     private:
         std::string codigo;

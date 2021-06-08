@@ -14,6 +14,8 @@ class Teorico : public Clase
         ~Teorico();
 
         void calcularAsistentes();
+        
+        DtInfoClase getDtInfoClase();
 };
 
 #endif

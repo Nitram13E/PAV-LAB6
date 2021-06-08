@@ -1,3 +1,4 @@
+  
 #include "header/ManejadorAsignatura.h"
 
 ManejadorAsignatura* ManejadorAsignatura::instancia = NULL;
@@ -46,4 +47,9 @@ std::list<Asignatura*> ManejadorAsignatura::listarAsignatura()
     }
 
     return lista;
+}
+
+std::map<std::string, Asignatura*> ManejadorAsignatura::listarMapAsignatura()
+{
+    return this -> asignaturas;
 }

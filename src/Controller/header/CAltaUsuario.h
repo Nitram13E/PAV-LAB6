@@ -1,7 +1,7 @@
 #ifndef C_ALTAUSUARIO
 #define C_ALTAUSUARIO
 
-#include "../../Interfaces/IAltaUsuario.h"
+#include "../Interfaces/IAltaUsuario.h"
 
 class CAltaUsuario : public IAltaUsuario
 {
@@ -10,6 +10,7 @@ class CAltaUsuario : public IAltaUsuario
         tipoPerfil tipo_perfil;
         std::string cedula;
         std::string instituto;
+        void setTipoPerfil(tipoPerfil);
         
     public: 
         CAltaUsuario();
