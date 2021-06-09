@@ -3,8 +3,7 @@
 
 Asignatura::Asignatura(){}
 
-
-Asignatura::Asignatura(std::string codigo, std::string nombre, DtInstanciaClase tipo)
+Asignatura::Asignatura(std::string codigo, std::string nombre, DtInstanciaClase* tipo)
 {
     this -> codigo = codigo;
     this -> nombre = nombre;
@@ -33,12 +32,12 @@ void Asignatura::setNombre(std::string nombre)
     this -> nombre = nombre;
 }
 
-DtInstanciaClase Asignatura::getTipoClases()
+DtInstanciaClase* Asignatura::getTipoClases()
 {
     return this -> tipoClases;
 }
 
-void Asignatura::setTipoClases(DtInstanciaClase tipo)
+void Asignatura::setTipoClases(DtInstanciaClase* tipo)
 {
     this -> tipoClases = tipo;
 }

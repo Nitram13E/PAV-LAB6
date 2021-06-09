@@ -15,11 +15,11 @@ class Asignatura
     private:
         std::string codigo;
         std::string nombre;
-        DtInstanciaClase tipoClases;
+        DtInstanciaClase* tipoClases;
         std::list<Clase*> clases;
     public:
         Asignatura();
-        Asignatura(std::string, std::string,DtInstanciaClase);
+        Asignatura(std::string, std::string,DtInstanciaClase*);
         ~Asignatura();
         
         std::string getCodigo();
@@ -28,8 +28,8 @@ class Asignatura
         std::string getNombre();
         void setNombre(std::string);
 
-        DtInstanciaClase getTipoClases();
-        void setTipoClases(DtInstanciaClase);
+        DtInstanciaClase* getTipoClases();
+        void setTipoClases(DtInstanciaClase*);
 
         void addClases(Clase*);
         std::list<Clase*> getClases();

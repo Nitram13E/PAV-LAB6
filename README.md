@@ -12,9 +12,7 @@ Progreso:
 - [ ] ➢ Eliminación de asignatura - Equipo
 - [X] ➢ Listado de Clases - Cristian
 
-### DUDAS:
+### DUDAS Y COSAS POR HACER:
 
-- Preguntar sobre deletes en cancelar()
-- Faltan los cpp e interfaces de los controladores(controllers)
-- Falta singleton y fabrica(Factory)
-- Preguntar como controlar id_response
+- Implementacion de casos de uso Asignación de docentes a una asignatura, Inicio de clase y Eliminación de asignatura
+- Agregar casos de uso al menu

@@ -6,7 +6,7 @@ class DtInstanciaClase
     private:
         bool teorico;
         bool practico;
-        bool monitoreo;    
+        bool monitoreo;
     
     public:
 
@@ -18,6 +18,5 @@ class DtInstanciaClase
         bool getPractico();
         bool getMonitoreo();
 };
-
 
 #endif
