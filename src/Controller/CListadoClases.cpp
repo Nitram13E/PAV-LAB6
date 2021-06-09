@@ -9,11 +9,11 @@ std::list<std::string> CListadoClases::asignaturasAsignadas()
 {
     Sesion* session = Sesion::getInstancia();
 
-    Perfil * p = session->getPerfil();
+    Perfil * p = session -> getPerfil();
 
     std::list<std::string> lista;
 
-    if(session->getTipoPerfil() == DOCENTE)
+    if(session -> getTipoPerfil() == DOCENTE)
     {
         try
         {
@@ -39,11 +39,11 @@ std::list<DtInfoClase> CListadoClases::selectAsignatura(std::string codigoAsigna
 {
     ManejadorAsignatura *ma = ManejadorAsignatura::getInstancia();
 
-    std::list<DtInfoClase> list; 
+    std::list<DtInfoClase> list;
     
-    Asignatura * a = ma->buscarAsignatura(codigoAsignatura);
+    Asignatura * a = ma -> buscarAsignatura(codigoAsignatura);
 
-    list = a->getDtInfoClase();
+    list = a -> getDtInfoClase();
 
     return list;
 }

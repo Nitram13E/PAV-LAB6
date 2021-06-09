@@ -7,9 +7,10 @@
             "args": [
                 "-g",
                 "${workspaceFolder}/src/Class/*.cpp",
+                "${workspaceFolder}/src/Controller/*.cpp",
                 "${workspaceFolder}/src/DataTypes/*.cpp",
                 "${workspaceFolder}/src/Handlers/*.cpp",
-                "${workspaceFolder}/src/main.cpp",
+                "${workspaceFolder}/src/*.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

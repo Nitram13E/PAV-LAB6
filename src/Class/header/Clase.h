@@ -23,7 +23,7 @@ class Clase
         int id;
         std::string nombre;
         DtTimeStamp inicio;
-        DtTimeStamp fin;
+        DtTimeStamp* fin;
         std::string rutavideo;
 
         std::list<Docente*> docentes;
@@ -35,7 +35,7 @@ class Clase
 
     public:
         Clase();
-        Clase(std::string, DtTimeStamp, DtTimeStamp, std::string);
+        Clase(std::string, DtTimeStamp, DtTimeStamp*, std::string);
         virtual ~Clase();
 
         static int getIdActual();
@@ -48,8 +48,8 @@ class Clase
         DtTimeStamp getInicio();
         void setInicio(DtTimeStamp);
 
-        DtTimeStamp getFin();
-        void setFin(DtTimeStamp);
+        DtTimeStamp* getFin();
+        void setFin(DtTimeStamp*);
 
         std::string getRutaVideo();
         void setRutaVideo(std::string);
@@ -65,6 +65,10 @@ class Clase
 
         void addAsisteDiferido(AsisteDiferido*);
         std::list<AsisteDiferido*> getAsisteDiferido();
+
+        bool asisteEstudiante();
+
+        bool enVivo();
 
         virtual DtInfoClase getDtInfoClase() = 0;
 };

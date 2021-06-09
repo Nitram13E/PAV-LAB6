@@ -1,14 +1,23 @@
 #include "header/Participacion.h"
 
+int Participacion::idActual = 0;
+
 Participacion::Participacion(){}
 
-Participacion::Participacion(int id, DtTimeStamp fecha, std::string mensaje, Participacion * responde)
+Participacion::Participacion(DtTimeStamp fecha, std::string mensaje, Participacion * responde)
 {
-    this -> id = id;
+    this -> id = idActual;
     this -> fecha = fecha;
     this -> mensaje = mensaje;
     this -> responde = responde;
+
+    this -> incrementarIDActual();
 };
+
+void Participacion::incrementarIDActual()
+{
+    this -> idActual++;
+}
 
 
 int Participacion::getId()

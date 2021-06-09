@@ -28,7 +28,6 @@ class AsisteVivo
 
         void setEstudiante(Estudiante*);
         Estudiante* getEstudiante();
-        
 };
 
 #endif

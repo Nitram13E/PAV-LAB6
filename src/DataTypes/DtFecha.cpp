@@ -31,10 +31,7 @@ int DtFecha::getAnio()
     return this -> anio;
 }
 
-DtFecha::~DtFecha()
-{
-
-}
+DtFecha::~DtFecha(){}
 
 bool DtFecha::checkFecha(int dia, int mes, int anio)
 {

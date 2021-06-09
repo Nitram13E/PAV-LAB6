@@ -3,7 +3,6 @@
 #include "../Handlers/header/ManejadorClase.h"
 #include "../Handlers/header/ManejadorAsignatura.h"
 #include "../Class/header/Sesion.h"
-
 #include <ctime>
 
 CAsistenciaClaseVivo::CAsistenciaClaseVivo(){}
@@ -13,7 +12,7 @@ std::list<std::string> CAsistenciaClaseVivo::asignaturasInscriptos()
 {
     std::list<std::string> lista;
 
-    std::list<Asignatura *> asig = this -> estudiante->getAsignaturas();
+    std::list<Asignatura *> asig = this -> estudiante-> getAsignaturas();
 
     for(std::list<Asignatura *>::iterator it = asig.begin(); it != asig.end(); ++it)
     {
@@ -31,11 +30,14 @@ std::list<int> CAsistenciaClaseVivo::clasesOnlineDisponibles(std::string codigoA
     ManejadorAsignatura* ma = ManejadorAsignatura::getInstancia();
 
     Asignatura* asig = ma -> buscarAsignatura(codigoAsig);
-    std::list<Clase *> clases = asig->getClases();
+    std::list<Clase *> clases = asig -> getClases();
 
     for(std::list<Clase *>::iterator it = clases.begin(); it != clases.end(); ++it)
     {
-        lista.push_back((*it)->getID());
+        if((*it) -> enVivo())
+        {
+            lista.push_back((*it) -> getID());
+        }
     }
 
     return lista;
@@ -56,10 +58,7 @@ void CAsistenciaClaseVivo::asistirClaseVivo()
     Clase* clase = mc -> buscarClase(this -> idClase);
 
     std::time_t tt;
-    time(&tt); // Se usa para encontrar la hora actual
-    struct tm * time = localtime(&tt);
-    DtFecha fecha = DtFecha(time -> tm_mday, time -> tm_mon, time -> tm_year);
-    DtTimeStamp iTime = DtTimeStamp(fecha, time -> tm_hour, time -> tm_min, time ->tm_sec); 
+    DtTimeStamp iTime = DtTimeStamp(tt);
 
     AsisteVivo* av = new AsisteVivo(iTime, NULL);
     av -> setEstudiante(this -> estudiante);
