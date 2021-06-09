@@ -31,6 +31,7 @@ std::list<std::string> CListadoClases::asignaturasAsignadas()
         }
     }
 }
+
 std::list<DtInfoClase> CListadoClases::selectAsignatura(std::string codigoAsignatura){
     
 
