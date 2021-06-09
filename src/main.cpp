@@ -1,4 +1,29 @@
-#include <iostream>
+#include "Factory.h"
+#include "Interfaces/IAltaAsignatura.h"
+#include "Interfaces/IAltaUsuario.h"
+#include "Interfaces/IAsignacionDocenteAsignatura.h"
+#include "Interfaces/IAsistenciaClaseVivo.h"
+#include "Interfaces/IEliminarAsignatura.h"
+#include "Interfaces/IiniciarSesion.h"
+#include "Interfaces/IinicioClase.h"
+#include "Interfaces/IInscripcionAsignaturas.h"
+#include "Interfaces/IListadoClase.h"
+
+#include "DataTypes/header/DtFecha.h"
+#include "DataTypes/header/DtLog.h"
+#include "DataTypes/header/DtAsistir.h"
+#include "DataTypes/header/DtPerfil.h"
+#include "DataTypes/header/DtTimeStamp.h"
+#include "DataTypes/header/DtInstanciaClase.h"
+#include "DataTypes/header/DtAsignatura.h"
+#include "DataTypes/header/DtInfoClase.h"
+#include "DataTypes/header/DtInfoTeorico.h"
+#include "DataTypes/header/DtInfoMonitoreo.h"
+#include "DataTypes/header/DtIniciarClase.h"
+#include "DataTypes/header/DtIniciarClaseFull.h"
+#include "DataTypes/header/DtIniciarMonitoreo.h"
+#include "DataTypes/header/DtParticipacion.h"
+
 #include <unistd.h>
 
 void menu();
@@ -10,13 +35,13 @@ void menu()
     setlocale(LC_ALL, "");
 
     int op;
-
+    
     do
     {
         system("clear");
 
         std::cout << "------------------------------------------------------------" << std::endl;
-        std::cout << "\n\t\tBienvenido a TecnoinfClass!\n" << std::endl;
+        std::cout << "Bienvenido a TecnoinfClass\n" << std::endl;
         std::cout << "------------------------------------------------------------" << std::endl;
         std::cout << "1.Alta de usuario" << std::endl;
         std::cout << "------------------------------------------------------------" << std::endl;

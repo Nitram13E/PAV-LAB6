@@ -1,6 +1,7 @@
 exec = exec #Nombre del archivo ejecutable
 
 obj = src/main.o \
+	  src/Factory.o \
 	  \
 	  src/Class/Asignatura.o \
 	  src/Class/Clase.o \
@@ -16,15 +17,13 @@ obj = src/main.o \
 	  src/Class/Teorico.o \
 	  src/Class/Sesion.o \
 	  \
-	  src/Controller/CAsistenciaClaseVivo.o \
 	  src/Controller/CAltaAsignatura.o \
-	  src/Controller/CIniciarSesion.o \
-	  src/Controller/CListadoClases.o \
-<<<<<<< HEAD
+	  src/Controller/CAltaUsuario.o \
+	  src/Controller/CAsistenciaClaseVivo.o \
 	  src/Controller/CEnvioMensaje.o \
-=======
+	  src/Controller/CIniciarSesion.o \
 	  src/Controller/CInscripcionAsignaturas.o \
->>>>>>> ac28f01d4db01cceb35c7643caae7107476c218b
+	  src/Controller/CListadoClases.o \
 	  \
 	  src/Handlers/ManejadorAsignatura.o \
 	  src/Handlers/ManejadorClase.o \

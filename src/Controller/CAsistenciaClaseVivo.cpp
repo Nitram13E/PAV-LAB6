@@ -3,7 +3,6 @@
 #include "../Handlers/header/ManejadorClase.h"
 #include "../Handlers/header/ManejadorAsignatura.h"
 #include "../Class/header/Sesion.h"
-
 #include <ctime>
 
 CAsistenciaClaseVivo::CAsistenciaClaseVivo(){}
@@ -35,7 +34,10 @@ std::list<int> CAsistenciaClaseVivo::clasesOnlineDisponibles(std::string codigoA
 
     for(std::list<Clase *>::iterator it = clases.begin(); it != clases.end(); ++it)
     {
-        lista.push_back((*it) -> getID());
+        if((*it) -> enVivo())
+        {
+            lista.push_back((*it) -> getID());
+        }
     }
 
     return lista;
@@ -56,10 +58,7 @@ void CAsistenciaClaseVivo::asistirClaseVivo()
     Clase* clase = mc -> buscarClase(this -> idClase);
 
     std::time_t tt;
-    time(&tt); // Se usa para encontrar la hora actual
-    struct tm * time = localtime(&tt);
-    DtFecha fecha = DtFecha(time -> tm_mday, time -> tm_mon, time -> tm_year);
-    DtTimeStamp iTime = DtTimeStamp(fecha, time -> tm_hour, time -> tm_min, time ->tm_sec); 
+    DtTimeStamp iTime = DtTimeStamp(tt);
 
     AsisteVivo* av = new AsisteVivo(iTime, NULL);
     av -> setEstudiante(this -> estudiante);

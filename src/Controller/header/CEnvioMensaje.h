@@ -17,11 +17,13 @@ class CEnvioMensaje
         int id_response;
         std::string txt;
 
+        DtParticipacion *ctodtParticipacion(Participacion*);
+
     public:
         CEnvioMensaje();
         ~CEnvioMensaje();
 
-        std::list<int> clasesOnlineAsistiendo(std::string);
+        std::list<int> clasesOnlineAsistiendo();
 
         std::list<DtParticipacion*> selectClase(int);
 
@@ -34,6 +36,5 @@ class CEnvioMensaje
         void cancelar();
 };
 
-std::list<DtParticipacion*> ctodtParticipacion(std::list<Participacion>);
 
 #endif

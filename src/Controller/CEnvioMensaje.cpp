@@ -1,10 +1,8 @@
 #include "header/CEnvioMensaje.h"
-
-//TODO: clean the code
-
+#include <ctime>
 
 
-DtParticipacion * ctodtParticipacion(Participacion * par)
+DtParticipacion * CEnvioMensaje::ctodtParticipacion(Participacion * par)
 {
       if (par == NULL) return NULL;
       //acordarme de lo que me dijo el yona
@@ -25,67 +23,43 @@ CEnvioMensaje::CEnvioMensaje()
 
 CEnvioMensaje::~CEnvioMensaje(){}
 
-std::list<int> CEnvioMensaje::clasesOnlineAsistiendo(std::string email)
+std::list<int> CEnvioMensaje::clasesOnlineAsistiendo()
 {
       std::list<int> clases_asistiendo;
      
       //Se llama al perfil que esta utilizando la sesion
-      Perfil * perfil_usuario = Sesion::getInstancia() -> getPerfil();
+      Sesion * sesion = Sesion::getInstancia();
+      Perfil * perfil = sesion -> getPerfil();
 
-      if (Sesion::getInstancia() -> getTipoPerfil() == ESTUDIANTE) //si el perfil es un estudiante
+      if (sesion -> getTipoPerfil() == ESTUDIANTE) //si el perfil es un estudiante
       {
-            Estudiante * estudiante = dynamic_cast<Estudiante*>(perfil_usuario);
+            Estudiante * estudiante = dynamic_cast<Estudiante*>(perfil);
             std::list<Asignatura*> lista_asignaturas = estudiante -> getAsignaturas();
+            std::list<Asignatura*>::iterator it;
 
-            //En cada asignatura, se busca si en una clase en vivo se encuentra el estudiante y se devuelve el id de la clase
-
-            //se recorren las asignaturas del estudiante
-            for (std::list<Asignatura*>::iterator it = lista_asignaturas.begin(); it != lista_asignaturas.end(); it++)
+            for (it = lista_asignaturas.begin(); it != lista_asignaturas.end(); it++)
             {
-                  //se recorre cada clase de cada asignatura
-                  std::list<Clase*> lista_clases_it = (*it) -> getClases();
-                  for (std::list<Clase*>::iterator it_c = lista_clases_it.begin(); it_c != lista_clases_it.end(); it_c++)
-                  {
-                        //se recorren las clases en vivo hasta encontrar al estudiante
-                        std::list<AsisteVivo*> lista_asistevivo_it_c = (*it_c) -> getAsisteVivo();
-                        std::list<AsisteVivo*>::iterator it_av = lista_asistevivo_it_c.begin();
-
-                        while ((*it_av) -> getEstudiante() -> getEmail().compare(email) != 0 && it_av != lista_asistevivo_it_c.end())
-                        {
-                              it_av++;
-                        }
-
-                        //al encontrarse el estudiante se devuelve el id de la clase en la posicion it_c
-                        if((*it_av) -> getEstudiante() -> getEmail().compare(email) == 0)
-                              clases_asistiendo.push_back((*it_c) -> getID());
-                  }
+                  // Mueve los elementos que devuelve listarIdAsisteVivo() al final de la lista clases_asistiendo
+                  clases_asistiendo.splice(clases_asistiendo.end(), (*it) -> listarIdAsisteVivo());
             }
       }
-      else //si es docente
+      else if (sesion -> getTipoPerfil() == DOCENTE) //si es docente
       {
-            Docente * docente = dynamic_cast<Docente *>(perfil_usuario);
+            Docente * docente = dynamic_cast<Docente *>(perfil);
 
             //se itera por cada rol que el docente cumple en determinada asignatura
-            std::list<Rol*> roles_docente =  docente -> getRoles();
+            std::list<Rol*> roles_docente = docente -> getRoles();
+            std::list<Rol*>::iterator it;
 
-            for(std::list<Rol*>::iterator it = roles_docente.begin(); it != roles_docente.end(); it++)
+            for (it = roles_docente.begin(); it != roles_docente.end(); it++)
             {
-                  //De la asignatura que tiene rol, se toman la lista de clases y se devueleven las mismas
-                  //Se devuelven todas las clases por rol ya que se asume que si el docente tiene una clase es porque esta participando en la misma
-
-                  std::list<Clase*> clasesXasig_rol = (*it) -> getAsignatura() -> getClases();
-                  
-                  for(std::list<Clase*>::iterator it = clasesXasig_rol.begin(); it != clasesXasig_rol.end(); it++)
-                  {
-                        clases_asistiendo.push_back((*it) -> getID());
-                  }
+                  // Mueve los elementos que devuelve listarIdAsisteVivo() al final de la lista clases_asistiendo
+                  clases_asistiendo.splice(clases_asistiendo.end(), (*it) -> getAsignatura() -> listarIdAsisteVivo());
             }
       }
-
 
       return clases_asistiendo;
 }
-
 
 std::list<DtParticipacion*> CEnvioMensaje::selectClase(int id_clase)
 {
@@ -102,6 +76,7 @@ std::list<DtParticipacion*> CEnvioMensaje::selectClase(int id_clase)
             //se busca u devuelve la clase
             Clase * clase_seleccionada = ManejadorClase::getInstancia() -> buscarClase(id_clase);
             std::list<Participacion*> lista_participaciones = clase_seleccionada -> getParticipaciones();
+            
             //el sistema recuerda la id de la clase buscada
             this -> id_clase = id_clase;
 
@@ -144,10 +119,11 @@ void CEnvioMensaje::enviarMensaje()
             if ((*it) -> getId() == this -> id_response)    to_response = (*it);
       }
 
-      //Participacion(DtTimeStamp, std::string, Participacion*);
+      std::time_t tt;
+      DtTimeStamp tiempo = DtTimeStamp(tt);
 
       //se crea la participacion y se la agrega a la clase
-      Participacion * newParticion = new Participacion(DtTimeStamp(DtFecha(12,12, 1980), 1 ,1, 1), this -> txt, to_response);
+      Participacion * newParticion = new Participacion(tiempo, this -> txt, to_response);
 
       clase -> getParticipaciones().push_back(newParticion);
 }
@@ -156,5 +132,4 @@ void CEnvioMensaje::cancelar()
 {
       //de cancelarse el CU, se reinician los valores
       this -> id_response = -1;
-      this -> txt = "";
 }

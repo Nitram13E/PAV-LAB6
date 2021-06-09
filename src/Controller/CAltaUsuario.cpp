@@ -39,4 +39,4 @@ void CAltaUsuario::altaUsuario()
     }
 }
 
-void cancelar(){}
+void CAltaUsuario::cancelar(){}

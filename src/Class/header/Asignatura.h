@@ -4,10 +4,11 @@
 class Clase;
 
 #include "Clase.h"
-#include <list>
 #include "../../DataTypes/header/DtInfoClase.h"
 #include "../../Handlers/header/ManejadorClase.h"
 #include "../../DataTypes/header/DtInstanciaClase.h"
+
+#include <list>
 
 class Asignatura
 {
@@ -35,6 +36,7 @@ class Asignatura
 
         std::list<DtInfoClase> getDtInfoClase();
 
+        std::list<int> listarIdAsisteVivo();
 };
 
 #endif

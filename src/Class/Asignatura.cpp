@@ -1,4 +1,5 @@
 #include "header/Asignatura.h"
+#include "header/Sesion.h"
 
 Asignatura::Asignatura(){}
 
@@ -54,12 +55,47 @@ std::list<DtInfoClase> Asignatura::getDtInfoClase()
 {
     std::list<DtInfoClase> lista;
 
-    std::list<Clase*>::iterator it ; 
+    std::list<Clase*>::iterator it;
 
     for(it = this->clases.begin(); it != this->clases.end();++it)
     {
-        DtInfoClase infoClase = (*it)->getDtInfoClase();
+        DtInfoClase infoClase = (*it) -> getDtInfoClase();
         lista.push_back(infoClase);
     }
+    return lista;
+}
+
+std::list<int> Asignatura::listarIdAsisteVivo()
+{
+    Sesion * sesion = Sesion::getInstancia();
+
+    std::list<int> lista;
+
+    // Si es estudiante se fija en si esta asistiendo(miramos en la coleccion AsisteVivo dentro de clase)
+    if(sesion -> getTipoPerfil() == ESTUDIANTE)
+    {
+        std::list<Clase*>::iterator it;
+
+        for(it = this -> clases.begin(); it != this -> clases.end(); it++)
+        {
+            if((*it) -> asisteEstudiante())
+            {
+                lista.push_back((*it) -> getID());
+            }
+        }
+    }
+    else if(sesion -> getTipoPerfil() == DOCENTE)// Si es un docente se fija si esta dictando una clase en vivo, para eso verificamos si la clase sigue estando en vivo(fin != NULL)
+    {
+        std::list<Clase*>::iterator it;
+
+        for(it = this -> clases.begin(); it != this -> clases.end(); it++)
+        {
+            if((*it) -> enVivo())
+            {
+                lista.push_back((*it) -> getID());
+            }
+        }
+    }
+    
     return lista;
 }
