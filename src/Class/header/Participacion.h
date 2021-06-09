@@ -7,16 +7,21 @@
 class Participacion
 {
     private:
+        static int idActual;
+
         int id; 
         DtTimeStamp fecha;
         std::string mensaje;
         Participacion * responde;
         Perfil * perfil;
 
+        void incrementarIDActual();
+
     public:
         Participacion();
-        Participacion(int, DtTimeStamp, std::string, Participacion*);
+        Participacion(DtTimeStamp, std::string, Participacion*);
         ~Participacion();
+        
 
         int getId();
         void setId(int);

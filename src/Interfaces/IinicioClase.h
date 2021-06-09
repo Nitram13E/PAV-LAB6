@@ -3,6 +3,8 @@
 
 #include "../DataTypes/header/DtIniciarClaseFull.h"
 
+#include <list>
+
 class IinicioClase
 {
     public:

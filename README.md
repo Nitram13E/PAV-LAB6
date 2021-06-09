@@ -8,12 +8,11 @@ Progreso:
 - [X] ➢ Inscripción a las asignaturas - Felipe
 - [ ] ➢ Inicio de clase - Equipo
 - [X] ➢ Asistencia a clase en vivo - Lucia
-- [ ] ➢ Envío de mensaje - Angel
+- [X] ➢ Envío de mensaje - Angel
 - [ ] ➢ Eliminación de asignatura - Equipo
 - [X] ➢ Listado de Clases - Cristian
 
-### DUDAS:
+### DUDAS Y COSAS POR HACER:
 
-- Preguntar sobre deletes en cancelar()
-- Faltan los cpp e interfaces de los controladores(controllers)
-- Falta singleton y fabrica(Factory)
+- Implementacion de casos de uso Asignación de docentes a una asignatura, Inicio de clase y Eliminación de asignatura
+- Agregar casos de uso al menu

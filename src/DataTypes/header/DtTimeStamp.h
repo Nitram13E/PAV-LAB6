@@ -2,9 +2,10 @@
 #define DTTIMESTAMP
 
 #include "DtFecha.h"
+
 class DtTimeStamp
 {
-    private: 
+    private:
         DtFecha fecha;
         int hora;
         int minuto;
@@ -13,6 +14,7 @@ class DtTimeStamp
     public: 
         DtTimeStamp();
         DtTimeStamp(DtFecha,int,int,int);
+        DtTimeStamp(time_t);
         ~DtTimeStamp();
 
         DtFecha getFecha();

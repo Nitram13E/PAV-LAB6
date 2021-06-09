@@ -1,12 +1,15 @@
-#include "CAltaUsuario.h"
-#include "ManejadorPerfil.cpp"
+#include "header/CAltaUsuario.h"
+#include "../Handlers/header/ManejadorPerfil.h"
+#include "../Class/header/Docente.h"
+#include "../Class/header/Estudiante.h"
 
 CAltaUsuario::CAltaUsuario(){}
 CAltaUsuario::~CAltaUsuario(){}
 
-void CAltaUsuario::ingresarDatosPerfil(DtPerfil perfil)
+void CAltaUsuario::ingresarDatosPerfil(DtPerfil perfil, tipoPerfil tipo)
 {
     this -> datosUsuario = perfil;
+    this -> tipo_perfil = tipo;
 }
 
 void CAltaUsuario::ingresarEstudiante(std::string ci)
@@ -23,25 +26,17 @@ void CAltaUsuario::ingresarDocente(std::string ins)
 void CAltaUsuario::altaUsuario()
 {
     ManejadorPerfil* mp = ManejadorPerfil::getInstancia();
-    
 
-    if (this->tipo_perfil==ESTUDIANTE)
+    if (this -> tipo_perfil == ESTUDIANTE)
     {
-        Estudiante* e = new Estudiante(this -> datosUsuarios -> getNombre(), this -> datosUsuarios ->  getImagenURL(), this -> datosUsuarios -> getEmail(), this -> datosUsuarios -> getPassword(), this -> documento);
-        mp->addPerfil(e);
-
-    } else if (this->tipo_perfil==DOCENTE)
+        Estudiante* e = new Estudiante(this -> datosUsuario.getNombre(), this -> datosUsuario.getImagenURL(), this -> datosUsuario.getEmail(), this -> datosUsuario.getPassword(), this -> cedula);
+        mp -> addPerfil(e);
+    } 
+    else if (this -> tipo_perfil == DOCENTE)
     {
-        Docente* d = new Docente(this -> datosUsuarios -> getNombre(), this -> datosUsuarios ->  getImagenURL(), this -> datosUsuarios -> getEmail(), this -> datosUsuarios -> getPassword(), this -> instituto);
-        mp->addPerfil(d);
+        Docente* d = new Docente(this -> datosUsuario.getNombre(), this -> datosUsuario.getImagenURL(), this -> datosUsuario.getEmail(), this -> datosUsuario.getPassword(), this -> instituto);
+        mp -> addPerfil(d);
     }
-    
 }
 
-void setTipoPerfil(tipoPerfil perfil)
-{
-    this -> tipo_perfil = perfil;
-    
-}
-
-void cancelar() {}
+void CAltaUsuario::cancelar(){}

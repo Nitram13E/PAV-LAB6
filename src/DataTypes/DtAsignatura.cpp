@@ -2,7 +2,7 @@
 
 DtAsignatura::DtAsignatura(){}
 
-DtAsignatura::DtAsignatura(std::string codigo, std::string nombre, DtInstanciaClase tipo)
+DtAsignatura::DtAsignatura(std::string codigo, std::string nombre, DtInstanciaClase* tipo)
 {
     this -> codigo = codigo;
     this -> nombre = nombre;
@@ -21,7 +21,7 @@ std::string DtAsignatura::getNombre()
     return this -> nombre;
 }
 
-DtInstanciaClase DtAsignatura::getTipoClases()
+DtInstanciaClase* DtAsignatura::getTipoClases()
 {
     return this -> tipoClases;
 }

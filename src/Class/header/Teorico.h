@@ -10,7 +10,7 @@ class Teorico : public Clase
         
     public:
         Teorico();
-        Teorico(std::string, DtTimeStamp, DtTimeStamp, std::string);
+        Teorico(std::string, DtTimeStamp, DtTimeStamp*, std::string);
         ~Teorico();
 
         void calcularAsistentes();
