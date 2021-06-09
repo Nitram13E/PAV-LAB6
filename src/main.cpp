@@ -26,8 +26,6 @@
 
 #include <unistd.h>
 
-
-
 void menu();
 void pressEnter();
 void cargarDatos();
