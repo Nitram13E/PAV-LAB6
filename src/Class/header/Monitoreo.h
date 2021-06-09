@@ -12,10 +12,12 @@ class Monitoreo: public Clase
         std::list<Estudiante*> habilitados;
     public:
         Monitoreo();
-        Monitoreo(std::string, DtTimeStamp, DtTimeStamp, std::string);
+        Monitoreo(std::string, DtTimeStamp, DtTimeStamp*, std::string);
         ~Monitoreo();
 
         std::list<Estudiante*> getHabilitados();
+
+        DtInfoClase getDtInfoClase();
 
         void addHabilitados(Estudiante *);
 };

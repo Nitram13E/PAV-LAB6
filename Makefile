@@ -1,6 +1,7 @@
 exec = exec #Nombre del archivo ejecutable
 
 obj = src/main.o \
+	  src/Factory.o \
 	  \
 	  src/Class/Asignatura.o \
 	  src/Class/Clase.o \
@@ -17,9 +18,12 @@ obj = src/main.o \
 	  src/Class/Sesion.o \
 	  \
 	  src/Controller/CAltaAsignatura.o \
+	  src/Controller/CAltaUsuario.o \
+	  src/Controller/CAsistenciaClaseVivo.o \
+	  src/Controller/CEnvioMensaje.o \
 	  src/Controller/CIniciarSesion.o \
-	  src/Controller/CListadoClases.o \
 	  src/Controller/CInscripcionAsignaturas.o \
+	  src/Controller/CListadoClases.o \
 	  \
 	  src/Handlers/ManejadorAsignatura.o \
 	  src/Handlers/ManejadorClase.o \
@@ -27,6 +31,7 @@ obj = src/main.o \
 	  \
 	  src/DataTypes/DtFecha.o \
 	  src/DataTypes/DtLog.o \
+	  src/DataTypes/DtAsistir.o \
 	  src/DataTypes/DtPerfil.o \
 	  src/DataTypes/DtTimeStamp.o \
 	  src/DataTypes/DtInstanciaClase.o \

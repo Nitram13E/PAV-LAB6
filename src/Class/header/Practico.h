@@ -7,8 +7,9 @@ class Practico: public Clase
 {
     public:
         Practico();
-        Practico(std::string, DtTimeStamp, DtTimeStamp, std::string);
+        Practico(std::string, DtTimeStamp, DtTimeStamp*, std::string);
         ~Practico();
+        DtInfoClase getDtInfoClase();
 };
 
 #endif

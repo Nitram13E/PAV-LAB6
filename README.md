@@ -2,19 +2,17 @@
 
 Progreso:
 
-- [ ] ➢ Alta de usuario - Lucas
-- [x] ➢ Alta de asignatura - Martin
+- [X] ➢ Alta de usuario - Lucas
+- [X] ➢ Alta de asignatura - Martin
 - [ ] ➢ Asignación de docentes a una asignatura - Equipo
-- [ ] ➢ Inscripción a las asignaturas - Felipe
+- [X] ➢ Inscripción a las asignaturas - Felipe
 - [ ] ➢ Inicio de clase - Equipo
-- [ ] ➢ Asistencia a clase en vivo - Lucia
-- [ ] ➢ Envío de mensaje - Angel
+- [X] ➢ Asistencia a clase en vivo - Lucia
+- [X] ➢ Envío de mensaje - Angel
 - [ ] ➢ Eliminación de asignatura - Equipo
-- [ ] ➢ Listado de Clases - Cristian
+- [X] ➢ Listado de Clases - Cristian
 
-### DUDAS:
+### DUDAS Y COSAS POR HACER:
 
-- Preguntar si DtInstanciaClase tipoClases en Asignatura
-- Faltan los cpp e interfaces de los controladores(controllers)
-- Falta singleton y fabrica(Factory)
-- Preguntar sobre virtual en destructores(destroyers)
+- Implementacion de casos de uso Asignación de docentes a una asignatura, Inicio de clase y Eliminación de asignatura
+- Agregar casos de uso al menu

@@ -1,10 +1,11 @@
 #include "header/Clase.h"
+#include "header/Sesion.h"
 
 int Clase::idActual = 0;//Inicializa la variable id generada por el sistema
 
 Clase::Clase(){}
 
-Clase::Clase(std::string nombre, DtTimeStamp inicio, DtTimeStamp fin, std::string rutavideo)
+Clase::Clase(std::string nombre, DtTimeStamp inicio, DtTimeStamp* fin, std::string rutavideo)
 {
     this -> id = idActual;
     this -> nombre = nombre;
@@ -51,12 +52,12 @@ void Clase::setInicio(DtTimeStamp inicio)
     this -> inicio = inicio;
 }
 
-DtTimeStamp Clase::getFin()
+DtTimeStamp* Clase::getFin()
 {
     return this -> fin;
 }
 
-void Clase::setFin(DtTimeStamp fin)
+void Clase::setFin(DtTimeStamp* fin)
 {
     this -> fin = fin;
 }
@@ -108,4 +109,27 @@ void Clase::addAsisteDiferido(AsisteDiferido* asistencia)
 std::list<AsisteDiferido*> Clase::getAsisteDiferido()
 {
     return this -> asisteDiferido;
+}
+
+bool Clase::asisteEstudiante()
+{
+    Sesion* sesion = Sesion::getInstancia();
+
+    Estudiante * estudiante = dynamic_cast<Estudiante*>(sesion -> getPerfil());
+    
+    std::list<AsisteVivo*>::iterator it = this -> asisteVivo.begin();
+
+    while (((*it) -> getEstudiante() -> getEmail() != estudiante -> getEmail()) && (it != this -> asisteVivo.end())) it++;
+    
+    // Si encontro al estudiante siempre va a ser distinto de end ya que se corta el while
+    if ((it != this -> asisteVivo.end()) && (*it) -> getFin() == NULL) return true;
+    
+    return false;
+}
+
+bool Clase::enVivo()
+{
+    if(this -> fin == NULL) return true;
+
+    return false;
 }

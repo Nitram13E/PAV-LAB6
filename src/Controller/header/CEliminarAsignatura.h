@@ -1,10 +1,8 @@
 #ifndef C_ELIMINARASIGNATURA
 #define C_ELIMINARASIGNATURA
 
-#include <list>
-#include <iostream>
-
-class CEliminarAsignatura
+#include "../../Interfaces/IEliminarAsignatura.h"
+class CEliminarAsignatura : public IEliminarAsignatura
 {
     private:
         std::string codigo;

@@ -11,11 +11,11 @@ class CAltaUsuario : public IAltaUsuario
         std::string cedula;
         std::string instituto;
         
-    public: 
+    public:
         CAltaUsuario();
         ~CAltaUsuario();
         
-        void ingresarDatosPerfil(DtPerfil);
+        void ingresarDatosPerfil(DtPerfil, tipoPerfil);
         void ingresarEstudiante(std::string);
         void ingresarDocente(std::string);
         void altaUsuario();

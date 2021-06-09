@@ -7,7 +7,7 @@
 class IAltaUsuario
 {
     public:
-        virtual void ingresarDatosPerfil(DtPerfil) = 0;
+        virtual void ingresarDatosPerfil(DtPerfil, tipoPerfil) = 0;
         virtual void ingresarEstudiante(std::string) = 0;
         virtual void ingresarDocente(std::string) = 0;
         virtual void altaUsuario() = 0;
