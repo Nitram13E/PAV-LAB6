@@ -273,8 +273,9 @@ void CUAsistenciaClaseVivo()
 
     std::string codigo;
     int id;
-    char resp;
+    char confirmar;
     
+    std::cout << "\t\tAsistencia de Clase en Vivo" << std::endl;
     std::list<std::string> inscr = IACV -> asignaturasInscriptos();
     std::cout << "Asignaturas cursando: " << std::endl;
     
@@ -303,8 +304,8 @@ void CUAsistenciaClaseVivo()
     std::cout << *asist << std::endl;
     
     std::cout << "Desea confirmar? [S/N]" << std::endl;
-    std::cin >> resp; 
-    if(resp == 'S')
+    std::cin >> confirmar; 
+    if(confirmar == 'S' || confirmar == 's')
     {
         IACV -> asistirClaseVivo();
         std::cout << "\nSu clase comenzara pronto.... o algo parecido, no se\n";
