@@ -2,7 +2,7 @@
 
 Perfil::Perfil(){}
 
-Perfil::Perfil(std::string nombre, std::string imagenUrl, std::string email, std::string password)
+Perfil::Perfil(std::string nombre, std::string imagenURL, std::string email, std::string password)
 {
     this -> nombre = nombre;
     this -> imagenURL = imagenURL;

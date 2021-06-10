@@ -2,7 +2,7 @@
 
 Estudiante::Estudiante(){}
 
-Estudiante::Estudiante(std::string nombre, std::string imagenURL, std::string password, std::string email, std::string documento) : Perfil(nombre, imagenURL, email, password)
+Estudiante::Estudiante(std::string nombre, std::string imagenURL, std::string email, std::string password, std::string documento) : Perfil(nombre, imagenURL, email, password)
 {   
     this -> documento = documento;
 }
