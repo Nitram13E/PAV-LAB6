@@ -384,11 +384,11 @@ void CUInscripcionAsignaturas()
     
         if(listaAsignaturas.empty())
         {
-            std::cout << "El usuario se encuentra inscripto en todas las asignaturas del sistema..." << std::endl;
+            std::cout << "\nNo hay asignaturas disponibles a las cuales inscribirse.\n" << std::endl;
 
             op = 3;
 
-            sleep(2);
+            pressEnter();
         }
         else
         {
