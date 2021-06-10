@@ -23,6 +23,7 @@
 #include "DataTypes/header/DtIniciarClaseFull.h"
 #include "DataTypes/header/DtIniciarMonitoreo.h"
 #include "DataTypes/header/DtParticipacion.h"
+#include "Handlers/header/ManejadorPerfil.h"
 
 #include <unistd.h>
 
@@ -226,7 +227,6 @@ void CUAltaUsuario()
         std::cout << "Elija el tipo de perfil:" << std::endl;
         std::cout << "- Estudiante '0'" << std::endl;
         std::cout << "- Docente '1'" << std::endl;
-        std::cout << "O presione ENTER para cancelar" << std::endl;
         std::cout << "Opción: ";
         std::cin >> op;
 
@@ -262,14 +262,16 @@ void CUAltaUsuario()
         std::cout << "Desea agregar el perfil? [S/N o Cualquier letra (menos la s)]: ";
         std::cin >> confirmar;
         
-        if(confirmar == "S" || confirmar == "s") IAU -> altaUsuario();
-
+        if(confirmar == "S" || confirmar == "s")
+        {
+            IAU -> altaUsuario();
+        }
         // [Quiere agregar usuario]
         system("clear");
-        std::cout << "Desea continuar agregando usuarios? [S/N o Cualquier letra (menos la s)]: ";
+        std::cout << "Desea crear un nuevo usuario? [S/N]: ";
         std::cin >> opAU;
-
-    }while(opAU == "S" && opAU == "s");
+        
+    }while(opAU != "N");
 }
 
 void CUAltaAsignatura()

@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jun  9 19:06:38 2021
+# Make data base, printed on Thu Jun 10 17:04:32 2021
 
 # Variables
 
@@ -55,7 +55,7 @@ XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-0a25a6fe-b314-4e42-afe1-aec504f1feee.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-62afb228-b986-40cb-b9df-ee4c4403b316.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -63,7 +63,7 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = 172.26.208.1:0.0
+DISPLAY = 192.168.208.1:0.0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -71,7 +71,7 @@ PWD = /mnt/c/PAV/PAV-LAB6
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/11_interop
+WSL_INTEROP = /run/WSL/93_interop
 # environment
 PULSE_SERVER = /mnt/wslg/PulseServer
 # environment
@@ -176,7 +176,7 @@ WSL_DISTRO_NAME = Debian
 src/DataTypes/DtAsistir.o: src/DataTypes/DtAsistir.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtAsistir'
-#  Last modified 2021-06-09 13:10:59.1632094
+#  Last modified 2021-06-10 00:30:34.7018725
 #  File has been updated.
 #  Successfully updated.
 
@@ -190,14 +190,14 @@ src/Class/Estudiante.cpp:
 src/Controller/CAltaUsuario.o: src/Controller/CAltaUsuario.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Controller/CAltaUsuario'
-#  Last modified 2021-06-09 13:10:55.0078047
+#  Last modified 2021-06-10 00:30:30.6813997
 #  File has been updated.
 #  Successfully updated.
 
 src/DataTypes/DtInfoClase.o: src/DataTypes/DtInfoClase.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtInfoClase'
-#  Last modified 2021-06-09 13:11:00.1089526
+#  Last modified 2021-06-10 00:30:35.6362675
 #  File has been updated.
 #  Successfully updated.
 
@@ -240,7 +240,7 @@ all: src/main.o src/Factory.o src/Class/Asignatura.o src/Class/Clase.o src/Class
 src/DataTypes/DtParticipacion.o: src/DataTypes/DtParticipacion.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtParticipacion'
-#  Last modified 2021-06-09 13:11:01.551601
+#  Last modified 2021-06-10 00:30:37.0696309
 #  File has been updated.
 #  Successfully updated.
 
@@ -254,7 +254,7 @@ src/DataTypes/DtInstanciaClase.cpp:
 src/DataTypes/DtIniciarClase.o: src/DataTypes/DtIniciarClase.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtIniciarClase'
-#  Last modified 2021-06-09 13:11:00.8575916
+#  Last modified 2021-06-10 00:30:36.3685797
 #  File has been updated.
 #  Successfully updated.
 
@@ -262,21 +262,21 @@ src/DataTypes/DtIniciarClase.o: src/DataTypes/DtIniciarClase.cpp
 src/Handlers/ManejadorPerfil.cpp:
 #  Implicit rule search has been done.
 #  Last modified 2021-06-07 19:28:44.8665029
+ 
 #  File has been updated.
 #  Successfully updated.
- 
 
 src/main.o: src/main.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/main'
-#  Last modified 2021-06-09 13:10:49.2074234
+#  Last modified 2021-06-10 00:32:04.7691966
 #  File has been updated.
 #  Successfully updated.
 
 src/DataTypes/DtAsignatura.o: src/DataTypes/DtAsignatura.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtAsignatura'
-#  Last modified 2021-06-09 13:10:59.829236
+#  Last modified 2021-06-10 00:30:35.358864
 #  File has been updated.
 #  Successfully updated.
 
@@ -310,14 +310,14 @@ src/DataTypes/DtLog.cpp:
 src/Controller/CAsistenciaClaseVivo.o: src/Controller/CAsistenciaClaseVivo.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Controller/CAsistenciaClaseVivo'
-#  Last modified 2021-06-09 13:10:55.4893853
+#  Last modified 2021-06-10 00:30:31.1476983
 #  File has been updated.
 #  Successfully updated.
 
 src/DataTypes/DtInfoTeorico.o: src/DataTypes/DtInfoTeorico.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtInfoTeorico'
-#  Last modified 2021-06-09 13:11:00.3658287
+#  Last modified 2021-06-10 00:30:35.8835846
 #  File has been updated.
 #  Successfully updated.
 
@@ -345,21 +345,21 @@ src/Class/Docente.cpp:
 src/DataTypes/DtInfoMonitoreo.o: src/DataTypes/DtInfoMonitoreo.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtInfoMonitoreo'
-#  Last modified 2021-06-09 13:11:00.6496813
+#  Last modified 2021-06-10 00:30:36.1569907
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/Teorico.o: src/Class/Teorico.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Teorico'
-#  Last modified 2021-06-09 13:10:54.058745
+#  Last modified 2021-06-10 00:30:29.7273083
 #  File has been updated.
 #  Successfully updated.
 
 src/Controller/CIniciarSesion.o: src/Controller/CIniciarSesion.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Controller/CIniciarSesion'
-#  Last modified 2021-06-09 13:10:56.3910537
+#  Last modified 2021-06-10 00:30:32.0252431
 #  File has been updated.
 #  Successfully updated.
 
@@ -373,42 +373,42 @@ src/Class/Perfil.cpp:
 src/DataTypes/DtIniciarMonitoreo.o: src/DataTypes/DtIniciarMonitoreo.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtIniciarMonitoreo'
-#  Last modified 2021-06-09 13:11:01.346294
+#  Last modified 2021-06-10 00:30:36.8569265
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/Monitoreo.o: src/Class/Monitoreo.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Monitoreo'
-#  Last modified 2021-06-09 13:10:53.2573575
+#  Last modified 2021-06-10 00:30:28.9580523
 #  File has been updated.
 #  Successfully updated.
 
 src/Controller/CInscripcionAsignaturas.o: src/Controller/CInscripcionAsignaturas.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Controller/CInscripcionAsignaturas'
-#  Last modified 2021-06-09 13:10:56.8646442
+#  Last modified 2021-06-10 00:30:32.4918981
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/AsisteDiferido.o: src/Class/AsisteDiferido.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/AsisteDiferido'
-#  Last modified 2021-06-09 13:10:52.8252835
+#  Last modified 2021-06-10 00:30:28.5229263
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/Practico.o: src/Class/Practico.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Practico'
-#  Last modified 2021-06-09 13:10:53.6508068
+#  Last modified 2021-06-10 00:30:29.3310523
 #  File has been updated.
 #  Successfully updated.
 
 src/DataTypes/DtTimeStamp.o: src/DataTypes/DtTimeStamp.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtTimeStamp'
-#  Last modified 2021-06-09 13:10:59.5688269
+#  Last modified 2021-06-10 00:30:35.1021702
 #  File has been updated.
 #  Successfully updated.
 
@@ -457,7 +457,7 @@ src/Handlers/ManejadorClase.cpp:
 src/Class/Estudiante.o: src/Class/Estudiante.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Estudiante'
-#  Last modified 2021-06-09 13:10:51.378167
+#  Last modified 2021-06-10 00:30:27.1225237
 #  File has been updated.
 #  Successfully updated.
 
@@ -492,21 +492,21 @@ src/DataTypes/DtFecha.cpp:
 src/Controller/CAltaAsignatura.o: src/Controller/CAltaAsignatura.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Controller/CAltaAsignatura'
-#  Last modified 2021-06-09 13:10:54.6338695
+#  Last modified 2021-06-10 00:30:30.3222268
 #  File has been updated.
 #  Successfully updated.
 
 src/DataTypes/DtInstanciaClase.o: src/DataTypes/DtInstanciaClase.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtInstanciaClase'
-#  Last modified 2021-06-09 13:10:59.6233311
+#  Last modified 2021-06-10 00:30:35.1584904
 #  File has been updated.
 #  Successfully updated.
 
 src/Handlers/ManejadorPerfil.o: src/Handlers/ManejadorPerfil.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Handlers/ManejadorPerfil'
-#  Last modified 2021-06-09 13:10:58.5558109
+#  Last modified 2021-06-10 00:30:34.1008431
 #  File has been updated.
 #  Successfully updated.
 
@@ -526,7 +526,7 @@ src/DataTypes/DtAsistir.cpp:
 src/Class/Clase.o: src/Class/Clase.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Clase'
-#  Last modified 2021-06-09 13:10:50.6252107
+#  Last modified 2021-06-10 00:30:26.3702939
 #  File has been updated.
 #  Successfully updated.
 
@@ -540,12 +540,12 @@ src/Controller/CAltaUsuario.cpp:
 src/DataTypes/DtIniciarClaseFull.o: src/DataTypes/DtIniciarClaseFull.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtIniciarClaseFull'
-#  Last modified 2021-06-09 13:11:01.0611901
+#  Last modified 2021-06-10 00:30:36.5716887
+ 
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
- 
 src/DataTypes/DtInfoClase.cpp:
 #  Implicit rule search has been done.
 #  Last modified 2021-06-07 14:02:41.85522
@@ -555,7 +555,7 @@ src/DataTypes/DtInfoClase.cpp:
 src/DataTypes/DtLog.o: src/DataTypes/DtLog.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtLog'
-#  Last modified 2021-06-09 13:10:58.9645172
+#  Last modified 2021-06-10 00:30:34.503875
 #  File has been updated.
 #  Successfully updated.
 
@@ -584,21 +584,21 @@ src/DataTypes/DtIniciarClase.cpp:
 src/Controller/CListadoClases.o: src/Controller/CListadoClases.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Controller/CListadoClases'
-#  Last modified 2021-06-09 13:10:57.2827644
+#  Last modified 2021-06-10 00:30:32.8934793
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/Docente.o: src/Class/Docente.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Docente'
-#  Last modified 2021-06-09 13:10:51.0147712
+#  Last modified 2021-06-10 00:30:26.7586673
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-09 15:20:46.8244955
+#  Last modified 2021-06-10 00:49:56.2966303
 #  File has been updated.
 #  Successfully updated.
 
@@ -612,7 +612,7 @@ src/DataTypes/DtAsignatura.cpp:
 src/Class/Perfil.o: src/Class/Perfil.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Perfil'
-#  Last modified 2021-06-09 13:10:51.8057949
+#  Last modified 2021-06-10 00:30:27.537948
 #  File has been updated.
 #  Successfully updated.
 
@@ -640,7 +640,7 @@ src/DataTypes/DtInfoTeorico.cpp:
 src/Handlers/ManejadorAsignatura.o: src/Handlers/ManejadorAsignatura.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Handlers/ManejadorAsignatura'
-#  Last modified 2021-06-09 13:10:57.7632449
+#  Last modified 2021-06-10 00:30:33.3539066
 #  File has been updated.
 #  Successfully updated.
 
@@ -661,14 +661,14 @@ src/Class/Teorico.cpp:
 src/Class/Rol.o: src/Class/Rol.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Rol'
-#  Last modified 2021-06-09 13:10:52.1283539
+#  Last modified 2021-06-10 00:30:27.8550114
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Controller/CIniciarSesion.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-07 22:56:34.7923373
+#  Last modified 2021-06-09 22:54:50.0770949
 #  File has been updated.
 #  Successfully updated.
 
@@ -689,56 +689,56 @@ src/Class/Monitoreo.cpp:
 src/Controller/CEnvioMensaje.o: src/Controller/CEnvioMensaje.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Controller/CEnvioMensaje'
-#  Last modified 2021-06-09 13:10:55.9781451
+#  Last modified 2021-06-10 00:30:31.6228546
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/AsisteVivo.o: src/Class/AsisteVivo.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/AsisteVivo'
-#  Last modified 2021-06-09 13:10:52.4564852
+#  Last modified 2021-06-10 00:30:28.1605541
 #  File has been updated.
 #  Successfully updated.
 
 src/DataTypes/DtPerfil.o: src/DataTypes/DtPerfil.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtPerfil'
-#  Last modified 2021-06-09 13:10:59.3662062
+#  Last modified 2021-06-10 00:30:34.9018717
 #  File has been updated.
 #  Successfully updated.
 
 src/Handlers/ManejadorClase.o: src/Handlers/ManejadorClase.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Handlers/ManejadorClase'
-#  Last modified 2021-06-09 13:10:58.1935225
+#  Last modified 2021-06-10 00:30:33.7710081
 #  File has been updated.
 #  Successfully updated.
 
 src/Factory.o: src/Factory.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Factory'
-#  Last modified 2021-06-09 13:10:49.6770975
+#  Last modified 2021-06-10 00:30:25.4464206
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/Sesion.o: src/Class/Sesion.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Sesion'
-#  Last modified 2021-06-09 13:10:54.2725323
+#  Last modified 2021-06-10 00:30:29.9397899
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/Asignatura.o: src/Class/Asignatura.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Asignatura'
-#  Last modified 2021-06-09 13:10:50.141242
+#  Last modified 2021-06-10 00:30:25.9053428
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/Participacion.o: src/Class/Participacion.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Participacion'
-#  Last modified 2021-06-09 13:10:51.599915
+#  Last modified 2021-06-10 00:30:27.336783
 #  File has been updated.
 #  Successfully updated.
 
@@ -766,7 +766,7 @@ src/Class/Practico.cpp:
 src/DataTypes/DtFecha.o: src/DataTypes/DtFecha.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtFecha'
-#  Last modified 2021-06-09 13:10:58.7618137
+#  Last modified 2021-06-10 00:30:34.3044456
 #  File has been updated.
 #  Successfully updated.
 
@@ -791,6 +791,6 @@ src/DataTypes/DtTimeStamp.cpp:
 # strcache performance: lookups = 220 / hit rate = 39%
 # hash-table stats:
 # Load=134/8192=2%, Rehash=0, Collisions=12/220=5%
-# Finished Make data base on Wed Jun  9 19:06:38 2021
+# Finished Make data base on Thu Jun 10 17:04:32 2021
 
  
