@@ -27,12 +27,12 @@ void CAltaUsuario::altaUsuario()
 {
     ManejadorPerfil* mp = ManejadorPerfil::getInstancia();
 
-    if (this -> tipo_perfil == ESTUDIANTE)
+    if(this -> tipo_perfil == ESTUDIANTE)
     {
         Estudiante* e = new Estudiante(this -> datosUsuario.getNombre(), this -> datosUsuario.getImagenURL(), this -> datosUsuario.getEmail(), this -> datosUsuario.getPassword(), this -> cedula);
         mp -> addPerfil(e);
-    } 
-    else if (this -> tipo_perfil == DOCENTE)
+    }
+    else if(this -> tipo_perfil == DOCENTE)
     {
         Docente* d = new Docente(this -> datosUsuario.getNombre(), this -> datosUsuario.getImagenURL(), this -> datosUsuario.getEmail(), this -> datosUsuario.getPassword(), this -> instituto);
         mp -> addPerfil(d);

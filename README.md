@@ -16,3 +16,6 @@ Progreso:
 
 - Implementacion de casos de uso Asignación de docentes a una asignatura, Inicio de clase y Eliminación de asignatura
 - Agregar casos de uso al menu
+- Controles de input de lado usuario(ej: CUInscripcionAsignatura, elegir una asignatura no existente en selectAsignatura)
+- Controles de id, Perfil asignatura clase
+- cargar usuario generico

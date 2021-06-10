@@ -23,21 +23,27 @@
 #include "DataTypes/header/DtIniciarClaseFull.h"
 #include "DataTypes/header/DtIniciarMonitoreo.h"
 #include "DataTypes/header/DtParticipacion.h"
+#include "Handlers/header/ManejadorPerfil.h"
 
 #include <unistd.h>
 
+bool CUIniciarSesion();
 void menu();
 void pressEnter();
 void cargarDatos();
 void CUAltaUsuario();
 void CUAltaAsignatura();
 
+void CUInscripcionAsignaturas();
+
 void CUAsistenciaClaseVivo();
 
 Factory* fabrica = Factory::getInstancia();
-IAltaUsuario * IAU;
+IiniciarSesion* IIS; 
+IAltaUsuario* IAU;
 IAsistenciaClaseVivo* IACV;
 IAltaAsignatura * IAA;
+IInscripcionesAsignaturas * IInscAsig;
 
 
 void menu()
@@ -45,70 +51,78 @@ void menu()
     setlocale(LC_ALL, "");
 
     int op;
-    
-    do
+    bool inicio;
+
+    system("clear");
+    std::cout << "\n\tBienvenido!\n" << std::endl;
+    std::cout << "1) Iniciar Sesion" << std::endl;
+    std::cout << "2) Registrarse" << std::endl;
+    std::cout << "\nElija una opción: ";
+    std::cin >> op;
+
+    if(op == 1) inicio = CUIniciarSesion();
+    else if(op == 2) 
     {
-        system("clear");
-
-        std::cout << "------------------------------------------------------------" << std::endl;
-        std::cout << "Bienvenido a TecnoinfClass\n" << std::endl;
-        std::cout << "------------------------------------------------------------" << std::endl;
-        std::cout << "1.Alta de usuario" << std::endl;
-        std::cout << "------------------------------------------------------------" << std::endl;
-        std::cout << "2.Alta de asignatura" << std::endl;
-        std::cout << "------------------------------------------------------------" << std::endl;
-        std::cout << "3.Asignación de docentes a una asignatura" << std::endl;
-        std::cout << "------------------------------------------------------------" << std::endl;
-        std::cout << "4.Inscripción a las asignaturas" << std::endl;
-        std::cout << "------------------------------------------------------------" << std::endl;
-        std::cout << "6.Asistencia clase en vivo" << std::endl;
-        std::cout << "------------------------------------------------------------" << std::endl;
-        std::cout << "13.Cargar datos de prueba" << std::endl;
-        std::cout << "------------------------------------------------------------" << std::endl;
-        std::cout << "14.Salir" << std::endl;
-        std::cout << "------------------------------------------------------------" << std::endl;
-        std::cout << "Opción: ";
-        std::cin >> op;
-
-        switch (op)
-        {
-            case 1: // Alta de usuario
-                CUAltaUsuario();
-                break;
-                
-            case 2: // Alta de asignatura
-                CUAltaAsignatura();
-                break;
-
-            case 3: // Asignación de docentes a una asignatura
-
-                break;
-
-            case 4: // Inscripción a las asignaturas
-
-                break;
-
-            case 6: // Asistencia a clase en vivo
-                //CUAsistenciaClaseVivo();
-                break;
-
-            case 13: // Cargar datos de prueba
-
-                break;
-
-            case 14: // Salir
-                std::cout << "\nSaliendo..." << std::endl;
-                sleep(2);
-
-                break;
-            
-            default:
-                std::cout << "\nPor favor, introduzca una opcion valida." << std::endl;
-                pressEnter();
-                system("clear");
-        }
+        CUAltaUsuario();
+        inicio = CUIniciarSesion();
     }
-    while (op != 14);
+    if(op == 3 || inicio) // Si el usuario ingreso en modo administrador (op = 3) o si inicio sesion exitosamente
+    {
+        do
+        {
+            system("clear");
+            std::cout << "---------------------------------------------------------" << std::endl;
+            std::cout << "\n\t\tBienvenido a TecnoinfClass\n" << std::endl;
+            std::cout << "---------------------------------------------------------" << std::endl;
+            std::cout << "1.Alta de usuario" << std::endl;
+            std::cout << "---------------------------------------------------------" << std::endl;
+            std::cout << "2.Alta de asignatura" << std::endl;
+            std::cout << "---------------------------------------------------------" << std::endl;
+            std::cout << "3.Asignación de docentes a una asignatura" << std::endl;
+            std::cout << "---------------------------------------------------------" << std::endl;
+            std::cout << "4.Inscripción a las asignaturas" << std::endl;
+            std::cout << "---------------------------------------------------------" << std::endl;
+            std::cout << "6.Asistencia clase en vivo" << std::endl;
+            std::cout << "---------------------------------------------------------" << std::endl;
+            std::cout << "13.Cargar datos de prueba" << std::endl;
+            std::cout << "---------------------------------------------------------" << std::endl;
+            std::cout << "14.Salir" << std::endl;
+            std::cout << "---------------------------------------------------------" << std::endl;
+            std::cout << "Opción: ";
+            std::cin >> op;
+
+            switch (op)
+            {
+                case 1: // Alta de usuario
+                    CUAltaUsuario();
+                    break;
+                    
+                case 2: // Alta de asignatura
+                    CUAltaAsignatura();
+                    break;
+
+                case 3: // Asignación de docentes a una asignatura
+
+                    break;
+
+                case 4:
+                    CUInscripcionAsignaturas();
+                    break;
+
+                case 14: // Salir
+                    std::cout << "\nSaliendo..." << std::endl;
+                    sleep(2);
+
+                    break;
+                
+                default:
+                    std::cout << "\nPor favor, introduzca una opcion valida." << std::endl;
+                    pressEnter();
+                    system("clear");
+            }
+        }
+        while (op != 14);
+    }
 }
 
 void pressEnter()
@@ -119,7 +133,6 @@ void pressEnter()
     std::getline(std::cin, enter);
 }
 
-
 void cargarDatos()
 {
     
@@ -127,10 +140,48 @@ void cargarDatos()
 
 int main()
 {
-    
     menu();
 
     return 0;
+}
+
+bool CUIniciarSesion()
+{
+    IIS = fabrica -> getIiniciarSesion();
+    std::string email;
+    std::string password;
+
+    bool inicio = false;
+    int intentos = 5;
+    
+    do
+    {
+        system("clear");
+        std::cout << "-----------------------------------------------" << std::endl;
+        std::cout << "\t\tIniciar Sesion:" << std::endl;
+        std::cout << "-----------------------------------------------" << std::endl;
+        std::cout << "Email: ";
+        std::cin >> email;
+        std::cout << "-----------------------------------------------" << std::endl;
+        std::cout << "Contraseña: ";
+        std::cin >> password;
+
+        IIS -> ingresarEmail(email);
+
+        if(IIS -> validarContrasenia(password))
+        {
+            IIS -> inciarSesion();
+            inicio = true;
+        }
+        else
+        {
+            intentos--;
+            std::cout << "\nContraseña incorrecta. Intentos restantes: "<< intentos << std::endl;
+            sleep(1);
+        }
+    }while(!inicio && intentos > 0);
+
+    return inicio;
 }
 
 void CUAltaUsuario()
@@ -172,7 +223,6 @@ void CUAltaUsuario()
         std::cout << "Elija el tipo de perfil:" << std::endl;
         std::cout << "- Estudiante '0'" << std::endl;
         std::cout << "- Docente '1'" << std::endl;
-        std::cout << "O presione ENTER para cancelar" << std::endl;
         std::cout << "Opción: ";
         std::cin >> op;
 
@@ -182,7 +232,7 @@ void CUAltaUsuario()
             {
                 // ingresarEstudiante
                 std::string ci;
-                std::cout << "Ingrese CI: " << std::endl;
+                std::cout << "Ingrese CI: ";
                 std::cin >> ci;
 
                 IAU -> ingresarDatosPerfil(auxPerfil, ESTUDIANTE);
@@ -193,7 +243,7 @@ void CUAltaUsuario()
             {
                 // ingresarDocente
                 std::string ins;
-                std::cout << "Ingrese instituto: " << std::endl;
+                std::cout << "Ingrese instituto: ";
                 std::cin >> ins;
 
                 IAU -> ingresarDatosPerfil(auxPerfil, DOCENTE);
@@ -208,14 +258,16 @@ void CUAltaUsuario()
         std::cout << "Desea agregar el perfil? [S/N o Cualquier letra (menos la s)]: ";
         std::cin >> confirmar;
         
-        if(confirmar == "S" || confirmar == "s") IAU -> altaUsuario();
-
+        if(confirmar == "S" || confirmar == "s")
+        {
+            IAU -> altaUsuario();
+        }
         // [Quiere agregar usuario]
         system("clear");
-        std::cout << "Desea continuar agregando usuarios? [S/N o Cualquier letra (menos la s)]: " << std::endl;
+        std::cout << "Desea crear un nuevo usuario? [S/N]: ";
         std::cin >> opAU;
-
-    }while(opAU == "S" && opAU == "s");
+        
+    }while(opAU != "N");
 }
 
 void CUAltaAsignatura()
@@ -231,7 +283,7 @@ void CUAltaAsignatura()
     bool monitoreo = false;
 
     system("clear");
-    std::cout << "\t\tAlta Asignatura" << std::endl;
+    std::cout << "\t\tAlta Asignatura\n" << std::endl;
     std::cout << "Ingrese código: ";
     std::cin >> codigo;
     system("clear");
@@ -314,4 +366,58 @@ void CUAsistenciaClaseVivo()
         IACV -> cancelar();
         std::cout << "\nUsted ha cancelado\n";
     }
+}
+
+void CUInscripcionAsignaturas()
+{
+    IInscAsig = fabrica -> getInscripcionAsignaturas();
+
+    std::string codigoAsig;
+    int op = 0;
+
+    do
+    {
+        std::list<std::string> listaAsignaturas = IInscAsig -> asignaturasNoInscriptos();
+
+        std::list<std::string>::iterator it;
+
+    
+        if(listaAsignaturas.empty())
+        {
+            std::cout << "\nNo hay asignaturas disponibles a las cuales inscribirse.\n" << std::endl;
+
+            op = 3;
+
+            pressEnter();
+        }
+        else
+        {
+            //Muestro las asignaturas en las cuales el estudiante no esta inscripto
+            for (it = listaAsignaturas.begin(); it != listaAsignaturas.end(); it++)
+            {
+                std::cout << *it << std::endl;
+            }
+            
+            std::cout << "Seleccione la asignatura a inscribirse: ";
+            std::cin >> codigoAsig;
+
+            IInscAsig -> selectAsignatura(codigoAsig);
+
+            std::cout << "1: Inscribirse" << std::endl << "2: Cancelar "<< std::endl;
+            std::cout << "Ingrese una opcion: ";
+            std::cin >> op;
+
+            if(op == 1)
+            {
+                IInscAsig -> inscribir();
+            }
+
+            std::string confirmar;
+            std::cout << "Desea continuar inscribiendose a asignaturas? [S/N o Cualquier letra (menos la s)]: ";
+            std::cin >> confirmar;
+            if(confirmar == "N" || confirmar == "n") op = 3;
+        }   
+
+    }while(op != 3);
+
 }
