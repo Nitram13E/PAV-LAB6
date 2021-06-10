@@ -32,12 +32,15 @@ void cargarDatos();
 void CUAltaUsuario();
 void CUAltaAsignatura();
 
+void CUInscripcionAsignaturas();
+
 void CUAsistenciaClaseVivo();
 
 Factory* fabrica = Factory::getInstancia();
 IAltaUsuario * IAU;
 IAsistenciaClaseVivo* IACV;
 IAltaAsignatura * IAA;
+IInscripcionesAsignaturas * IInscAsig;
 
 
 void menu()
@@ -85,7 +88,7 @@ void menu()
                 break;
 
             case 4: // Inscripción a las asignaturas
-
+                CUInscripcionAsignaturas();
                 break;
 
             case 6: // Asistencia a clase en vivo
@@ -314,4 +317,58 @@ void CUAsistenciaClaseVivo()
         IACV -> cancelar();
         std::cout << "\nUsted ha cancelado\n";
     }
+}
+
+void CUInscripcionAsignaturas()
+{
+    IInscAsig = fabrica -> getInscripcionAsignaturas();
+
+    std::string codigoAsig;
+    int op = 0;
+
+    do
+    {
+        std::list<std::string> listaAsignaturas = IInscAsig -> asignaturasNoInscriptos();
+
+        std::list<std::string>::iterator it;
+
+    
+        if(listaAsignaturas.empty())
+        {
+            std::cout << "El usuario se encuentra inscripto en todas las asignaturas del sistema..." << std::endl;
+
+            op = 3;
+
+            sleep(2);
+        }
+        else
+        {
+            //Muestro las asignaturas en las cuales el estudiante no esta inscripto
+            for (it = listaAsignaturas.begin(); it != listaAsignaturas.end(); it++)
+            {
+                std::cout << *it << std::endl;
+            }
+            
+            std::cout << "Seleccione la asignatura a inscribirse: ";
+            std::cin >> codigoAsig;
+
+            IInscAsig -> selectAsignatura(codigoAsig);
+
+            std::cout << "1: Inscribirse" << std::endl << "2: Cancelar "<< std::endl;
+            std::cout << "Ingrese una opcion: ";
+            std::cin >> op;
+
+            if(op == 1)
+            {
+                IInscAsig -> inscribir();
+            }
+
+            std::string confirmar;
+            std::cout << "Desea continuar inscribiendose a asignaturas? [S/N o Cualquier letra (menos la s)]: ";
+            std::cin >> confirmar;
+            if(confirmar == "N" || confirmar == "n") op = 3;
+        }   
+
+    }while(op != 3);
+
 }
