@@ -57,7 +57,7 @@ void menu()
     std::cin >> op;
 
     if(op == 1) inicio = CUIniciarSesion();
-    else if(op == 2) 
+    else if(op == 2)
     {
         CUAltaUsuario();
         inicio = CUIniciarSesion();
@@ -270,7 +270,7 @@ void CUAltaUsuario()
         system("clear");
         std::cout << "Desea crear un nuevo usuario? [S/N]: ";
         std::cin >> opAU;
-        
+
     }while(opAU != "N");
 }
 

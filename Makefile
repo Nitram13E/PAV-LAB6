@@ -51,5 +51,5 @@ all: $(obj)
 $(obj): %.o: %.cpp
 
 clean:
-	@ rm -f $(obj) $(exec)
+	@ rm -f $(obj) $(exec) src/main
 	@ echo "archivos de compilacion eliminados."
