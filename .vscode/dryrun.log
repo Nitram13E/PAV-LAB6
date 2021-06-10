@@ -1,9 +1,7 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/mnt/c/PAV/PAV-LAB6'
 g++    -c -o src/main.o src/main.cpp
- 
 g++    -c -o src/Factory.o src/Factory.cpp
- 
 g++    -c -o src/Class/Asignatura.o src/Class/Asignatura.cpp
 g++    -c -o src/Class/Clase.o src/Class/Clase.cpp
 g++    -c -o src/Class/Docente.o src/Class/Docente.cpp

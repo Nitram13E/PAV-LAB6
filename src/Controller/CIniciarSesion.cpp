@@ -20,7 +20,7 @@ bool CIniciarSesion::validarContrasenia(std::string password)
     
     Perfil* p = mp -> buscarPerfil(this -> email);
     
-    if(p -> getPassword() == password) return true;
+    if(p != NULL && p -> getPassword() == password) return true;
     
     return false;
 }
