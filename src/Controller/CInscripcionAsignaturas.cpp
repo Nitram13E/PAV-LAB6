@@ -76,7 +76,4 @@ void CInscripcionAsignaturas::inscribir()
 }
 
 //En cancelar no se borra nada, ya que no se creo ninguna instancia de ningun objeto porque no paso por la funcion inscribir()
-void CInscripcionAsignaturas::cancelar()
-{
-    //FIXME:delete this -> codigo;
-}
+void CInscripcionAsignaturas::cancelar(){}
