@@ -2,7 +2,6 @@
 #include "../Handlers/header/ManejadorAsignatura.h"
 #include "../Handlers/header/ManejadorPerfil.h"
 
-
 CInscripcionAsignaturas::CInscripcionAsignaturas(){}
 
 CInscripcionAsignaturas::~CInscripcionAsignaturas(){}
