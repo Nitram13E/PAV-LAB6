@@ -179,7 +179,8 @@ bool CUIniciarSesion()
         else
         {
             intentos--;
-            std::cout << "Contraseña incorrecta. Intentos restantes: "<< intentos << std::endl;
+            std::cout << "\nContraseña incorrecta. Intentos restantes: "<< intentos << std::endl;
+            sleep(1);
         }
     }while(!inicio && intentos > 0);
 
