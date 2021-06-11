@@ -8,6 +8,7 @@
 #include "Controller/header/CInicioClase.h"
 #include "Controller/header/CInscripcionAsignaturas.h"
 #include "Controller/header/CListadoClases.h"
+#include "Controller/header/CEnvioMensaje.h"
 
 Factory * Factory::instancia = NULL;
 
@@ -37,3 +38,5 @@ IiniciarSesion* Factory::getIiniciarSesion(){return new CIniciarSesion();}
 //IinicioClase* Factory::getIinicioClase(){return new CInicioClase();}
 
 IInscripcionesAsignaturas* Factory::getInscripcionAsignaturas(){return new CInscripcionAsignaturas();}
+
+IEnvioMensaje* getIEnvioMensaje(){return new CEnvioMensaje();}

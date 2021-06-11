@@ -10,6 +10,7 @@
 #include "Interfaces/IinicioClase.h"
 #include "Interfaces/IInscripcionAsignaturas.h"
 #include "Interfaces/IListadoClase.h"
+#include "Interfaces/IEnvioMensaje.h"
 
 class Factory
 {
@@ -36,6 +37,8 @@ class Factory
         IinicioClase* getIinicioClase();
         
         IInscripcionesAsignaturas* getInscripcionAsignaturas();
+
+        IEnvioMensaje* getIEnvioMensaje();
 };
 
 #endif

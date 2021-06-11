@@ -5,7 +5,7 @@
 #include <list>
 
 
-class ICEnvioMensaje 
+class IEnvioMensaje 
 {
       public:
             virtual std::list<int> clasesOnlineAsistiendo() = 0;

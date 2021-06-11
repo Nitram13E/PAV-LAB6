@@ -1,4 +1,5 @@
 #include "Factory.h"
+#include "Class/header/Sesion.h"
 #include "Interfaces/IAltaAsignatura.h"
 #include "Interfaces/IAltaUsuario.h"
 #include "Interfaces/IAsignacionDocenteAsignatura.h"
@@ -8,6 +9,7 @@
 #include "Interfaces/IinicioClase.h"
 #include "Interfaces/IInscripcionAsignaturas.h"
 #include "Interfaces/IListadoClase.h"
+#include "Interfaces/IEnvioMensaje.h"
 
 #include "DataTypes/header/DtFecha.h"
 #include "DataTypes/header/DtLog.h"
@@ -29,16 +31,16 @@
 void menu();
 void pressEnter();
 void cargarDatos();
+void bubbleMsg(DtParticipacion*);
 void CUAltaUsuario();
 void CUAltaAsignatura();
-
 void CUAsistenciaClaseVivo();
 
 Factory* fabrica = Factory::getInstancia();
 IAltaUsuario * IAU;
 IAsistenciaClaseVivo* IACV;
 IAltaAsignatura * IAA;
-
+IEnvioMensaje * IEM;
 
 void menu()
 {
@@ -62,6 +64,8 @@ void menu()
         std::cout << "4.Inscripción a las asignaturas" << std::endl;
         std::cout << "------------------------------------------------------------" << std::endl;
         std::cout << "6.Asistencia clase en vivo" << std::endl;
+        std::cout << "------------------------------------------------------------" << std::endl;
+        std::cout << "7.Enviar Mensaje" << std::endl;
         std::cout << "------------------------------------------------------------" << std::endl;
         std::cout << "13.Cargar datos de prueba" << std::endl;
         std::cout << "------------------------------------------------------------" << std::endl;
@@ -314,4 +318,121 @@ void CUAsistenciaClaseVivo()
         IACV -> cancelar();
         std::cout << "\nUsted ha cancelado\n";
     }
+}
+
+void CUEnvioMensaje()
+{
+    Sesion * sesion = Sesion::getInstancia();
+    Perfil * perfil = sesion -> getPerfil();
+    int id_selected, id_response;
+    std::string txt;
+
+    IEM = fabrica -> getIEnvioMensaje();
+
+    std::list<int> clasesVivo = IEM -> clasesOnlineAsistiendo();
+    std::list<int>::iterator it;
+
+    std::list<DtParticipacion*> participaciones;
+    std::list<DtParticipacion*>::iterator it_p;
+
+    std::cout << "\nClases en vivo:\n\n";
+
+    for (it = clasesVivo.begin(); it != clasesVivo.end(); it++)
+    {
+        std::cout << "- " << *it << "\n";
+    }
+
+    do
+    {
+        system("clear");
+        std::cout << "\nSeleccionar clase: ";
+        std::cin >> id_selected;
+
+        it = clasesVivo.begin();
+
+        while (*it != id_selected && it != clasesVivo.end())
+        {
+            it++;
+        }
+
+    } while (it == clasesVivo.end());
+    
+    participaciones = IEM -> selectClase(id_selected);
+
+    std::cout << "\nParticipaciones:\n\n";
+
+    for (it_p = participaciones.begin(); it_p != participaciones.end(); it_p++)
+    {
+
+        bubbleMsg(*it_p);
+
+        if ((*it_p) -> getResponde() != NULL)
+        {
+            std::cout << "Responde a:\n";
+            bubbleMsg((*it_p) -> getResponde());
+        }
+
+        std::cout << "------------------------------------------------------------" << std::endl;
+    }
+
+    std::string confirmar;
+    std::cout << "Desea contestar alguna participacion? [S/N o Cualquier letra (menos la s, por favor no seas rata)]: ";
+    std::cin >> confirmar;
+
+    if(confirmar == "S" || confirmar == "s")
+    {
+        do
+        {
+            //system("clear");
+            std::cout << "\n id de la participacion a responder: ";
+            std::cin >> id_response;
+
+            it_p = participaciones.begin();
+
+            while ((*it_p) -> getId() != id_response && it_p != participaciones.end())
+            {
+                it_p++;
+            }
+        } while (it_p == participaciones.end());
+        
+        IEM ->responder(id_response);
+    }
+        std::cout << "\n Ingrese texto: ";
+        std::cin >> txt;
+
+        IEM -> ingresarTexto(txt);
+
+    std::cout << "Seguro que quiere enviar la participacion? (Verifique que no sea un insulto al docente)[S/N o Cualquier letra (menos la s)]: ";
+    std::cin >> confirmar;
+    
+    if(confirmar == "S" || confirmar == "s")
+    {
+        IEM -> enviarMensaje();
+    }
+    else
+    {
+        IEM -> cancelar();
+    }
+}
+
+
+void bubbleMsg(DtParticipacion* msg)
+{
+	for (int i = 0; i < msg -> getMensaje().length() + 7; i++)
+	{
+		std::cout << "_";
+	}
+	std::cout << "\n";
+	
+	std::cout << "(" << msg;
+	std::cout << "  " << msg -> getFecha().getHora() << ":" << msg -> getFecha().getMinuto() << ")";
+    std::cout << "\t[id: " << msg -> getId() << "]" << std::endl;
+	std::cout << "|/";
+	
+	for (int i = 0; i < msg ->getMensaje().length() + 7; i++)
+	{
+		std::cout << "¯";
+	}
+	
+	std::cout << "\n";
 }
