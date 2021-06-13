@@ -31,3 +31,24 @@ DtParticipacion * DtParticipacion::getResponde()
 {
     return this -> responde;
 }
+
+void DtParticipacion::bubbleMsg()
+{
+	for (int i = 0; i < this -> getMensaje().length() + 7; i++)
+	{
+		std::cout << "_";
+	}
+	std::cout << "\n";
+	
+	std::cout << "(" << this;
+	std::cout << "  " << this -> getFecha().getHora() << ":" << this -> getFecha().getMinuto() << ")";
+    std::cout << "\t[id: " << this -> getId() << "]" << std::endl;
+	std::cout << "|/";
+	
+	for (int i = 0; i < this ->getMensaje().length() + 7; i++)
+	{
+		std::cout << "¯";
+	}
+	
+	std::cout << "\n";
+}

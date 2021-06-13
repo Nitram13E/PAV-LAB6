@@ -25,6 +25,8 @@ class DtParticipacion
         std::string getMensaje();
 
         DtParticipacion * getResponde();
+
+        void bubbleMsg();
 };
 
 

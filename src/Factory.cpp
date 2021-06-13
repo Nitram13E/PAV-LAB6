@@ -39,4 +39,4 @@ IiniciarSesion* Factory::getIiniciarSesion(){return new CIniciarSesion();}
 
 IInscripcionesAsignaturas* Factory::getInscripcionAsignaturas(){return new CInscripcionAsignaturas();}
 
-IEnvioMensaje* getIEnvioMensaje(){return new CEnvioMensaje();}
+IEnvioMensaje* Factory::getIEnvioMensaje(){return new CEnvioMensaje();}
