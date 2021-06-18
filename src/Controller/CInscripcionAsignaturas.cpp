@@ -69,7 +69,7 @@ void CInscripcionAsignaturas::inscribir()
 
     Estudiante * estudiante = dynamic_cast<Estudiante*>(sesion -> getPerfil());
 
-    if(estudiante == NULL)  throw std::invalid_argument("Usuario no encontrado\n");
+    if(estudiante == NULL) throw std::invalid_argument("Usuario no encontrado\n");
 
     //Lo inscribo a esa asignatura
     estudiante -> addAsignaturas(asignaturaAIncribir);
