@@ -16,7 +16,6 @@ class DtIniciarMonitoreo : public DtIniciarClaseFull
         ~DtIniciarMonitoreo();
 
         std::list<std::string> getHabilitados();
-    
 };
 
 #endif

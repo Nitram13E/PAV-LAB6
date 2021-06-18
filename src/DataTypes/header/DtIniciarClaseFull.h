@@ -3,6 +3,8 @@
 
 #include "DtIniciarClase.h"
 
+#include <iostream>
+
 class DtIniciarClaseFull : public DtIniciarClase
 {
     private:
@@ -10,10 +12,12 @@ class DtIniciarClaseFull : public DtIniciarClase
 
     public:
         DtIniciarClaseFull();
-        DtIniciarClaseFull(int, std::string codigo, std::string nombre, DtTimeStamp fechahora);
+        DtIniciarClaseFull(int, std::string, std::string, DtTimeStamp);
         ~DtIniciarClaseFull();
 
         int getId();
+
+        friend std::ostream& operator << (std::ostream&, DtIniciarClaseFull&);
 };
 
 #endif

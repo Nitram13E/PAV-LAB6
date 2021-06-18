@@ -1,13 +1,13 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # GNU Make 4.2.1
+ 
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Thu Jun 10 19:30:06 2021
+# Make data base, printed on Fri Jun 18 15:20:28 2021
 
 # Variables
 
@@ -16,7 +16,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up:VSCODE_SERVER_TAR/up
+WSLENV = VSCODE_WSL_EXT_LOCATION/up
 # default
 .SHELLFLAGS := -c
 # environment
@@ -38,7 +38,7 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-_ = /home/nitram/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/node
+_ = /home/nitram/.vscode-server/bin/507ce72a4466fbb27b715c3722558bb15afa9f48/node
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # 'override' directive
@@ -50,15 +50,13 @@ VSCODE_CWD = /mnt/c/Users/marti/AppData/Local/Programs/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/nitram/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/marti/Anaconda3:/mnt/c/Users/marti/Anaconda3/Library/mingw-w64/bin:/mnt/c/Users/marti/Anaconda3/Library/usr/bin:/mnt/c/Users/marti/Anaconda3/Library/bin:/mnt/c/Users/marti/Anaconda3/Scripts:/mnt/c/Users/marti/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/marti/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/marti/AppData/Local/GitHubDesktop/bin:/mnt/c/Program Files/JetBrains/PyCharm 2020.2/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/marti/Anaconda3:/mnt/c/Users/marti/Anaconda3/Library/mingw-w64/bin:/mnt/c/Users/marti/Anaconda3/Library/usr/bin:/mnt/c/Users/marti/Anaconda3/Library/bin:/mnt/c/Users/marti/Anaconda3/Scripts:/mnt/c/Users/marti/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/marti/AppData/Local/GitHubDesktop/bin:/mnt/c/Program Files/JetBrains/PyCharm 2020.2/bin:/mnt/c/platform-tools:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2020.2.3/bin:/mnt/c/Users/marti/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/marti/AppData/Local/Programs/Microsoft VS Code/bin
+PATH = /home/nitram/.vscode-server/bin/507ce72a4466fbb27b715c3722558bb15afa9f48/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/marti/Anaconda3:/mnt/c/Users/marti/Anaconda3/Library/mingw-w64/bin:/mnt/c/Users/marti/Anaconda3/Library/usr/bin:/mnt/c/Users/marti/Anaconda3/Library/bin:/mnt/c/Users/marti/Anaconda3/Scripts:/mnt/c/Users/marti/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/marti/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/marti/AppData/Local/GitHubDesktop/bin:/mnt/c/Program Files/JetBrains/PyCharm 2020.2/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/marti/Anaconda3:/mnt/c/Users/marti/Anaconda3/Library/mingw-w64/bin:/mnt/c/Users/marti/Anaconda3/Library/usr/bin:/mnt/c/Users/marti/Anaconda3/Library/bin:/mnt/c/Users/marti/Anaconda3/Scripts:/mnt/c/Users/marti/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/marti/AppData/Local/GitHubDesktop/bin:/mnt/c/Program Files/JetBrains/PyCharm 2020.2/bin:/mnt/c/platform-tools:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2020.2.3/bin:/mnt/c/Users/marti/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/marti/AppData/Local/Programs/Microsoft VS Code/bin
 # environment
 XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-da7d9a0d-d491-4dfe-92d8-b54f087816ea.sock
-# environment
-VSCODE_SERVER_TAR = /mnt/c/Users/marti/AppData/Local/Temp/vscode-remote-wsl/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/vscode-server-stable-linux-x64.tar.gz
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-e9c779f4-8745-4ee1-80a9-fcccbf8ed291.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -66,7 +64,7 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = 192.168.208.1:0.0
+DISPLAY = 172.30.176.1:0.0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -74,7 +72,7 @@ PWD = /mnt/c/PAV/PAV-LAB6
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/12_interop
+WSL_INTEROP = /run/WSL/11_interop
 # environment
 PULSE_SERVER = /mnt/wslg/PulseServer
 # environment
@@ -90,7 +88,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # makefile (from 'Makefile', line 3)
-obj = src/main.o src/Factory.o src/Class/Asignatura.o src/Class/Clase.o src/Class/Docente.o src/Class/Estudiante.o src/Class/Participacion.o src/Class/Perfil.o src/Class/Rol.o src/Class/AsisteVivo.o src/Class/AsisteDiferido.o src/Class/Monitoreo.o src/Class/Practico.o src/Class/Teorico.o src/Class/Sesion.o src/Controller/CAltaAsignatura.o src/Controller/CAltaUsuario.o src/Controller/CAsistenciaClaseVivo.o src/Controller/CEnvioMensaje.o src/Controller/CIniciarSesion.o src/Controller/CInscripcionAsignaturas.o src/Controller/CListadoClases.o src/Handlers/ManejadorAsignatura.o src/Handlers/ManejadorClase.o src/Handlers/ManejadorPerfil.o src/DataTypes/DtFecha.o src/DataTypes/DtLog.o src/DataTypes/DtAsistir.o src/DataTypes/DtPerfil.o src/DataTypes/DtTimeStamp.o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtAsignatura.o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtParticipacion.o
+obj = src/main.o src/Factory.o src/Class/Asignatura.o src/Class/Clase.o src/Class/Docente.o src/Class/Estudiante.o src/Class/Participacion.o src/Class/Perfil.o src/Class/Rol.o src/Class/AsisteVivo.o src/Class/Monitoreo.o src/Class/Practico.o src/Class/Teorico.o src/Class/Sesion.o src/Controller/CAltaAsignatura.o src/Controller/CAltaUsuario.o src/Controller/CAsistenciaClaseVivo.o src/Controller/CEnvioMensaje.o src/Controller/CIniciarSesion.o src/Controller/CInscripcionAsignaturas.o src/Controller/CInicioClase.o src/Controller/CAsignacionDocenteAsignatura.o src/Controller/CEliminarAsignatura.o src/Controller/CListadoClases.o src/Handlers/ManejadorAsignatura.o src/Handlers/ManejadorClase.o src/Handlers/ManejadorPerfil.o src/DataTypes/DtFecha.o src/DataTypes/DtAsistir.o src/DataTypes/DtPerfil.o src/DataTypes/DtTimeStamp.o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtAsignatura.o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtParticipacion.o
 # environment
 MAKELEVEL := 0
 # default
@@ -110,7 +108,7 @@ NAME = DESKTOP-T39194T
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/marti/.vscode/extensions/ms-vscode-remote.remote-wsl-0.56.4
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/marti/.vscode/extensions/ms-vscode-remote.remote-wsl-0.56.5
 # default
 MAKE_COMMAND := make
 # default
@@ -146,7 +144,7 @@ WAYLAND_DISPLAY = wayland-0
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
-VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /home/nitram/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/remote/node_modules
+VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /home/nitram/.vscode-server/bin/507ce72a4466fbb27b715c3722558bb15afa9f48/remote/node_modules
 # default
 .RECIPEPREFIX := 
 # environment
@@ -158,7 +156,7 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Debian
 # variable set hash-table stats:
-# Load=73/1024=7%, Rehash=0, Collisions=4/106=4%
+# Load=72/1024=7%, Rehash=0, Collisions=4/105=4%
 
 # Pattern-specific Variable Values
 
@@ -166,9 +164,9 @@ WSL_DISTRO_NAME = Debian
 
 # Directories
 
-# . (device 64, inode 6192449488293441): 8 files, no impossibilities.
+# . (device 64, inode 6192449488293441): 9 files, no impossibilities.
 
-# 8 files, no impossibilities in 1 directories.
+# 9 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -179,28 +177,35 @@ WSL_DISTRO_NAME = Debian
 src/DataTypes/DtAsistir.o: src/DataTypes/DtAsistir.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtAsistir'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:34.2430638
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Class/Estudiante.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-10 18:19:01.7344384
+#  Last modified 2021-06-17 18:52:08.061149
 #  File has been updated.
 #  Successfully updated.
 
 src/Controller/CAltaUsuario.o: src/Controller/CAltaUsuario.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Controller/CAltaUsuario'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:28.7868542
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/Controller/CListadoClases.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-06-07 22:55:12.9938904
 #  File has been updated.
 #  Successfully updated.
 
 src/DataTypes/DtInfoClase.o: src/DataTypes/DtInfoClase.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtInfoClase'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:35.3834968
 #  File has been updated.
 #  Successfully updated.
 
@@ -211,7 +216,7 @@ src/Controller/CAltaAsignatura.cpp:
 #  File has been updated.
 #  Successfully updated.
 
-all: src/main.o src/Factory.o src/Class/Asignatura.o src/Class/Clase.o src/Class/Docente.o src/Class/Estudiante.o src/Class/Participacion.o src/Class/Perfil.o src/Class/Rol.o src/Class/AsisteVivo.o src/Class/AsisteDiferido.o src/Class/Monitoreo.o src/Class/Practico.o src/Class/Teorico.o src/Class/Sesion.o src/Controller/CAltaAsignatura.o src/Controller/CAltaUsuario.o src/Controller/CAsistenciaClaseVivo.o src/Controller/CEnvioMensaje.o src/Controller/CIniciarSesion.o src/Controller/CInscripcionAsignaturas.o src/Controller/CListadoClases.o src/Handlers/ManejadorAsignatura.o src/Handlers/ManejadorClase.o src/Handlers/ManejadorPerfil.o src/DataTypes/DtFecha.o src/DataTypes/DtLog.o src/DataTypes/DtAsistir.o src/DataTypes/DtPerfil.o src/DataTypes/DtTimeStamp.o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtAsignatura.o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtParticipacion.o
+all: src/main.o src/Factory.o src/Class/Asignatura.o src/Class/Clase.o src/Class/Docente.o src/Class/Estudiante.o src/Class/Participacion.o src/Class/Perfil.o src/Class/Rol.o src/Class/AsisteVivo.o src/Class/Monitoreo.o src/Class/Practico.o src/Class/Teorico.o src/Class/Sesion.o src/Controller/CAltaAsignatura.o src/Controller/CAltaUsuario.o src/Controller/CAsistenciaClaseVivo.o src/Controller/CEnvioMensaje.o src/Controller/CIniciarSesion.o src/Controller/CInscripcionAsignaturas.o src/Controller/CInicioClase.o src/Controller/CAsignacionDocenteAsignatura.o src/Controller/CEliminarAsignatura.o src/Controller/CListadoClases.o src/Handlers/ManejadorAsignatura.o src/Handlers/ManejadorClase.o src/Handlers/ManejadorPerfil.o src/DataTypes/DtFecha.o src/DataTypes/DtAsistir.o src/DataTypes/DtPerfil.o src/DataTypes/DtTimeStamp.o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtAsignatura.o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtParticipacion.o
 #  Command line target.
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: ''
@@ -225,25 +230,25 @@ all: src/main.o src/Factory.o src/Class/Asignatura.o src/Class/Clase.o src/Class
 # automatic
 # * := 
 # automatic
-# + := src/main.o src/Factory.o src/Class/Asignatura.o src/Class/Clase.o src/Class/Docente.o src/Class/Estudiante.o src/Class/Participacion.o src/Class/Perfil.o src/Class/Rol.o src/Class/AsisteVivo.o src/Class/AsisteDiferido.o src/Class/Monitoreo.o src/Class/Practico.o src/Class/Teorico.o src/Class/Sesion.o src/Controller/CAltaAsignatura.o src/Controller/CAltaUsuario.o src/Controller/CAsistenciaClaseVivo.o src/Controller/CEnvioMensaje.o src/Controller/CIniciarSesion.o src/Controller/CInscripcionAsignaturas.o src/Controller/CListadoClases.o src/Handlers/ManejadorAsignatura.o src/Handlers/ManejadorClase.o src/Handlers/ManejadorPerfil.o src/DataTypes/DtFecha.o src/DataTypes/DtLog.o src/DataTypes/DtAsistir.o src/DataTypes/DtPerfil.o src/DataTypes/DtTimeStamp.o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtAsignatura.o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtParticipacion.o
+# + := src/main.o src/Factory.o src/Class/Asignatura.o src/Class/Clase.o src/Class/Docente.o src/Class/Estudiante.o src/Class/Participacion.o src/Class/Perfil.o src/Class/Rol.o src/Class/AsisteVivo.o src/Class/Monitoreo.o src/Class/Practico.o src/Class/Teorico.o src/Class/Sesion.o src/Controller/CAltaAsignatura.o src/Controller/CAltaUsuario.o src/Controller/CAsistenciaClaseVivo.o src/Controller/CEnvioMensaje.o src/Controller/CIniciarSesion.o src/Controller/CInscripcionAsignaturas.o src/Controller/CInicioClase.o src/Controller/CAsignacionDocenteAsignatura.o src/Controller/CEliminarAsignatura.o src/Controller/CListadoClases.o src/Handlers/ManejadorAsignatura.o src/Handlers/ManejadorClase.o src/Handlers/ManejadorPerfil.o src/DataTypes/DtFecha.o src/DataTypes/DtAsistir.o src/DataTypes/DtPerfil.o src/DataTypes/DtTimeStamp.o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtAsignatura.o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtParticipacion.o
 # automatic
 # | := 
 # automatic
 # < := src/main.o
 # automatic
-# ^ := src/main.o src/Factory.o src/Class/Asignatura.o src/Class/Clase.o src/Class/Docente.o src/Class/Estudiante.o src/Class/Participacion.o src/Class/Perfil.o src/Class/Rol.o src/Class/AsisteVivo.o src/Class/AsisteDiferido.o src/Class/Monitoreo.o src/Class/Practico.o src/Class/Teorico.o src/Class/Sesion.o src/Controller/CAltaAsignatura.o src/Controller/CAltaUsuario.o src/Controller/CAsistenciaClaseVivo.o src/Controller/CEnvioMensaje.o src/Controller/CIniciarSesion.o src/Controller/CInscripcionAsignaturas.o src/Controller/CListadoClases.o src/Handlers/ManejadorAsignatura.o src/Handlers/ManejadorClase.o src/Handlers/ManejadorPerfil.o src/DataTypes/DtFecha.o src/DataTypes/DtLog.o src/DataTypes/DtAsistir.o src/DataTypes/DtPerfil.o src/DataTypes/DtTimeStamp.o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtAsignatura.o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtParticipacion.o
+# ^ := src/main.o src/Factory.o src/Class/Asignatura.o src/Class/Clase.o src/Class/Docente.o src/Class/Estudiante.o src/Class/Participacion.o src/Class/Perfil.o src/Class/Rol.o src/Class/AsisteVivo.o src/Class/Monitoreo.o src/Class/Practico.o src/Class/Teorico.o src/Class/Sesion.o src/Controller/CAltaAsignatura.o src/Controller/CAltaUsuario.o src/Controller/CAsistenciaClaseVivo.o src/Controller/CEnvioMensaje.o src/Controller/CIniciarSesion.o src/Controller/CInscripcionAsignaturas.o src/Controller/CInicioClase.o src/Controller/CAsignacionDocenteAsignatura.o src/Controller/CEliminarAsignatura.o src/Controller/CListadoClases.o src/Handlers/ManejadorAsignatura.o src/Handlers/ManejadorClase.o src/Handlers/ManejadorPerfil.o src/DataTypes/DtFecha.o src/DataTypes/DtAsistir.o src/DataTypes/DtPerfil.o src/DataTypes/DtTimeStamp.o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtAsignatura.o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtParticipacion.o
 # automatic
-# ? := src/main.o src/Factory.o src/Class/Asignatura.o src/Class/Clase.o src/Class/Docente.o src/Class/Estudiante.o src/Class/Participacion.o src/Class/Perfil.o src/Class/Rol.o src/Class/AsisteVivo.o src/Class/AsisteDiferido.o src/Class/Monitoreo.o src/Class/Practico.o src/Class/Teorico.o src/Class/Sesion.o src/Controller/CAltaAsignatura.o src/Controller/CAltaUsuario.o src/Controller/CAsistenciaClaseVivo.o src/Controller/CEnvioMensaje.o src/Controller/CIniciarSesion.o src/Controller/CInscripcionAsignaturas.o src/Controller/CListadoClases.o src/Handlers/ManejadorAsignatura.o src/Handlers/ManejadorClase.o src/Handlers/ManejadorPerfil.o src/DataTypes/DtFecha.o src/DataTypes/DtLog.o src/DataTypes/DtAsistir.o src/DataTypes/DtPerfil.o src/DataTypes/DtTimeStamp.o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtAsignatura.o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtParticipacion.o
+# ? := src/main.o src/Factory.o src/Class/Asignatura.o src/Class/Clase.o src/Class/Docente.o src/Class/Estudiante.o src/Class/Participacion.o src/Class/Perfil.o src/Class/Rol.o src/Class/AsisteVivo.o src/Class/Monitoreo.o src/Class/Practico.o src/Class/Teorico.o src/Class/Sesion.o src/Controller/CAltaAsignatura.o src/Controller/CAltaUsuario.o src/Controller/CAsistenciaClaseVivo.o src/Controller/CEnvioMensaje.o src/Controller/CIniciarSesion.o src/Controller/CInscripcionAsignaturas.o src/Controller/CInicioClase.o src/Controller/CAsignacionDocenteAsignatura.o src/Controller/CEliminarAsignatura.o src/Controller/CListadoClases.o src/Handlers/ManejadorAsignatura.o src/Handlers/ManejadorClase.o src/Handlers/ManejadorPerfil.o src/DataTypes/DtFecha.o src/DataTypes/DtAsistir.o src/DataTypes/DtPerfil.o src/DataTypes/DtTimeStamp.o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtAsignatura.o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtParticipacion.o
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=5/14=36%
-#  recipe to execute (from 'Makefile', line 48):
+#  recipe to execute (from 'Makefile', line 49):
 	g++ $(obj) -o $(exec)
 	@ echo "\n\nEjecutar con: ./$(exec)\n\n"
 
 src/DataTypes/DtParticipacion.o: src/DataTypes/DtParticipacion.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtParticipacion'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:36.8391363
 #  File has been updated.
 #  Successfully updated.
 
@@ -257,8 +262,9 @@ src/DataTypes/DtInstanciaClase.cpp:
 src/DataTypes/DtIniciarClase.o: src/DataTypes/DtIniciarClase.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtIniciarClase'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:36.1198696
 #  File has been updated.
+ 
 #  Successfully updated.
 
 # Not a target:
@@ -270,37 +276,36 @@ src/Handlers/ManejadorPerfil.cpp:
 
 src/main.o: src/main.cpp
 #  Implicit rule search has been done.
- 
 #  Implicit/static pattern stem: 'src/main'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:23.1910095
 #  File has been updated.
 #  Successfully updated.
 
 src/DataTypes/DtAsignatura.o: src/DataTypes/DtAsignatura.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtAsignatura'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:35.0722421
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Class/Clase.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-08 19:44:48.7091658
+#  Last modified 2021-06-17 21:21:29.2220845
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/DataTypes/DtIniciarClaseFull.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-07 23:21:11.8679892
+#  Last modified 2021-06-18 00:15:20.3173979
 #  File has been updated.
 #  Successfully updated.
 
-# Not a target:
-src/DataTypes/DtLog.cpp:
+src/Controller/CAsignacionDocenteAsignatura.o: src/Controller/CAsignacionDocenteAsignatura.cpp
 #  Implicit rule search has been done.
-#  Last modified 2021-05-31 16:15:36.4133949
+#  Implicit/static pattern stem: 'src/Controller/CAsignacionDocenteAsignatura'
+#  Last modified 2021-06-18 00:37:31.5496648
 #  File has been updated.
 #  Successfully updated.
 
@@ -313,56 +318,56 @@ src/DataTypes/DtLog.cpp:
 src/Controller/CAsistenciaClaseVivo.o: src/Controller/CAsistenciaClaseVivo.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Controller/CAsistenciaClaseVivo'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:29.2432551
 #  File has been updated.
 #  Successfully updated.
 
 src/DataTypes/DtInfoTeorico.o: src/DataTypes/DtInfoTeorico.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtInfoTeorico'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:35.629263
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-src/Controller/CListadoClases.cpp:
+src/Controller/CEliminarAsignatura.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-07 22:55:12.9938904
+#  Last modified 2021-06-16 12:46:53.2110749
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-10 19:27:34.998106
+#  Last modified 2021-06-18 00:27:48.5759161
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Class/Docente.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-07 18:44:14.485156
+#  Last modified 2021-06-16 09:52:52.0587356
 #  File has been updated.
 #  Successfully updated.
 
 src/DataTypes/DtInfoMonitoreo.o: src/DataTypes/DtInfoMonitoreo.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtInfoMonitoreo'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:35.9105162
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/Teorico.o: src/Class/Teorico.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Teorico'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:27.7301758
 #  File has been updated.
 #  Successfully updated.
 
 src/Controller/CIniciarSesion.o: src/Controller/CIniciarSesion.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Controller/CIniciarSesion'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:30.1325128
 #  File has been updated.
 #  Successfully updated.
 
@@ -376,49 +381,49 @@ src/Class/Perfil.cpp:
 src/DataTypes/DtIniciarMonitoreo.o: src/DataTypes/DtIniciarMonitoreo.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtIniciarMonitoreo'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:36.6279714
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/Monitoreo.o: src/Class/Monitoreo.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Monitoreo'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:26.9525219
+#  File has been updated.
+#  Successfully updated.
+
+src/Controller/CInicioClase.o: src/Controller/CInicioClase.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/Controller/CInicioClase'
+#  Last modified 2021-06-18 00:37:31.1524006
 #  File has been updated.
 #  Successfully updated.
 
 src/Controller/CInscripcionAsignaturas.o: src/Controller/CInscripcionAsignaturas.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Controller/CInscripcionAsignaturas'
-#  File does not exist.
-#  File has been updated.
-#  Successfully updated.
-
-src/Class/AsisteDiferido.o: src/Class/AsisteDiferido.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/Class/AsisteDiferido'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:30.5995921
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/Practico.o: src/Class/Practico.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Practico'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:27.3358084
 #  File has been updated.
 #  Successfully updated.
 
 src/DataTypes/DtTimeStamp.o: src/DataTypes/DtTimeStamp.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtTimeStamp'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:34.6666643
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Handlers/ManejadorAsignatura.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-07 19:42:31.7373889
+#  Last modified 2021-06-16 12:56:29.2354944
 #  File has been updated.
 #  Successfully updated.
 
@@ -453,14 +458,14 @@ src/DataTypes/DtPerfil.cpp:
 # Not a target:
 src/Handlers/ManejadorClase.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-07 18:44:14.6091632
+#  Last modified 2021-06-16 12:57:56.5494985
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/Estudiante.o: src/Class/Estudiante.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Estudiante'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:25.432915
 #  File has been updated.
 #  Successfully updated.
 
@@ -474,14 +479,14 @@ src/Class/Sesion.cpp:
 # Not a target:
 src/Class/Asignatura.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-09 12:51:26.0860725
+#  Last modified 2021-06-16 12:45:12.7397606
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Class/Participacion.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-08 18:00:23.5470585
+#  Last modified 2021-06-16 13:06:51.9682374
 #  File has been updated.
 #  Successfully updated.
 
@@ -495,21 +500,21 @@ src/DataTypes/DtFecha.cpp:
 src/Controller/CAltaAsignatura.o: src/Controller/CAltaAsignatura.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Controller/CAltaAsignatura'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:28.4207863
 #  File has been updated.
 #  Successfully updated.
 
 src/DataTypes/DtInstanciaClase.o: src/DataTypes/DtInstanciaClase.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtInstanciaClase'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:34.7546658
 #  File has been updated.
 #  Successfully updated.
 
 src/Handlers/ManejadorPerfil.o: src/Handlers/ManejadorPerfil.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Handlers/ManejadorPerfil'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:33.8246667
 #  File has been updated.
 #  Successfully updated.
 
@@ -529,7 +534,7 @@ src/DataTypes/DtAsistir.cpp:
 src/Class/Clase.o: src/Class/Clase.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Clase'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:24.6306422
 #  File has been updated.
 #  Successfully updated.
 
@@ -538,27 +543,20 @@ src/Controller/CAltaUsuario.cpp:
 #  Implicit rule search has been done.
 #  Last modified 2021-06-10 17:57:45.8772699
 #  File has been updated.
+ 
 #  Successfully updated.
 
 src/DataTypes/DtIniciarClaseFull.o: src/DataTypes/DtIniciarClaseFull.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtIniciarClaseFull'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:36.3351043
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/DataTypes/DtInfoClase.cpp:
 #  Implicit rule search has been done.
- 
 #  Last modified 2021-06-07 14:02:41.85522
-#  File has been updated.
-#  Successfully updated.
-
-src/DataTypes/DtLog.o: src/DataTypes/DtLog.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/DataTypes/DtLog'
-#  File does not exist.
 #  File has been updated.
 #  Successfully updated.
 
@@ -573,9 +571,16 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 54):
+#  recipe to execute (from 'Makefile', line 55):
 	@ rm -f $(obj) $(exec) src/main
 	@ echo "archivos de compilacion eliminados."
+
+src/Controller/CListadoClases.o: src/Controller/CListadoClases.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/Controller/CListadoClases'
+#  Last modified 2021-06-18 00:37:32.3626296
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 src/DataTypes/DtIniciarClase.cpp:
@@ -584,24 +589,24 @@ src/DataTypes/DtIniciarClase.cpp:
 #  File has been updated.
 #  Successfully updated.
 
-src/Controller/CListadoClases.o: src/Controller/CListadoClases.cpp
+src/Controller/CEliminarAsignatura.o: src/Controller/CEliminarAsignatura.cpp
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/Controller/CListadoClases'
-#  File does not exist.
+#  Implicit/static pattern stem: 'src/Controller/CEliminarAsignatura'
+#  Last modified 2021-06-18 00:37:31.9450718
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/Docente.o: src/Class/Docente.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Docente'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:25.0624985
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-10 19:06:28.0848002
+#  Last modified 2021-06-18 00:48:11.2798007
 #  File has been updated.
 #  Successfully updated.
 
@@ -615,14 +620,21 @@ src/DataTypes/DtAsignatura.cpp:
 src/Class/Perfil.o: src/Class/Perfil.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Perfil'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:25.8685757
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/Controller/CAsignacionDocenteAsignatura.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-06-16 10:53:59.0378941
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Factory.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-08 21:05:45.9491807
+#  Last modified 2021-06-18 00:15:08.1853226
 #  File has been updated.
 #  Successfully updated.
 
@@ -643,7 +655,7 @@ src/DataTypes/DtInfoTeorico.cpp:
 src/Handlers/ManejadorAsignatura.o: src/Handlers/ManejadorAsignatura.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Handlers/ManejadorAsignatura'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:32.8229784
 #  File has been updated.
 #  Successfully updated.
 
@@ -664,7 +676,7 @@ src/Class/Teorico.cpp:
 src/Class/Rol.o: src/Class/Rol.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Rol'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:26.1765273
 #  File has been updated.
 #  Successfully updated.
 
@@ -685,77 +697,77 @@ src/DataTypes/DtIniciarMonitoreo.cpp:
 # Not a target:
 src/Class/Monitoreo.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-08 20:45:50.1841088
+#  Last modified 2021-06-17 21:19:10.7802585
 #  File has been updated.
 #  Successfully updated.
 
 src/Controller/CEnvioMensaje.o: src/Controller/CEnvioMensaje.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Controller/CEnvioMensaje'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:29.7634749
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/AsisteVivo.o: src/Class/AsisteVivo.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/AsisteVivo'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:26.498704
 #  File has been updated.
 #  Successfully updated.
 
 src/DataTypes/DtPerfil.o: src/DataTypes/DtPerfil.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtPerfil'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:34.4546714
 #  File has been updated.
 #  Successfully updated.
 
 src/Handlers/ManejadorClase.o: src/Handlers/ManejadorClase.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Handlers/ManejadorClase'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:33.4646537
 #  File has been updated.
 #  Successfully updated.
 
 src/Factory.o: src/Factory.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Factory'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:23.6995069
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/Sesion.o: src/Class/Sesion.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Sesion'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:28.0416526
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/Controller/CInicioClase.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-06-18 00:37:19.043717
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/Asignatura.o: src/Class/Asignatura.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Asignatura'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:24.1674198
 #  File has been updated.
 #  Successfully updated.
 
 src/Class/Participacion.o: src/Class/Participacion.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/Class/Participacion'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:25.6581082
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Controller/CInscripcionAsignaturas.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-07 19:45:37.8623734
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/Class/AsisteDiferido.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2021-06-02 17:32:21.5252338
+#  Last modified 2021-06-14 14:37:10.5711308
 #  File has been updated.
 #  Successfully updated.
 
@@ -769,31 +781,31 @@ src/Class/Practico.cpp:
 src/DataTypes/DtFecha.o: src/DataTypes/DtFecha.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtFecha'
-#  File does not exist.
+#  Last modified 2021-06-18 00:37:34.0343343
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/DataTypes/DtTimeStamp.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-08 20:45:27.7441664
+#  Last modified 2021-06-18 00:25:18.9809541
 #  File has been updated.
 #  Successfully updated.
 
 # files hash-table stats:
-# Load=83/1024=8%, Rehash=0, Collisions=3/212=1%
+# Load=85/1024=8%, Rehash=0, Collisions=8/217=4%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 133 / storage = 3258 B / avg = 24 B
-# current buf: size = 8162 B / used = 3258 B / count = 133 / avg = 24 B
+# strcache buffers: 1 (0) / strings = 137 / storage = 3455 B / avg = 25 B
+# current buf: size = 8162 B / used = 3455 B / count = 137 / avg = 25 B
 
-# strcache performance: lookups = 219 / hit rate = 39%
+# strcache performance: lookups = 225 / hit rate = 39%
 # hash-table stats:
-# Load=133/8192=2%, Rehash=0, Collisions=12/219=5%
-# Finished Make data base on Thu Jun 10 19:30:06 2021
+# Load=137/8192=2%, Rehash=0, Collisions=15/225=7%
+# Finished Make data base on Fri Jun 18 15:20:28 2021
 
  

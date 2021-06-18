@@ -2,6 +2,7 @@
 #define C_ASIGNACIONDOCENTEASIGNATURA
 
 #include "../../Interfaces/IAsignacionDocenteAsignatura.h"
+#include "../../Handlers/header/ManejadorAsignatura.h"
 
 class CAsignacionDocenteAsignatura : public IAsignacionDocenteAsignatura
 {
@@ -9,6 +10,8 @@ class CAsignacionDocenteAsignatura : public IAsignacionDocenteAsignatura
         std::string codigo;
         std::string email;
         tipoRol rol;
+        
+        bool controlRol(DtInstanciaClase*); //Controla si el docente a asignar corresponde con el tipo de clase.
 
     public:
         CAsignacionDocenteAsignatura();

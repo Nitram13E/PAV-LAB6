@@ -44,3 +44,10 @@ int DtTimeStamp::getSegundo()
 {
     return this -> segundo;
 }
+
+std::ostream& operator << (std::ostream& out, DtTimeStamp fechaHora)
+{
+    std::cout << fechaHora.getFecha() << " " << fechaHora.getHora() << ":" << fechaHora.getMinuto() << ":" << fechaHora.getSegundo();
+
+    return out;
+}

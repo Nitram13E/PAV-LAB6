@@ -12,7 +12,6 @@ class Docente : public Perfil
 {
     private:
         std::string instituto;
-
         std::list<Rol*> roles;
 
     public:
@@ -22,10 +21,11 @@ class Docente : public Perfil
 
         void setInstituto(std::string);
         std::string getInstituto();
-
         void addRol(Rol*);
         std::list<Rol*> getRoles();
         std::list <std::string> listarAsignaturas();
+        bool dictaAsignatura(std::string);
+        void desvincularAsignatura(std::string);
 };
 
 #endif 

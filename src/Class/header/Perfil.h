@@ -31,6 +31,7 @@ class Perfil
         void setPassword(std::string);
         std::string getPassword();
         
+        virtual void desvincularAsignatura(std::string) = 0;
     };
 
 #endif 

@@ -3,6 +3,8 @@
 
 #include "DtFecha.h"
 
+#include <iostream>
+
 class DtTimeStamp
 {
     private:
@@ -24,6 +26,8 @@ class DtTimeStamp
         int getMinuto();
 
         int getSegundo();
+
+        friend std::ostream& operator << (std::ostream&, DtTimeStamp);
 };
 
 #endif

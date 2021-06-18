@@ -1,4 +1,4 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/mnt/c/PAV/PAV-LAB6'
 g++    -c -o src/main.o src/main.cpp
  
@@ -7,27 +7,15 @@ g++    -c -o src/Factory.o src/Factory.cpp
 g++    -c -o src/Class/Asignatura.o src/Class/Asignatura.cpp
  
 g++    -c -o src/Class/Clase.o src/Class/Clase.cpp
- 
 g++    -c -o src/Class/Docente.o src/Class/Docente.cpp
- 
 g++    -c -o src/Class/Estudiante.o src/Class/Estudiante.cpp
- 
 g++    -c -o src/Class/Participacion.o src/Class/Participacion.cpp
- 
 g++    -c -o src/Class/Perfil.o src/Class/Perfil.cpp
- 
 g++    -c -o src/Class/Rol.o src/Class/Rol.cpp
- 
 g++    -c -o src/Class/AsisteVivo.o src/Class/AsisteVivo.cpp
- 
-g++    -c -o src/Class/AsisteDiferido.o src/Class/AsisteDiferido.cpp
- 
 g++    -c -o src/Class/Monitoreo.o src/Class/Monitoreo.cpp
- 
 g++    -c -o src/Class/Practico.o src/Class/Practico.cpp
- 
 g++    -c -o src/Class/Teorico.o src/Class/Teorico.cpp
- 
 g++    -c -o src/Class/Sesion.o src/Class/Sesion.cpp
  
 g++    -c -o src/Controller/CAltaAsignatura.o src/Controller/CAltaAsignatura.cpp
@@ -37,45 +25,29 @@ g++    -c -o src/Controller/CAltaUsuario.o src/Controller/CAltaUsuario.cpp
 g++    -c -o src/Controller/CAsistenciaClaseVivo.o src/Controller/CAsistenciaClaseVivo.cpp
  
 g++    -c -o src/Controller/CEnvioMensaje.o src/Controller/CEnvioMensaje.cpp
- 
 g++    -c -o src/Controller/CIniciarSesion.o src/Controller/CIniciarSesion.cpp
- 
 g++    -c -o src/Controller/CInscripcionAsignaturas.o src/Controller/CInscripcionAsignaturas.cpp
- 
+g++    -c -o src/Controller/CInicioClase.o src/Controller/CInicioClase.cpp
+g++    -c -o src/Controller/CAsignacionDocenteAsignatura.o src/Controller/CAsignacionDocenteAsignatura.cpp
+g++    -c -o src/Controller/CEliminarAsignatura.o src/Controller/CEliminarAsignatura.cpp
 g++    -c -o src/Controller/CListadoClases.o src/Controller/CListadoClases.cpp
- 
 g++    -c -o src/Handlers/ManejadorAsignatura.o src/Handlers/ManejadorAsignatura.cpp
- 
 g++    -c -o src/Handlers/ManejadorClase.o src/Handlers/ManejadorClase.cpp
- 
 g++    -c -o src/Handlers/ManejadorPerfil.o src/Handlers/ManejadorPerfil.cpp
- 
 g++    -c -o src/DataTypes/DtFecha.o src/DataTypes/DtFecha.cpp
- 
-g++    -c -o src/DataTypes/DtLog.o src/DataTypes/DtLog.cpp
- 
 g++    -c -o src/DataTypes/DtAsistir.o src/DataTypes/DtAsistir.cpp
- 
 g++    -c -o src/DataTypes/DtPerfil.o src/DataTypes/DtPerfil.cpp
- 
 g++    -c -o src/DataTypes/DtTimeStamp.o src/DataTypes/DtTimeStamp.cpp
- 
 g++    -c -o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtInstanciaClase.cpp
- 
 g++    -c -o src/DataTypes/DtAsignatura.o src/DataTypes/DtAsignatura.cpp
- 
 g++    -c -o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoClase.cpp
- 
 g++    -c -o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoTeorico.cpp
- 
 g++    -c -o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtInfoMonitoreo.cpp
- 
 g++    -c -o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClase.cpp
- 
 g++    -c -o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarClaseFull.cpp
 g++    -c -o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtIniciarMonitoreo.cpp
 g++    -c -o src/DataTypes/DtParticipacion.o src/DataTypes/DtParticipacion.cpp
-g++ src/main.o src/Factory.o src/Class/Asignatura.o src/Class/Clase.o src/Class/Docente.o src/Class/Estudiante.o src/Class/Participacion.o src/Class/Perfil.o src/Class/Rol.o src/Class/AsisteVivo.o src/Class/AsisteDiferido.o src/Class/Monitoreo.o src/Class/Practico.o src/Class/Teorico.o src/Class/Sesion.o src/Controller/CAltaAsignatura.o src/Controller/CAltaUsuario.o src/Controller/CAsistenciaClaseVivo.o src/Controller/CEnvioMensaje.o src/Controller/CIniciarSesion.o src/Controller/CInscripcionAsignaturas.o src/Controller/CListadoClases.o src/Handlers/ManejadorAsignatura.o src/Handlers/ManejadorClase.o src/Handlers/ManejadorPerfil.o src/DataTypes/DtFecha.o src/DataTypes/DtLog.o src/DataTypes/DtAsistir.o src/DataTypes/DtPerfil.o src/DataTypes/DtTimeStamp.o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtAsignatura.o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtParticipacion.o -o exec 
+g++ src/main.o src/Factory.o src/Class/Asignatura.o src/Class/Clase.o src/Class/Docente.o src/Class/Estudiante.o src/Class/Participacion.o src/Class/Perfil.o src/Class/Rol.o src/Class/AsisteVivo.o src/Class/Monitoreo.o src/Class/Practico.o src/Class/Teorico.o src/Class/Sesion.o src/Controller/CAltaAsignatura.o src/Controller/CAltaUsuario.o src/Controller/CAsistenciaClaseVivo.o src/Controller/CEnvioMensaje.o src/Controller/CIniciarSesion.o src/Controller/CInscripcionAsignaturas.o src/Controller/CInicioClase.o src/Controller/CAsignacionDocenteAsignatura.o src/Controller/CEliminarAsignatura.o src/Controller/CListadoClases.o src/Handlers/ManejadorAsignatura.o src/Handlers/ManejadorClase.o src/Handlers/ManejadorPerfil.o src/DataTypes/DtFecha.o src/DataTypes/DtAsistir.o src/DataTypes/DtPerfil.o src/DataTypes/DtTimeStamp.o src/DataTypes/DtInstanciaClase.o src/DataTypes/DtAsignatura.o src/DataTypes/DtInfoClase.o src/DataTypes/DtInfoTeorico.o src/DataTypes/DtInfoMonitoreo.o src/DataTypes/DtIniciarClase.o src/DataTypes/DtIniciarClaseFull.o src/DataTypes/DtIniciarMonitoreo.o src/DataTypes/DtParticipacion.o -o exec 
 echo "\n\nEjecutar con: ./exec \n\n"
 make: Leaving directory '/mnt/c/PAV/PAV-LAB6'
  

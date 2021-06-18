@@ -4,7 +4,7 @@ Progreso:
 
 - [X] ➢ Alta de usuario - Lucas
 - [X] ➢ Alta de asignatura - Martin
-- [ ] ➢ Asignación de docentes a una asignatura - Equipo
+- [X] ➢ Asignación de docentes a una asignatura - Equipo
 - [X] ➢ Inscripción a las asignaturas - Felipe
 - [ ] ➢ Inicio de clase - Equipo
 - [X] ➢ Asistencia a clase en vivo - Lucia
@@ -14,8 +14,14 @@ Progreso:
 
 ### DUDAS Y COSAS POR HACER:
 
-- Implementacion de casos de uso Asignación de docentes a una asignatura, Inicio de clase y Eliminación de asignatura
+- Implementacion de casos de uso Inicio de clase 
 - Agregar casos de uso al menu
 - Controles de input de lado usuario(ej: CUInscripcionAsignatura, elegir una asignatura no existente en selectAsignatura)
-- Controles de id, Perfil asignatura clase
+- Controles de id, Perfil asignatura clase - controlar
 - cargar usuario generico
+- Preguntar si en los destructores hay que eliminar los punteros del objeto o lo hace el destructor por mas que se implemente el destructor
+- Clase tiene solo 1 docente
+
+### REVISAR:
+- FIXME en Clase.cpp
+- FIXME en Monitoreo.cpp

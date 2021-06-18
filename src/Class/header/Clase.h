@@ -7,7 +7,6 @@ class AsisteDiferido;
 
 #include "../../DataTypes/header/DtTimeStamp.h"
 #include "AsisteVivo.h"
-#include "AsisteDiferido.h"
 #include "Docente.h"
 #include "Participacion.h"
 #include "../../DataTypes/header/DtInfoClase.h"
@@ -29,7 +28,6 @@ class Clase
         std::list<Docente*> docentes;
         std::list<Participacion*> participaciones;
         std::list<AsisteVivo*> asisteVivo;
-        std::list<AsisteDiferido*> asisteDiferido;
 
         void incrementarIdActual();
 
@@ -62,9 +60,6 @@ class Clase
 
         void addAsisteEnVivo(AsisteVivo*);
         std::list<AsisteVivo*> getAsisteVivo();
-
-        void addAsisteDiferido(AsisteDiferido*);
-        std::list<AsisteDiferido*> getAsisteDiferido();
 
         bool asisteEstudiante();
 

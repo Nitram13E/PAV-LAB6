@@ -3,18 +3,16 @@
 
 Monitoreo::Monitoreo(){}
 
-Monitoreo::Monitoreo(std::string nombre, DtTimeStamp inicio, DtTimeStamp* fin , std::string rutavideo) : Clase(nombre, inicio, fin, rutavideo){}
+Monitoreo::Monitoreo(std::string nombre, DtTimeStamp inicio, DtTimeStamp* fin , std::string rutavideo, std::list<Estudiante*> habilitados) : Clase(nombre, inicio, fin, rutavideo)
+{
+    this -> habilitados = habilitados;
+}
 
 Monitoreo::~Monitoreo(){}
-
 
 std::list<Estudiante*> Monitoreo::getHabilitados()
 {
     return this -> habilitados;
-}
-void Monitoreo::addHabilitados(Estudiante* estudiante)
-{
-    this -> habilitados.push_back(estudiante);
 }
 
 DtInfoClase Monitoreo::getDtInfoClase()
@@ -29,9 +27,9 @@ DtInfoClase Monitoreo::getDtInfoClase()
     }
     for(it2 = this->habilitados.begin(); it2 != this->habilitados.end(); ++it)
     {
-        dtEstudiantes.push_back((*it2)->getEmail());
+        dtEstudiantes.push_back((*it2) -> getEmail());
     }
     
-    DtInfoMonitoreo dtic = DtInfoMonitoreo(this->getID(),this->getNombre(),dtDocentes,dtEstudiantes);
+    DtInfoMonitoreo dtic = DtInfoMonitoreo(this -> getID(),this -> getNombre(),dtDocentes,dtEstudiantes);
     return dtic;
 }

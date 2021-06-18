@@ -5,6 +5,7 @@
 #include "Controller/header/CAsistenciaClaseVivo.h"
 #include "Controller/header/CEliminarAsignatura.h"
 #include "Controller/header/CIniciarSesion.h"
+#include "Controller/header/CEnvioMensaje.h"
 #include "Controller/header/CInicioClase.h"
 #include "Controller/header/CInscripcionAsignaturas.h"
 #include "Controller/header/CListadoClases.h"
@@ -26,14 +27,16 @@ IAltaAsignatura* Factory::getIAltaAsignatura(){return new CAltaAsignatura();}
 
 IAltaUsuario* Factory::getIAltaUsuario(){return new CAltaUsuario();}
 
-//IAsignacionDocenteAsignatura* Factory::getIAsignacionDocenteAsignatura(){return new CAsignacionDocenteAsignatura();}
+IAsignacionDocenteAsignatura* Factory::getIAsignacionDocenteAsignatura(){return new CAsignacionDocenteAsignatura();}
 
 IAsistenciaClaseVivo* Factory::getIAsistenciaClaseVivo(){return new CAsistenciaClaseVivo();}
 
-//IEliminarAsignatura* Factory::getIEliminarAsignatura(){return new CEliminarAsignatura();}
+IEliminarAsignatura* Factory::getIEliminarAsignatura(){return new CEliminarAsignatura();}
 
 IiniciarSesion* Factory::getIiniciarSesion(){return new CIniciarSesion();}
 
-//IinicioClase* Factory::getIinicioClase(){return new CInicioClase();}
+IEnvioMensaje* Factory::getIEnvioMensaje(){return new CEnvioMensaje();}
+
+IinicioClase* Factory::getIinicioClase(){return new CInicioClase();}
 
 IInscripcionesAsignaturas* Factory::getInscripcionAsignaturas(){return new CInscripcionAsignaturas();}
