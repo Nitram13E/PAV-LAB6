@@ -82,8 +82,3 @@ void CAsistenciaClaseVivo::cancelar()
 {
     delete this -> estudiante;
 }
-
-void CAsistenciaClaseVivo::cancelar()
-{
-    delete this -> estudiante;
-}
