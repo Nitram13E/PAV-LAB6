@@ -1,8 +1,5 @@
 #include "header/CInicioClase.h"
 #include "../Class/header/Sesion.h"
-#include "../Class/header/Teorico.h"
-#include "../Class/header/Practico.h"
-#include "../Class/header/Monitoreo.h"
 #include "../Handlers/header/ManejadorPerfil.h"
 #include "../Handlers/header/ManejadorAsignatura.h"
 #include "../Handlers/header/ManejadorClase.h"

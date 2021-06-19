@@ -26,6 +26,9 @@
 #include "DataTypes/header/DtParticipacion.h"
 #include "Handlers/header/ManejadorPerfil.h"
 
+#include "Handlers/header/ManejadorClase.h"
+#include "Handlers/header/ManejadorAsignatura.h"
+
 #include <unistd.h>
 
 void menu();
@@ -222,26 +225,26 @@ void cargarDatos()
     //ALTA ASIGNATURA
     IAA = fabrica -> getIAltaAsignatura();
 
-    IAA -> ingresar(new DtAsignatura("1", "PAV", new DtInstanciaClase(true, false, false)));
+    IAA -> ingresar(new DtAsignatura("1", "PAV", new DtInstanciaClase(true, true, true)));
     IAA -> altaAsignatura();
 
-    IAA -> ingresar(new DtAsignatura("2", "COE", new DtInstanciaClase(false, true, false)));
+    IAA -> ingresar(new DtAsignatura("2", "COE", new DtInstanciaClase(true, true, false)));
     IAA -> altaAsignatura();
     
-    IAA -> ingresar(new DtAsignatura("3", "CONT", new DtInstanciaClase(false, false, true)));
+    IAA -> ingresar(new DtAsignatura("3", "CONT", new DtInstanciaClase(false, true, false)));
     IAA -> altaAsignatura();
 
-    IAA -> ingresar(new DtAsignatura("4", "BD II", new DtInstanciaClase(true, false, true)));
+    IAA -> ingresar(new DtAsignatura("4", "BD II", new DtInstanciaClase(true, true, false)));
     IAA -> altaAsignatura();
 
-    IAA -> ingresar(new DtAsignatura("5", "RC", new DtInstanciaClase(true, true, false)));
+    IAA -> ingresar(new DtAsignatura("5", "RC", new DtInstanciaClase(true, false, true)));
     IAA -> altaAsignatura();
 
-    IAA -> ingresar(new DtAsignatura("6", "BD I", new DtInstanciaClase(true, true, true)));
+    IAA -> ingresar(new DtAsignatura("6", "BD I", new DtInstanciaClase(false, true, false)));
     IAA -> altaAsignatura();
 
     //Asignar Docentes
-    /**
+    
     IADA = fabrica -> getIAsignacionDocenteAsignatura();
 
     IADA -> docentesSinLaAsignatura("1");
@@ -280,8 +283,22 @@ void cargarDatos()
     IADA -> selectDocente("mail-d3", PRACTICO);
     IADA -> asignarDocente();
     
+    Asignatura * asig = ManejadorAsignatura::getInstancia() -> buscarAsignatura("1"); 
+    ManejadorPerfil * mp = ManejadorPerfil::getInstancia();
+    Estudiante * est = dynamic_cast<Estudiante *>(mp -> buscarPerfil("mail-e1"));
+    est -> addAsignaturas(asig);
+    
+    Practico * pr = new Practico("PAv Practico", DtTimeStamp(DtFecha(21,6,2021), 10, 00 , 00), NULL, "");
+    pr -> addDocentes(dynamic_cast<Docente *>(mp -> buscarPerfil("mail-d2")));
+    ManejadorClase::getInstancia() -> addClase(pr);
+    asig -> addClases(pr);
+
+    //Creacion de mensaje para clase agregada
+    Participacion * msj = new Participacion(DtTimeStamp(DtFecha(21,6,2021), 10, 05 , 00),"Bienvenidos",NULL);
+    pr -> addParticipacion(msj);
+
     //Iniciar Clases
-    IIC = fabrica -> getIinicioClase();
+    /**IIC = fabrica -> getIinicioClase();
     
     IIC -> selectAsignatura(DtIniciarClase("", "", DtTimeStamp(DtFecha(), 0, 0, 0)));
     IIC -> datosIngresados();
@@ -308,8 +325,8 @@ void cargarDatos()
 
         IIA -> selectAsignatura("5");
         IIA -> inscribir();
-    }
-    **/
+    }**/
+    
     //Enviar Mensaje
 
     system("clear");
@@ -671,6 +688,7 @@ void CUInicioClase()
                 std::string email;
                 std::cout << "Ingrese mail de alumno a habilitar: " << std::endl;
                 std::cin >> email;
+                std::cout << email << std::endl; //prueba
 
                 IIC -> habilitar(email);
 

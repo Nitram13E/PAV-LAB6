@@ -2,6 +2,9 @@
 #define I_INICIOCLASE
 
 #include "../DataTypes/header/DtIniciarClaseFull.h"
+#include "../Class/header/Teorico.h"
+#include "../Class/header/Practico.h"
+#include "../Class/header/Monitoreo.h"
 
 #include <list>
 
