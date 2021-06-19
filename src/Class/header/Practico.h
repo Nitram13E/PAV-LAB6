@@ -1,5 +1,5 @@
-#ifndef PRACTICO
-#define PRACTICO
+#ifndef PRACTICO_H
+#define PRACTICO_H
 
 #include "Clase.h"
 
@@ -9,7 +9,7 @@ class Practico: public Clase
         Practico();
         Practico(std::string, DtTimeStamp, DtTimeStamp*, std::string);
         ~Practico();
-        DtInfoClase getDtInfoClase();
+        DtInfoClase* getDtInfoClase();
 };
 
 #endif

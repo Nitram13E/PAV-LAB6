@@ -37,7 +37,10 @@ bool ManejadorClase::existeClase(int id)
 void ManejadorClase::removeClase(int id)
 {
     std::map<int, Clase*>::iterator it = this -> clases.find(id);
+    Clase* clase = it -> second;
     this -> clases.erase(it);
+
+    delete clase;
 }
 
 std::list<Clase*> ManejadorClase::listarClases()

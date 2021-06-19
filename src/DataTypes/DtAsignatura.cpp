@@ -25,3 +25,12 @@ DtInstanciaClase* DtAsignatura::getTipoClases()
 {
     return this -> tipoClases;
 }
+
+std::ostream& operator << (std::ostream& salida, DtAsignatura& dtAsig)
+{
+    std::cout << "Codigo: " << dtAsig.getCodigo() << std::endl;
+    std::cout << "Nombre: " << dtAsig.getNombre() << std::endl;
+    std::cout << "Tipo Clases:\n" << dtAsig.getTipoClases();
+
+    return salida;
+}

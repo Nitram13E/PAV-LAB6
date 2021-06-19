@@ -1,6 +1,6 @@
-#ifndef TIPOROL
-#define TIPOROL
+#ifndef TIPOROL_H
+#define TIPOROL_H
 
-enum tipoRol{Teorico, Practico, Monitoreo};
+enum tipoRol{TEORICO, PRACTICO, MONITOREO};
 
 #endif

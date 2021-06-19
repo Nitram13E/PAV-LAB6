@@ -8,7 +8,7 @@
 
 class IAsignacionDocenteAsignatura
 {
-    private:
+    public:
         virtual std::list<std::string> listarAsignaturas() = 0;
 
         virtual std::list<std::string> docentesSinLaAsignatura(std::string) = 0;

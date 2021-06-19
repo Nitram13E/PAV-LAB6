@@ -17,7 +17,13 @@ ManejadorAsignatura* ManejadorAsignatura::getInstancia()
 Asignatura* ManejadorAsignatura::buscarAsignatura(std::string codigo)
 {
     std::map<std::string,Asignatura*>::iterator iterador = this -> asignaturas.find(codigo);
-    return iterador -> second;
+
+    if(iterador != asignaturas.end())
+    {
+        return iterador -> second;
+    }
+
+    return NULL;
 }
 
 void ManejadorAsignatura::agregarAsignatura(Asignatura* asignatura)
@@ -34,16 +40,18 @@ bool ManejadorAsignatura::existeAsignatura(std::string codigo)
 void ManejadorAsignatura::removeAsignatura(std::string codigo)
 {
     std::map<std::string,Asignatura*>::iterator it = this -> asignaturas.find(codigo);
+    Asignatura * asig = it -> second;
     this -> asignaturas.erase(it);
+    delete asig;
 }
 
-std::list<Asignatura*> ManejadorAsignatura::listarAsignatura()
+std::list<std::string> ManejadorAsignatura::listarAsignatura()
 {
-    std::list<Asignatura*> lista;
+    std::list<std::string> lista;
     
     for(std::map<std::string, Asignatura*>::iterator it = this -> asignaturas.begin(); it != asignaturas.end(); ++it)
     {
-       lista.push_back(it -> second); 
+       lista.push_back(it -> first);
     }
 
     return lista;

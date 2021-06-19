@@ -18,6 +18,7 @@ class DtAsignatura
         std::string getCodigo();
         std::string getNombre();
         DtInstanciaClase* getTipoClases();
+        friend std::ostream& operator << (std::ostream&, DtAsignatura&);
 };
 
 #endif

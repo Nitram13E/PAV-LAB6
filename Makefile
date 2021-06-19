@@ -11,7 +11,6 @@ obj = src/main.o \
 	  src/Class/Perfil.o \
 	  src/Class/Rol.o \
 	  src/Class/AsisteVivo.o \
-	  src/Class/AsisteDiferido.o \
 	  src/Class/Monitoreo.o \
 	  src/Class/Practico.o \
 	  src/Class/Teorico.o \
@@ -23,6 +22,9 @@ obj = src/main.o \
 	  src/Controller/CEnvioMensaje.o \
 	  src/Controller/CIniciarSesion.o \
 	  src/Controller/CInscripcionAsignaturas.o \
+	  src/Controller/CInicioClase.o \
+	  src/Controller/CAsignacionDocenteAsignatura.o \
+	  src/Controller/CEliminarAsignatura.o \
 	  src/Controller/CListadoClases.o \
 	  \
 	  src/Handlers/ManejadorAsignatura.o \
@@ -30,7 +32,6 @@ obj = src/main.o \
 	  src/Handlers/ManejadorPerfil.o \
 	  \
 	  src/DataTypes/DtFecha.o \
-	  src/DataTypes/DtLog.o \
 	  src/DataTypes/DtAsistir.o \
 	  src/DataTypes/DtPerfil.o \
 	  src/DataTypes/DtTimeStamp.o \
@@ -51,5 +52,5 @@ all: $(obj)
 $(obj): %.o: %.cpp
 
 clean:
-	@ rm -f $(obj) $(exec)
+	@ rm -f $(obj) $(exec) src/main
 	@ echo "archivos de compilacion eliminados."

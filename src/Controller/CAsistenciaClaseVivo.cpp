@@ -10,6 +10,18 @@ CAsistenciaClaseVivo::~CAsistenciaClaseVivo(){}
 
 std::list<std::string> CAsistenciaClaseVivo::asignaturasInscriptos()
 {
+    Sesion* session = Sesion::getInstancia();
+    
+    if(session -> getTipoPerfil() == ESTUDIANTE)
+    {
+        Estudiante* est = dynamic_cast<Estudiante*>(session -> getPerfil());
+        
+        if(est != NULL)
+        {
+            this -> estudiante = est;
+        }
+    }
+
     std::list<std::string> lista;
 
     std::list<Asignatura *> asig = this -> estudiante-> getAsignaturas();
@@ -71,16 +83,7 @@ void CAsistenciaClaseVivo::cancelar()
     delete this -> estudiante;
 }
 
-void CAsistenciaClaseVivo::setEstudiante()
+void CAsistenciaClaseVivo::cancelar()
 {
-    Sesion* session = Sesion::getInstancia();
-    
-    if(session -> getTipoPerfil() == ESTUDIANTE)
-    {
-        Estudiante* est = dynamic_cast<Estudiante*>(session -> getPerfil());
-        if(est != NULL)
-        {
-            this -> estudiante = est;
-        }
-    }
+    delete this -> estudiante;
 }

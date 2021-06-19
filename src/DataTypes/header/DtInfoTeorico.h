@@ -15,6 +15,8 @@ class DtInfoTeorico : public DtInfoClase
         ~DtInfoTeorico();
         
         int getCantAsist();
+
+        friend std::ostream& operator << (std::ostream&, DtInfoTeorico);
 };
 
 #endif

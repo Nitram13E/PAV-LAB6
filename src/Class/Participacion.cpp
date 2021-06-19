@@ -4,6 +4,8 @@ int Participacion::idActual = 0;
 
 Participacion::Participacion(){}
 
+Participacion::~Participacion(){}
+
 Participacion::Participacion(DtTimeStamp fecha, std::string mensaje, Participacion * responde)
 {
     this -> id = idActual;
@@ -18,7 +20,6 @@ void Participacion::incrementarIDActual()
 {
     this -> idActual++;
 }
-
 
 int Participacion::getId()
 {
