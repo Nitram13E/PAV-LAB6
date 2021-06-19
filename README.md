@@ -6,10 +6,10 @@ Progreso:
 - [X] ➢ Alta de asignatura - Martin
 - [X] ➢ Asignación de docentes a una asignatura - Equipo
 - [X] ➢ Inscripción a las asignaturas - Felipe
-- [ ] ➢ Inicio de clase - Equipo
+- [X] ➢ Inicio de clase - Equipo
 - [X] ➢ Asistencia a clase en vivo - Lucia
 - [X] ➢ Envío de mensaje - Angel
-- [ ] ➢ Eliminación de asignatura - Equipo
+- [X] ➢ Eliminación de asignatura - Equipo
 - [X] ➢ Listado de Clases - Cristian
 
 ### DUDAS Y COSAS POR HACER:
