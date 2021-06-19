@@ -1,5 +1,5 @@
-#ifndef TEORICO
-#define TEORICO
+#ifndef TEORICO_H
+#define TEORICO_H
 
 #include "Clase.h"
 
@@ -15,7 +15,7 @@ class Teorico : public Clase
 
         void calcularAsistentes();
         
-        DtInfoClase getDtInfoClase();
+        DtInfoClase* getDtInfoClase();
 };
 
 #endif

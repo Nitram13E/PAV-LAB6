@@ -15,7 +15,7 @@ DtTimeStamp::DtTimeStamp(std::time_t tt)
 {
     time(&tt); // Se usa para encontrar la hora actual
     struct tm * time = localtime(&tt);
-    DtFecha fecha = DtFecha(time -> tm_mday, time -> tm_mon, time -> tm_year);
+    DtFecha fecha = DtFecha(time -> tm_mday, time -> tm_mon + 1, time -> tm_year + 1900);
 
     this -> fecha = fecha;
     this -> hora = time -> tm_hour;
@@ -43,4 +43,11 @@ int DtTimeStamp::getMinuto()
 int DtTimeStamp::getSegundo()
 {
     return this -> segundo;
+}
+
+std::ostream& operator << (std::ostream& out, DtTimeStamp fechaHora)
+{
+    std::cout << fechaHora.getFecha() << " " << fechaHora.getHora() << ":" << fechaHora.getMinuto() << ":" << fechaHora.getSegundo();
+
+    return out;
 }

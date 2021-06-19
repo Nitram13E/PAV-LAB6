@@ -2,38 +2,37 @@
 #include "../Handlers/header/ManejadorAsignatura.h"
 #include "../Handlers/header/ManejadorPerfil.h"
 
-
 CInscripcionAsignaturas::CInscripcionAsignaturas(){}
 
 CInscripcionAsignaturas::~CInscripcionAsignaturas(){}
 
 std::list<std::string> CInscripcionAsignaturas::asignaturasNoInscriptos()
 {
-    ManejadorAsignatura * asignaturas = asignaturas -> getInstancia();
+    ManejadorAsignatura * asignaturas = ManejadorAsignatura::getInstancia();
 
-    //Creo la lista de asignaturas a devolver
+    // Creo la lista de asignaturas a devolver
     std::list<std::string> result;
 
-    //Traigo todas las asignaturas existentes
+    // Traigo todas las asignaturas existentes
     std::map<std::string,Asignatura*> listaAsignaturas = asignaturas -> listarMapAsignatura();
 
-    ManejadorPerfil *  usuarios = usuarios -> getInstancia();
+    ManejadorPerfil *  usuarios = ManejadorPerfil::getInstancia();
     Sesion * sesion = sesion -> getInstancia();
 
-    //Obtengo estudiante con asignaturas de sesion
+    // Obtengo estudiante con asignaturas de sesion
     Estudiante * estudiante = dynamic_cast<Estudiante*>(sesion -> getPerfil());
 
     if(estudiante == NULL)  throw std::invalid_argument("Usuario no encontrado\n");
 
-    //Traigo las asignaturas en las cuales el estudiante esta inscripto
+    // Traigo las asignaturas en las cuales el estudiante esta inscripto
     std::list<Asignatura*> asignaturasEstudiante = estudiante -> getAsignaturas();
 
-    //Creo el iterador para recorrer las listas de asignatura
+    // Creo el iterador para recorrer las listas de asignatura
     std::map<std::string,Asignatura*>::iterator iteradorAsig;
 
     std::list<Asignatura*>::iterator iteradorAsigestudiante;
 
-    //Algoritmo de busqueda
+    // Algoritmo de busqueda
 
     for (iteradorAsigestudiante = asignaturasEstudiante.begin(); iteradorAsigestudiante != asignaturasEstudiante.end(); iteradorAsigestudiante++)
     {
@@ -42,7 +41,7 @@ std::list<std::string> CInscripcionAsignaturas::asignaturasNoInscriptos()
         if(iteradorAsig != listaAsignaturas.end())  listaAsignaturas.erase(iteradorAsig);
     }
 
-    //Copiar lo que quedo del mapa a una lista de strings
+    // Copiar lo que quedo del mapa a una lista de strings
     
     for(iteradorAsig = listaAsignaturas.begin(); iteradorAsig != listaAsignaturas.end(); iteradorAsig++)
     {
@@ -64,16 +63,16 @@ void CInscripcionAsignaturas::inscribir()
 
     Asignatura * asignaturaAIncribir = asignaturas -> buscarAsignatura(this -> codigo);
 
-    //Busco si existe un estudiante con ese mail
+    // Busco si existe un estudiante con ese mail
     ManejadorPerfil *  usuarios = usuarios -> getInstancia();
 
     Estudiante * estudiante = dynamic_cast<Estudiante*>(sesion -> getPerfil());
 
     if(estudiante == NULL)  throw std::invalid_argument("Usuario no encontrado\n");
 
-    //Lo inscribo a esa asignatura
+    // Lo inscribo a esa asignatura
     estudiante -> addAsignaturas(asignaturaAIncribir);
 }
 
-//En cancelar no se borra nada, ya que no se creo ninguna instancia de ningun objeto porque no paso por la funcion inscribir()
+// En cancelar no se borra nada, ya que no se creo ninguna instancia de ningun objeto porque no paso por la funcion inscribir()
 void CInscripcionAsignaturas::cancelar(){}

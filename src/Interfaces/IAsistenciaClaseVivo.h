@@ -13,6 +13,6 @@ class IAsistenciaClaseVivo
         virtual DtAsistir* selectClase(int) = 0;
         virtual void asistirClaseVivo() = 0;
         virtual void cancelar() = 0;
-    };
+};
 
 #endif

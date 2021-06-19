@@ -13,7 +13,6 @@ class CAsistenciaClaseVivo : public IAsistenciaClaseVivo
         int idClase;
         Estudiante* estudiante;
 
-        void setEstudiante();
 
     public:
         CAsistenciaClaseVivo();

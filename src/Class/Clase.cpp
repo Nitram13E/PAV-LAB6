@@ -12,11 +12,28 @@ Clase::Clase(std::string nombre, DtTimeStamp inicio, DtTimeStamp* fin, std::stri
     this -> inicio = inicio;
     this -> fin = fin;
     this -> rutavideo = rutavideo;
-    
+
     this -> incrementarIdActual();
 }
 
-Clase::~Clase(){}
+Clase::~Clase()
+{
+    //Borrando participaciones de Clase
+    std::list<Participacion*>::iterator itP;
+    for(itP = this -> participaciones.begin(); itP != participaciones.end(); itP++)
+    {
+        this -> participaciones.remove(*itP);
+        delete (*itP);
+    }
+
+    //Borrando AsisteVivo de Clase
+    std::list<AsisteVivo*>::iterator itA;
+    for(itA = this -> asisteVivo.begin(); itA != asisteVivo.end(); itA++)
+    {
+        this -> asisteVivo.remove(*itA);
+        delete (*itA);
+    }
+}
 
 void Clase::incrementarIdActual()
 {
@@ -71,7 +88,6 @@ void Clase::setRutaVideo(std::string rutavideo)
     this -> rutavideo = rutavideo;
 }
 
-
 void Clase::addDocentes(Docente* docente)
 {
     this -> docentes.push_back(docente);
@@ -102,28 +118,19 @@ std::list<AsisteVivo*> Clase::getAsisteVivo()
     return this -> asisteVivo;
 }
 
-void Clase::addAsisteDiferido(AsisteDiferido* asistencia)
-{
-    this -> asisteDiferido.push_back(asistencia);
-}
-std::list<AsisteDiferido*> Clase::getAsisteDiferido()
-{
-    return this -> asisteDiferido;
-}
-
 bool Clase::asisteEstudiante()
 {
     Sesion* sesion = Sesion::getInstancia();
 
     Estudiante * estudiante = dynamic_cast<Estudiante*>(sesion -> getPerfil());
-    
+
     std::list<AsisteVivo*>::iterator it = this -> asisteVivo.begin();
 
-    while (((*it) -> getEstudiante() -> getEmail() != estudiante -> getEmail()) && (it != this -> asisteVivo.end())) it++;
-    
+    while ((it != this -> asisteVivo.end()) && ((*it) -> getEstudiante() -> getEmail() != estudiante -> getEmail())) it++;
+
     // Si encontro al estudiante siempre va a ser distinto de end ya que se corta el while
     if ((it != this -> asisteVivo.end()) && (*it) -> getFin() == NULL) return true;
-    
+
     return false;
 }
 

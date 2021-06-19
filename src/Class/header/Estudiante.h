@@ -13,7 +13,7 @@ class Estudiante: public Perfil
     private: 
         std::string documento;
         std::list<Asignatura*> asignaturas;
-        
+
     public:
         Estudiante();
         Estudiante(std::string, std::string, std::string, std::string, std::string);
@@ -24,6 +24,8 @@ class Estudiante: public Perfil
 
         void addAsignaturas(Asignatura*);
         std::list<Asignatura*> getAsignaturas();
+        void desvincularAsignatura(std::string);
+        bool tieneAsignatura(std::string);
 };
 
 #endif

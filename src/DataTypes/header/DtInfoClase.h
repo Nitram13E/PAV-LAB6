@@ -17,13 +17,13 @@ class DtInfoClase
     public:
         DtInfoClase();
         DtInfoClase(int, std::string, std::list<std::string>);
-        ~DtInfoClase();
+        virtual ~DtInfoClase();
 
         int getId();
-
         std::string getNombre();
-
         std::list<std::string> getDocentes();
+
+        friend std::ostream& operator << (std::ostream&, const DtInfoClase&);
 };
 
 #endif

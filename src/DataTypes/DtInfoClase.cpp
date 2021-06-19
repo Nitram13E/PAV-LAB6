@@ -25,3 +25,19 @@ std::list<std::string> DtInfoClase::getDocentes()
 {
     return this -> docentes;
 }
+
+std::ostream& operator << (std::ostream& out, const DtInfoClase& info)
+{
+    std::cout << "Codigo: " << info.id << std::endl;
+    std::cout << "Nombre: " << info.nombre << std::endl;
+    std::cout << "Codigos de los Docentes: " << std::endl;
+
+    std::list<std::string> docentes = info.docentes;
+
+    for(std::list<std::string>::iterator it = docentes.begin(); it != docentes.end(); it++)
+    {
+        std::cout << " - " << (*it) << std::endl;
+    }
+
+    return out;
+}
