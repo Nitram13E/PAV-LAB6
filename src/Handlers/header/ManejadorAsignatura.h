@@ -21,7 +21,7 @@ class ManejadorAsignatura
         void agregarAsignatura(Asignatura*);
         bool existeAsignatura(std::string);
         void removeAsignatura(std::string);
-        std::list<Asignatura*> listarAsignatura();
+        std::list<std::string> listarAsignatura();
         std::map<std::string, Asignatura*> listarMapAsignatura();
 };
 

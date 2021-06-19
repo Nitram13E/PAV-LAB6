@@ -10,7 +10,17 @@ Asignatura::Asignatura(std::string codigo, std::string nombre, DtInstanciaClase*
     this -> tipoClases = tipo;
 }
 
-Asignatura::~Asignatura(){}
+Asignatura::~Asignatura()
+{
+    ManejadorClase * mc = ManejadorClase::getInstancia();
+    
+    std::list<Clase*>::iterator it;
+
+    for(it = this -> clases.begin(); it != this -> clases.end(); it++) 
+    {
+        mc -> removeClase((*it) -> getID());
+    }
+}
 
 std::string Asignatura::getCodigo()
 {
@@ -50,15 +60,15 @@ std::list<Clase*> Asignatura::getClases()
 {
     return this -> clases;
 }
-std::list<DtInfoClase> Asignatura::getDtInfoClase()
+std::list<DtInfoClase*> Asignatura::getDtInfoClase()
 {
-    std::list<DtInfoClase> lista;
+    std::list<DtInfoClase*> lista;
 
     std::list<Clase*>::iterator it;
 
-    for(it = this->clases.begin(); it != this->clases.end();++it)
+    for(it = this->clases.begin(); it != this->clases.end(); it++)
     {
-        DtInfoClase infoClase = (*it) -> getDtInfoClase();
+        DtInfoClase* infoClase = (*it) -> getDtInfoClase();
         lista.push_back(infoClase);
     }
     return lista;

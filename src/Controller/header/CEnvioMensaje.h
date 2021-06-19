@@ -1,6 +1,7 @@
 #ifndef C_ENVIOMENSAJE
 #define C_ENVIOMENSAJE
 
+#include "../../Interfaces/IEnvioMensaje.h"
 #include "../../DataTypes/header/DtParticipacion.h"
 #include "../../Handlers/header/ManejadorPerfil.h"
 #include "../../Handlers/header/ManejadorClase.h"
@@ -9,10 +10,9 @@
 
 #include <list>
 
-class CEnvioMensaje
+class CEnvioMensaje : public IEnvioMensaje
 {
     private:
-        //DtParticipacion * participacion;
         int id_clase;
         int id_response;
         std::string txt;
@@ -35,6 +35,5 @@ class CEnvioMensaje
 
         void cancelar();
 };
-
 
 #endif

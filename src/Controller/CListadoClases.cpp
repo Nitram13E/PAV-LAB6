@@ -35,13 +35,15 @@ std::list<std::string> CListadoClases::asignaturasAsignadas()
     }
     return lista;
 }
-std::list<DtInfoClase> CListadoClases::selectAsignatura(std::string codigoAsignatura)
+std::list<DtInfoClase*> CListadoClases::selectAsignatura(std::string codigoAsignatura)
 {
     ManejadorAsignatura *ma = ManejadorAsignatura::getInstancia();
 
-    std::list<DtInfoClase> list;
-    
+    std::list<DtInfoClase*> list;
+
     Asignatura * a = ma -> buscarAsignatura(codigoAsignatura);
+
+    if(a == NULL) return list;
 
     list = a -> getDtInfoClase();
 

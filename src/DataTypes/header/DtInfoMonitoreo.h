@@ -14,6 +14,8 @@ class DtInfoMonitoreo : public DtInfoClase
         ~DtInfoMonitoreo();
 
         std::list<std::string> getEstudiantes();
+
+        friend std::ostream& operator << (std::ostream&, DtInfoMonitoreo);
 };
 
 #endif

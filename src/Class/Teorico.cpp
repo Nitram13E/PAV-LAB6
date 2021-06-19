@@ -13,16 +13,20 @@ void Teorico::calcularAsistentes()
    this -> cantAsistentes = this -> getAsisteVivo().size();
 }
 
-DtInfoClase Teorico::getDtInfoClase()
+DtInfoClase* Teorico::getDtInfoClase()
 {
     std::list<std::string> dtDocentes;
     std::list<Docente*>::iterator it;
-    
-    for(it = this -> getDocentes().begin(); it != this -> getDocentes().end(); ++it)
+    std::list<Docente*> listDoc = this -> getDocentes();
+
+    for(it = listDoc.begin(); it != listDoc.end(); it++)
     {
         dtDocentes.push_back((*it) -> getEmail());
     }
-    DtInfoTeorico dtic = DtInfoTeorico(this -> getID(), this -> getNombre(), dtDocentes, this -> cantAsistentes);
+
+    calcularAsistentes();
+
+    DtInfoTeorico* dtic = new DtInfoTeorico(this -> getID(), this -> getNombre(), dtDocentes, this -> cantAsistentes);
 
     return dtic;
 }

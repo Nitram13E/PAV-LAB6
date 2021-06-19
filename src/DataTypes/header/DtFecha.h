@@ -25,11 +25,12 @@ class DtFecha
 
         bool checkFecha(int dia, int mes, int anio);
         
-        friend std::ostream& operator << (std::ostream&, DtFecha);
+        friend std::ostream& operator << (std::ostream&, const DtFecha);
 
         friend bool operator == (DtFecha, DtFecha);
         
         friend bool operator < (DtFecha, DtFecha);
+        
 };
 
 #endif

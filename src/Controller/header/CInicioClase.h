@@ -2,6 +2,8 @@
 #define C_INICIOCLASE
 
 #include "../../Interfaces/IinicioClase.h"
+#include "../../Class/header/Docente.h"
+#include "../../Class/header/Estudiante.h"
 
 #include <list>
 
@@ -9,8 +11,12 @@ class CInicioClase : public IinicioClase
 {
     private:
         DtIniciarClase inicioClase;
-        std::string email;
-        
+        DtIniciarClaseFull * data;
+        std::list<std::string> listaHabilitados;
+        std::list<Estudiante*> listaEstudiantes;
+        Docente* doc;
+        tipoRol rol;
+
     public:
         CInicioClase();
         ~CInicioClase();

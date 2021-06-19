@@ -12,7 +12,7 @@ class CListadoClases : public IListadoClases
         ~CListadoClases();
 
         std::list<std::string> asignaturasAsignadas();
-        std::list<DtInfoClase> selectAsignatura(std::string);
+        std::list<DtInfoClase*> selectAsignatura(std::string);
         
 };
 

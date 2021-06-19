@@ -27,3 +27,11 @@ bool DtInstanciaClase::getMonitoreo()
     return this -> monitoreo;
 }
 
+std::ostream& operator << (std::ostream& out, DtInstanciaClase dtInstClase)
+{
+    std::cout << "Teorico: " << dtInstClase.getTeorico() << std::endl;
+    std::cout << "Practico: " << dtInstClase.getPractico() << std::endl;
+    std::cout << "Monitoreo: " << dtInstClase.getMonitoreo();
+
+    return out;
+}

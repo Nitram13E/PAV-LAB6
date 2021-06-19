@@ -28,13 +28,39 @@ std::list<Rol*> Docente::getRoles()
 {
     return this -> roles;
 }
-std::list<std::string> Docente::listarAsignaturas(){
+std::list<std::string> Docente::listarAsignaturas()
+{
     std::list<Rol*>::iterator it;
     std::list<std::string> list;
     std::string cod;
-    for(it = roles.begin(); it != roles.end(); ++it){
-        cod = (*it)->getCodigoAsignatura();
+
+    for(it = roles.begin(); it != roles.end(); ++it)
+    {
+        cod = (*it) -> getCodigoAsignatura();
         list.push_back(cod);
     }
-return list;
+
+    return list;
+}
+
+bool Docente::dictaAsignatura(std::string codigo)
+{
+    std::list<Rol*>::iterator it = this -> roles.begin();
+
+    while(it != this -> roles.end() && (*it) -> getCodigoAsignatura() != codigo) it++;
+
+    if(it != this -> roles.end()) return true;
+    return false;
+}
+
+void Docente::desvincularAsignatura(std::string codigo)
+{
+    std::list<Rol*>::iterator it = this -> roles.begin();
+
+    while(it != this -> roles.end() && (*it) -> getCodigoAsignatura() != codigo) it++;
+
+    if(it != this -> roles.end())
+    {
+        roles.remove(*it);
+    }
 }
