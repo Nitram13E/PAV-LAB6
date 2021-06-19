@@ -65,7 +65,7 @@ class Clase
 
         bool enVivo();
 
-        virtual DtInfoClase getDtInfoClase() = 0;
+        virtual DtInfoClase* getDtInfoClase() = 0;
 };
 
 #endif

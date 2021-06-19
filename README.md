@@ -21,7 +21,4 @@ Progreso:
 - cargar usuario generico
 - Preguntar si en los destructores hay que eliminar los punteros del objeto o lo hace el destructor por mas que se implemente el destructor
 - Clase tiene solo 1 docente
-
-### REVISAR:
-- FIXME en Clase.cpp
-- FIXME en Monitoreo.cpp
+- Carga de datos en Controllers

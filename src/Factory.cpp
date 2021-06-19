@@ -40,3 +40,5 @@ IEnvioMensaje* Factory::getIEnvioMensaje(){return new CEnvioMensaje();}
 IinicioClase* Factory::getIinicioClase(){return new CInicioClase();}
 
 IInscripcionesAsignaturas* Factory::getInscripcionAsignaturas(){return new CInscripcionAsignaturas();}
+
+IListadoClases* Factory::getIListadoClase(){return new CListadoClases();}

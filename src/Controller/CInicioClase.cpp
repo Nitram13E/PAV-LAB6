@@ -11,15 +11,15 @@
 CInicioClase::CInicioClase(){}
 CInicioClase::~CInicioClase(){}
 
-void CInicioClase::setDocente()
+std::list<std::string> CInicioClase::asignaturasAsignadas()
 {
     Perfil* p = Sesion::getInstancia() -> getPerfil();
     Docente * d = dynamic_cast<Docente*>(p);
-    this -> doc = d;
-}
 
-std::list<std::string> CInicioClase::asignaturasAsignadas()
-{
+    if(d == NULL) throw std::invalid_argument("El usuario logueado no es un docente");
+
+    this -> doc = d;
+
     std::list<std::string> lista;
 
     if(this -> doc != NULL)
@@ -70,9 +70,11 @@ DtIniciarClaseFull* CInicioClase::datosIngresados()
     //si es de monitoreo
     if (!this -> listaHabilitados.empty())
     {
-        return this -> data = new DtIniciarMonitoreo(Clase::getIdActual(), this -> inicioClase.getCodigo(), this -> inicioClase.getNombre(), this -> inicioClase.getFechaHora(), this -> listaHabilitados);
+        this -> data = new DtIniciarMonitoreo(Clase::getIdActual(), this -> inicioClase.getCodigo(), this -> inicioClase.getNombre(), this -> inicioClase.getFechaHora(), this -> listaHabilitados);
+        return this -> data;
     }
-    return this -> data = new DtIniciarClaseFull(Clase::getIdActual(), this -> inicioClase.getCodigo(), this -> inicioClase.getNombre(), this -> inicioClase.getFechaHora());
+    this -> data = new DtIniciarClaseFull(Clase::getIdActual(), this -> inicioClase.getCodigo(), this -> inicioClase.getNombre(), this -> inicioClase.getFechaHora());
+    return this -> data;
 }
 
 void CInicioClase::iniciarClase()
@@ -82,15 +84,15 @@ void CInicioClase::iniciarClase()
     switch(this -> rol)
     {
         case TEORICO:
-            clase = new Teorico(this -> data -> getNombre(), this -> data -> getFechaHora(), NULL, NULL);
+            clase = new Teorico(this -> data -> getNombre(), this -> data -> getFechaHora(), NULL, "");
             break;
 
         case PRACTICO:
-            clase = new Practico(this -> data -> getNombre(), this -> data -> getFechaHora(), NULL, NULL);
+            clase = new Practico(this -> data -> getNombre(), this -> data -> getFechaHora(), NULL, "");
             break;
 
         case MONITOREO:
-            clase = new Monitoreo(this -> data -> getNombre(), this -> data -> getFechaHora(), NULL, NULL, this -> listaEstudiantes);
+            clase = new Monitoreo(this -> data -> getNombre(), this -> data -> getFechaHora(), NULL, "", this -> listaEstudiantes);
             break;
     }
 

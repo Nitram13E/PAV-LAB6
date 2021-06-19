@@ -17,7 +17,7 @@ class Monitoreo: public Clase
 
         std::list<Estudiante*> getHabilitados();
 
-        DtInfoClase getDtInfoClase();
+        DtInfoClase* getDtInfoClase();
 };
 
 #endif

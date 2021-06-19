@@ -22,6 +22,7 @@ void Estudiante::addAsignaturas(Asignatura* asignatura)
 {
     this -> asignaturas.push_back(asignatura);
 }
+
 std::list<Asignatura*> Estudiante::getAsignaturas()
 {
     return this -> asignaturas;

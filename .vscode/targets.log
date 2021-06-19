@@ -1,13 +1,12 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # GNU Make 4.2.1
- 
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jun 18 15:20:28 2021
+# Make data base, printed on Fri Jun 18 16:02:22 2021
 
 # Variables
 
@@ -56,7 +55,7 @@ XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-e9c779f4-8745-4ee1-80a9-fcccbf8ed291.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-427a302c-bac0-43d9-8411-78d7e44707f2.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -64,7 +63,7 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = 172.30.176.1:0.0
+DISPLAY = 172.18.224.1:0.0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -263,8 +262,8 @@ src/DataTypes/DtIniciarClase.o: src/DataTypes/DtIniciarClase.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtIniciarClase'
 #  Last modified 2021-06-18 00:37:36.1198696
-#  File has been updated.
  
+#  File has been updated.
 #  Successfully updated.
 
 # Not a target:
@@ -542,8 +541,8 @@ src/Class/Clase.o: src/Class/Clase.cpp
 src/Controller/CAltaUsuario.cpp:
 #  Implicit rule search has been done.
 #  Last modified 2021-06-10 17:57:45.8772699
-#  File has been updated.
  
+#  File has been updated.
 #  Successfully updated.
 
 src/DataTypes/DtIniciarClaseFull.o: src/DataTypes/DtIniciarClaseFull.cpp
@@ -806,6 +805,6 @@ src/DataTypes/DtTimeStamp.cpp:
 # strcache performance: lookups = 225 / hit rate = 39%
 # hash-table stats:
 # Load=137/8192=2%, Rehash=0, Collisions=15/225=7%
-# Finished Make data base on Fri Jun 18 15:20:28 2021
+# Finished Make data base on Fri Jun 18 16:02:22 2021
 
  

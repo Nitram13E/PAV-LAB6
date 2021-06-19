@@ -1,4 +1,5 @@
 #include "Factory.h"
+#include "Class/header/Sesion.h"
 #include "Interfaces/IAltaAsignatura.h"
 #include "Interfaces/IAltaUsuario.h"
 #include "Interfaces/IAsignacionDocenteAsignatura.h"
@@ -39,6 +40,7 @@ void CUInicioClase();
 void CUAsistenciaClaseVivo();
 void CUEnvioMensaje();
 void CUInscripcionAsignaturas();
+void CUListadoClase();
 void CUEliminarAsignatura();
 
 Factory* fabrica = Factory::getInstancia();
@@ -51,6 +53,7 @@ IInscripcionesAsignaturas * IIA;
 IEnvioMensaje * IEM;
 IEliminarAsignatura * IEA;
 IinicioClase * IIC;
+IListadoClases * ILC;
 
 void menu()
 {
@@ -105,7 +108,7 @@ void menu()
             std::cout << "Opción: ";
             std::cin >> op;
 
-            switch (op)
+            switch(op)
             {
                 case 1: // Alta de usuario
                     CUAltaUsuario();
@@ -140,11 +143,11 @@ void menu()
                     break;
 
                 case 9: //Listado de Clases
-
+                    CUListadoClase();
                     break;
 
                 case 10: //cargar datos
-
+                    cargarDatos();
                     break;
 
                 case 11: // Salir
@@ -158,7 +161,7 @@ void menu()
                     system("clear");
             }
         }
-        while (op != 14);
+        while (op != 11);
     }
 }
 
@@ -172,34 +175,146 @@ void pressEnter()
 
 void cargarDatos()
 {
+    IAU = fabrica -> getIAltaUsuario();
+
     //ALTA USUARIO
-    DtPerfil auxPerfil = DtPerfil("NOM1", "IMG1", "mail1", "123abc");
-    IAU -> ingresarDatosPerfil(auxPerfil, ESTUDIANTE);
+    IAU -> ingresarDatosPerfil(DtPerfil("EST1", "IMG1", "mail-e1", "123abc"), ESTUDIANTE);
     IAU -> ingresarEstudiante("342342");
     IAU -> altaUsuario();
 
-    auxPerfil = DtPerfil("NOM2", "IMG2", "mail2", "123abc"); 
-    IAU -> ingresarDatosPerfil(auxPerfil, ESTUDIANTE);
+    IAU -> ingresarDatosPerfil(DtPerfil("EST2", "IMG2", "mail-e2", "123abc"), ESTUDIANTE);
     IAU -> ingresarEstudiante("3878424");
     IAU -> altaUsuario();
 
-    auxPerfil = DtPerfil("NOM3", "IMG3", "mail3", "123abc"); 
-    IAU -> ingresarDatosPerfil(auxPerfil, ESTUDIANTE);
+    IAU -> ingresarDatosPerfil(DtPerfil("EST3", "IMG3", "mail-e3", "123abc"), ESTUDIANTE);
     IAU -> ingresarEstudiante("6565624");
     IAU -> altaUsuario(); 
 
-    auxPerfil = DtPerfil("NOM4", "IMG4", "mail4", "123abc");
-    IAU -> ingresarDatosPerfil(auxPerfil, ESTUDIANTE);
+    IAU -> ingresarDatosPerfil(DtPerfil("EST4", "IMG4", "mail-e4", "123abc"), ESTUDIANTE);
+    IAU -> ingresarEstudiante("342342");
+    IAU -> altaUsuario();
+
+    IAU -> ingresarDatosPerfil(DtPerfil("EST5", "IMG5", "mail-e5", "123abc"), ESTUDIANTE);
+    IAU -> ingresarEstudiante("3878424");
+    IAU -> altaUsuario();
+
+    IAU -> ingresarDatosPerfil(DtPerfil("EST6", "IMG6", "mail-e6", "123abc"), ESTUDIANTE);
+    IAU -> ingresarEstudiante("6565624");
+    IAU -> altaUsuario();
+
+
+    IAU -> ingresarDatosPerfil(DtPerfil("DOC1", "IMG1", "mail-d1", "123abc"), DOCENTE);
     IAU -> ingresarDocente("ins1");
     IAU -> altaUsuario();
 
-    auxPerfil = DtPerfil("NOM5", "IMG5", "mail5", "123abc"); 
-    IAU -> ingresarDatosPerfil(auxPerfil, ESTUDIANTE);
+    IAU -> ingresarDatosPerfil(DtPerfil("DOC2", "IMG2", "mail-d2", "123abc"), DOCENTE);
+    IAU -> ingresarDocente("ins2");
+    IAU -> altaUsuario();
+
+    IAU -> ingresarDatosPerfil(DtPerfil("DOC3", "IMG3", "mail-d3", "123abc"), DOCENTE);
+    IAU -> ingresarDocente("ins1");
+    IAU -> altaUsuario();
+
+    IAU -> ingresarDatosPerfil(DtPerfil("DOC4", "IMG4", "mail-d4", "123abc"), DOCENTE);
     IAU -> ingresarDocente("ins2");
     IAU -> altaUsuario();
 
     //ALTA ASIGNATURA
+    IAA = fabrica -> getIAltaAsignatura();
 
+    IAA -> ingresar(new DtAsignatura("1", "PAV", new DtInstanciaClase(true, false, false)));
+    IAA -> altaAsignatura();
+
+    IAA -> ingresar(new DtAsignatura("2", "COE", new DtInstanciaClase(false, true, false)));
+    IAA -> altaAsignatura();
+    
+    IAA -> ingresar(new DtAsignatura("3", "CONT", new DtInstanciaClase(false, false, true)));
+    IAA -> altaAsignatura();
+
+    IAA -> ingresar(new DtAsignatura("4", "BD II", new DtInstanciaClase(true, false, true)));
+    IAA -> altaAsignatura();
+
+    IAA -> ingresar(new DtAsignatura("5", "RC", new DtInstanciaClase(true, true, false)));
+    IAA -> altaAsignatura();
+
+    IAA -> ingresar(new DtAsignatura("6", "BD I", new DtInstanciaClase(true, true, true)));
+    IAA -> altaAsignatura();
+
+    //Asignar Docentes
+    /**
+    IADA = fabrica -> getIAsignacionDocenteAsignatura();
+
+    IADA -> docentesSinLaAsignatura("1");
+    IADA -> selectDocente("mail-d1", TEORICO);
+    IADA -> asignarDocente();
+
+    IADA -> docentesSinLaAsignatura("1");
+    IADA -> selectDocente("mail-d2", PRACTICO);
+    IADA -> asignarDocente();
+
+    IADA -> docentesSinLaAsignatura("2");
+    IADA -> selectDocente("mail-d3", TEORICO);
+    IADA -> asignarDocente();
+
+    IADA -> docentesSinLaAsignatura("3");
+    IADA -> selectDocente("mail-d4", PRACTICO);
+    IADA -> asignarDocente();
+
+    IADA -> docentesSinLaAsignatura("4");
+    IADA -> selectDocente("mail-d3", TEORICO);
+    IADA -> asignarDocente();
+
+    IADA -> docentesSinLaAsignatura("4");
+    IADA -> selectDocente("mail-d1", PRACTICO);
+    IADA -> asignarDocente();
+
+    IADA -> docentesSinLaAsignatura("5");
+    IADA -> selectDocente("mail-d2", TEORICO);
+    IADA -> asignarDocente();
+
+    IADA -> docentesSinLaAsignatura("5");
+    IADA -> selectDocente("mail-d1", MONITOREO);
+    IADA -> asignarDocente();
+
+    IADA -> docentesSinLaAsignatura("6");
+    IADA -> selectDocente("mail-d3", PRACTICO);
+    IADA -> asignarDocente();
+    
+    //Iniciar Clases
+    IIC = fabrica -> getIinicioClase();
+    
+    IIC -> selectAsignatura(DtIniciarClase("", "", DtTimeStamp(DtFecha(), 0, 0, 0)));
+    IIC -> datosIngresados();
+    IIC -> iniciarClase();
+
+    //Inscripcion Asignaturas
+    Sesion * sesion = Sesion::getInstancia();
+   
+    if(sesion -> getTipoPerfil() == ESTUDIANTE)
+    {
+        IIA = fabrica -> getInscripcionAsignaturas();
+
+        IIA -> selectAsignatura("1");
+        IIA -> inscribir();
+
+        IIA -> selectAsignatura("2");
+        IIA -> inscribir();
+
+        IIA -> selectAsignatura("3");
+        IIA -> inscribir();
+
+        IIA -> selectAsignatura("4");
+        IIA -> inscribir();
+
+        IIA -> selectAsignatura("5");
+        IIA -> inscribir();
+    }
+    **/
+    //Enviar Mensaje
+
+    system("clear");
+    std::cout << "\nDatos cargados.\n" << std::endl;
+    pressEnter();
 }
 
 //Crea burbuja para mensaje
@@ -302,7 +417,7 @@ void CUAltaUsuario()
         std::cin >> pass;
         system("clear");
         
-        DtPerfil auxPerfil = DtPerfil(nom, imgURL, email, pass);
+        DtPerfil perfil = DtPerfil(nom, imgURL, email, pass);
 
         int op;
 
@@ -321,7 +436,7 @@ void CUAltaUsuario()
                 std::cout << "Ingrese CI: ";
                 std::cin >> ci;
 
-                IAU -> ingresarDatosPerfil(auxPerfil, ESTUDIANTE);
+                IAU -> ingresarDatosPerfil(perfil, ESTUDIANTE);
                 IAU -> ingresarEstudiante(ci);
                 break;
             }
@@ -332,7 +447,7 @@ void CUAltaUsuario()
                 std::cout << "Ingrese instituto: ";
                 std::cin >> ins;
 
-                IAU -> ingresarDatosPerfil(auxPerfil, DOCENTE);
+                IAU -> ingresarDatosPerfil(perfil, DOCENTE);
                 IAU -> ingresarDocente(ins);
                 break;
             }
@@ -353,7 +468,7 @@ void CUAltaUsuario()
         std::cout << "Desea crear un nuevo usuario? [S/N]: ";
         std::cin >> opAU;
 
-    }while(opAU != "N");
+    }while(opAU == "S" || opAU == "s");
 }
 
 void CUAltaAsignatura()
@@ -396,10 +511,12 @@ void CUAltaAsignatura()
     DtAsignatura* dtAsig = new DtAsignatura(codigo, nombre, tipo);
 
     // AltaAsignatura
-    IAA -> ingresar(dtAsig);
+    DtAsignatura* datos = IAA -> ingresar(dtAsig);
+
+    std::cout << *datos << std::endl;
 
     std::string confirmar;
-    std::cout << "Desea agregar la asignatura? [S/N o Cualquier letra (menos la s)]: ";
+    std::cout << "\nDesea agregar la asignatura? [S/N o Cualquier letra (menos la s)]: ";
     std::cin >> confirmar;
     if(confirmar == "S" || confirmar == "s") IAA -> altaAsignatura();
     else IAA -> cancelar();
@@ -417,34 +534,34 @@ void CUAsignacionDocenteAsignatura()
     std::string op;
     std::string confirmar;
     
-    std::cout << "\t\tAsignacion de un Docente a una Asignatura\n" << std::endl;
-
-    std::list<std::string> asignaturas = IADA -> listarAsignaturas();
-    
-    std::cout << "Asignaturas: " << std::endl;
-    for(std::list<std::string>::iterator it = asignaturas.begin(); it != asignaturas.end(); it++)
-    {
-        std::cout << *it << std::endl;
-    }
-    
-    std::cout << "Seleccione una asignatura: ";
-    std:: cin >> codigo;
-    system("clear");
-    
-    std::list<std::string> docentes = IADA -> docentesSinLaAsignatura(codigo);
-    
-    std::cout << "Docentes no asignados: " << std::endl;
-    for(std::list<std::string>::iterator i = docentes.begin(); i != docentes.end(); i++)
-    {
-        std::cout << *i << std::endl;
-    }
-
     do
     {
+        std::cout << "\t\tAsignacion de un Docente a una Asignatura\n" << std::endl;
+
+        std::list<std::string> asignaturas = IADA -> listarAsignaturas();
+        
+        std::cout << "Asignaturas: " << std::endl;
+        for(std::list<std::string>::iterator it = asignaturas.begin(); it != asignaturas.end(); it++)
+        {
+            std::cout << *it << std::endl;
+        }
+        
+        std::cout << "Seleccione una asignatura: ";
+        std:: cin >> codigo;
+        system("clear");
+
+        std::list<std::string> docentes = IADA -> docentesSinLaAsignatura(codigo);
+
+        std::cout << "Docentes no asignados: " << std::endl;
+        for(std::list<std::string>::iterator i = docentes.begin(); i != docentes.end(); i++)
+        {
+            std::cout << *i << std::endl;
+        }
+
         std::cout << "Seleccione un docente: ";
         std:: cin >> email;
         system("clear");
-
+        
         std::cout << "Asigne un rol: " << std::endl;
         std::cout << "1: Teorico" << std::endl;
         std::cout << "2: Practico" << std::endl;
@@ -452,42 +569,56 @@ void CUAsignacionDocenteAsignatura()
         std::cout << "Opción: ";
         std:: cin >> r;
 
-        if(r == 1)
+        switch (r)
         {
+        case 1:
             rol = TEORICO;
-        } else if ( r == 2)
-        {
+            break;
+        
+        case 2:
             rol = PRACTICO;
-        } else 
-        {
+            break;
+
+        case 3:
             rol = MONITOREO;
+            break;
+
+        default:
+            std::cout << "Opción incorrecta. " << std::endl;
+            pressEnter();
+            op = "e";
+            break;
         }
         
-        system("clear");
-
-        IADA -> selectDocente(email, rol);
-        
-        std::cout << "Desea confirmar? [S/N]: ";
-        std::cin >> confirmar;
-
-        if(confirmar == "S" || confirmar == "s")
+        if(op != "e")
         {
-            try
+            system("clear");
+
+            IADA -> selectDocente(email, rol);
+            
+            std::cout << "Desea confirmar? [S/N]: ";
+            std::cin >> confirmar;
+
+            if(confirmar == "S" || confirmar == "s")
             {
-                IADA -> asignarDocente();
+                try
+                {
+                    IADA -> asignarDocente();
+                }
+                catch(const std::invalid_argument& e)
+                {
+                    std::cerr << e.what() << '\n';
+                }
             }
-            catch(const std::invalid_argument& e)
-            {
-                std::cerr << e.what() << '\n';
-            }
+            else IADA -> cancelar();
+            system("clear");
+
+            std::cout << "Desea continuar agregando docentes? [S/N]: ";
+            std::cin >> op;
+
+            docentes.empty();
+            system("clear");
         }
-        else IADA -> cancelar();
-        system("clear");
-
-        std::cout << "Desea continuar agregando docentes? [S/N]: ";
-        std::cin >> op; 
-        system("clear");
-
     }while(op == "S");
 }
 
@@ -497,7 +628,7 @@ void CUInicioClase()
     std::string codAsig;
     std::string nombre;
     DtIniciarClase inicio;
-    
+
     std::list<std::string> asignaturasAsignadas = IIC -> asignaturasAsignadas();
 
     std::list<std::string>::iterator it;
@@ -505,43 +636,50 @@ void CUInicioClase()
     std::cout << "Inicio Clase" << std::endl;
     std::cout << "Asignaturas Asignadas: " << std::endl;
 
-    for(it = asignaturasAsignadas.begin(); it != asignaturasAsignadas.end(); it++) std::cout << (*it) << std::endl;
-    
-    std::cout << "Seleccione una de las Asignaturas: ";
-    std::cin >> codAsig;
-    std::cout << "Ingrese nombre de la clase: ";
-    std::cin >> nombre;
-
-    time_t time;
-    inicio = DtIniciarClase(codAsig, nombre, DtTimeStamp(time));
-    
-    if(IIC -> selectAsignatura(inicio))
+    if(asignaturasAsignadas.empty())
     {
-        std::list<std::string> inscriptos = IIC -> inscriptosAsignatura();
-        std::list<std::string>::iterator it;
+        std::cout << "La asignatura no contiene clases. " << std::endl;
+        pressEnter();
+    }
+    else
+    {
+        for(it = asignaturasAsignadas.begin(); it != asignaturasAsignadas.end(); it++) std::cout << (*it) << std::endl;
+
+        std::cout << "Seleccione una de las Asignaturas: ";
+        std::cin >> codAsig;
+        std::cout << "Ingrese nombre de la clase: ";
+        std::cin >> nombre;
+
+        time_t time;
+        inicio = DtIniciarClase(codAsig, nombre, DtTimeStamp(time));
         std::string op;
 
-        std::cout << "Estudiantes inscriptos a la asignatura " << codAsig << ":" << std::endl;
-
-        for(it = inscriptos.begin(); it != inscriptos.end(); it++)
+        if(IIC -> selectAsignatura(inicio))
         {
-            std::cout << " - " << *it << std::endl;
+            std::list<std::string> inscriptos = IIC -> inscriptosAsignatura();
+            std::list<std::string>::iterator it;
+
+            std::cout << "Estudiantes inscriptos a la asignatura " << codAsig << ":" << std::endl;
+
+            for(it = inscriptos.begin(); it != inscriptos.end(); it++)
+            {
+                std::cout << " - " << *it << std::endl;
+            }
+
+            do
+            {
+                std::string email;
+                std::cout << "Ingrese mail de alumno a habilitar: " << std::endl;
+                std::cin >> email;
+
+                IIC -> habilitar(email);
+
+                std::cout << "Desea agregar otro alumno? [S/N o Cualquier letra (menos la s)]: ";
+                std::cin >> op;
+
+            }while(op == "S" || op == "s");
         }
-
-        do
-        {
-            std::string email;
-            std::cout << "Ingrese mail de alumno a habilitar: " << std::endl;
-            std::cin >> email;
-
-            IIC -> habilitar(email);
-
-            std::cout << "Desea agregar otro alumno? [S/N o Cualquier letra (menos la s)]: ";
-            std::cin >> op;
-
-        }while(op == "S" || op == "s");
-
-        std::cout << IIC -> datosIngresados() << std::endl;
+        std::cout << *(IIC -> datosIngresados()) << std::endl;
 
         std::cout << "Desea confirmar los datos ingresados? [S/N o Cualquier letra (menos la s)]: ";
         std::cin >> op;
@@ -591,7 +729,8 @@ void CUAsistenciaClaseVivo()
     if(resp == 'S')
     {
         IACV -> asistirClaseVivo();
-        std::cout << "\nSu clase comenzara pronto.... o algo parecido, no se\n";
+        std::cout << "\nSu clase comenzara pronto....\n";
+        pressEnter();
     } 
     else
     {
@@ -617,7 +756,7 @@ void CUEnvioMensaje()
 
     for (it = clasesVivo.begin(); it != clasesVivo.end(); it++)
     {
-        std::cout << "- " << *it << "\n";
+        std::cout << " - " << *it << "\n";
     }
 
     do
@@ -745,11 +884,84 @@ void CUInscripcionAsignaturas()
     }while(op != 3);
 }
 
+void CUListadoClase()
+{
+    ILC = fabrica->getIListadoClase();
+    
+    std::list<std::string> clasesDelDocente = ILC -> asignaturasAsignadas();
+    std::list<std::string>::iterator it;
+
+    std::list<DtInfoClase*> infoClases;
+    std::list<DtInfoClase*>::iterator itClases;
+
+    int counter = 0;
+    std::string opcion;
+    
+    if(!clasesDelDocente.empty())   //lista no vacia
+    {
+        std::cout << "Seleccione una de las siguientes asignaturas que esta asignado: " << std::endl;
+        
+        for(it = clasesDelDocente.begin(); it != clasesDelDocente.end(); ++it)
+        {
+            std::cout << counter+1 << ") " << (*it) << std::endl;
+        }
+        
+        std::cout << std::endl <<"Opción: ";
+        std::cin >> opcion;
+
+        infoClases = ILC -> selectAsignatura(opcion);
+
+        system("clear");
+        std::cout << "Informacion de la Clase:" << std::endl;
+
+        for(itClases = infoClases.begin(); itClases != infoClases.end(); itClases++) //hacer un dynamic cast sis DtInfoClaseMonitoreo o Teorico o Practico
+        {
+            try
+            {
+                DtInfoTeorico* infoTeorico = dynamic_cast<DtInfoTeorico*>(*itClases);
+                std::cout << *infoTeorico << std::endl;
+            }
+            catch(const std::bad_cast* e)
+            {
+                DtInfoMonitoreo* infoMonitoreo = dynamic_cast<DtInfoMonitoreo*>(*itClases);
+                std::cout << *infoMonitoreo << std::endl;
+            }
+            catch(const std::bad_cast* error)
+            {
+                std::cout << *(*itClases) << std::endl;
+            }
+
+            /**
+            if(infoTeorico != NULL)
+            {
+                std::cout << infoTeorico << std::endl;
+            }
+            else
+            {
+                
+
+                if(infoMonitoreo != NULL) std::cout << infoMonitoreo << std::endl;
+
+                else 
+            }
+            **/
+            //std::cout <<  << std::endl;
+        }
+
+        pressEnter();
+    }
+    else
+    {
+        std::cout << "El docente no tiene clases. " << std::endl;
+        pressEnter();
+    }
+}
+
 void CUEliminarAsignatura()
 {
     IEA = fabrica -> getIEliminarAsignatura();
 
-    std::cout << "\t\tEliminar Asignatura:" << std::endl;
+    std::cout << "\t\tEliminar Asignatura: " << std::endl;
     std::list<std::string> listarAsignaturas = IEA ->  listarAsignaturas();
     std::list<std::string>::iterator it;
     std::string opcion;
@@ -774,5 +986,5 @@ void CUEliminarAsignatura()
         IEA -> eliminarAsignatura();
         std::cout << "Se ha eliminado la asignatura exitosamente" << std::endl;
     }
-    else std::cout <<"Operación cancelada."<<std::endl;
+    else std::cout <<"Operación cancelada." << std::endl;
 }

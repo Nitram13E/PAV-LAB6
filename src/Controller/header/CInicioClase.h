@@ -17,7 +17,6 @@ class CInicioClase : public IinicioClase
         Docente* doc;
         tipoRol rol;
 
-        void setDocente();
     public:
         CInicioClase();
         ~CInicioClase();

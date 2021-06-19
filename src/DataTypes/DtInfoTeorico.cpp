@@ -11,5 +11,13 @@ DtInfoTeorico::~DtInfoTeorico(){}
 
 int DtInfoTeorico::getCantAsist()
 {
-    return this -> cantAsistentes;   
+    return this -> cantAsistentes;
+}
+
+std::ostream& operator << (std::ostream& out, DtInfoTeorico dtInfTeorico)
+{
+    std::cout << (DtInfoClase)dtInfTeorico << std::endl;
+    std::cout << dtInfTeorico.getCantAsist();
+
+    return out;
 }

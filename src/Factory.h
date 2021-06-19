@@ -31,6 +31,7 @@ class Factory
         IEnvioMensaje* getIEnvioMensaje();
         IinicioClase* getIinicioClase();
         IInscripcionesAsignaturas* getInscripcionAsignaturas();
+        IListadoClases* getIListadoClase();
 };
 
 #endif
