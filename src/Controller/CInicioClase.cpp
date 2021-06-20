@@ -114,7 +114,7 @@ void CInicioClase::iniciarClase()
 
 void CInicioClase::cancelar()
 {
-    delete this -> doc;
+    this -> doc = NULL;
     this -> listaHabilitados.clear();
 }
 //Carga Datos Predefinidos al Programa.

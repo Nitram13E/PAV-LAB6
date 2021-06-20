@@ -83,5 +83,5 @@ void CAsistenciaClaseVivo::asistirClaseVivo()
 
 void CAsistenciaClaseVivo::cancelar()
 {
-    delete this -> estudiante;
+    this -> estudiante = NULL;
 }
