@@ -6,9 +6,10 @@ Participacion::Participacion(){}
 
 Participacion::~Participacion(){}
 
-Participacion::Participacion(DtTimeStamp fecha, std::string mensaje, Participacion * responde)
+Participacion::Participacion(Perfil * perfil, DtTimeStamp fecha, std::string mensaje, Participacion * responde)
 {
     this -> id = idActual;
+    this -> perfil = perfil;
     this -> fecha = fecha;
     this -> mensaje = mensaje;
     this -> responde = responde;
@@ -33,7 +34,7 @@ void Participacion::setId(int id)
 
 DtTimeStamp Participacion::getFecha()
 {
-    return this -> fecha;    
+    return this -> fecha;
 }
 
 void Participacion::setFecha(DtTimeStamp fecha)
@@ -58,7 +59,7 @@ Participacion* Participacion::getResponde()
 
 void Participacion::setResponde(Participacion* responde)
 {
-    this -> responde = responde;   
+    this -> responde = responde;
 }
 
 Perfil* Participacion::getPerfil()

@@ -18,6 +18,8 @@ class IAsignacionDocenteAsignatura
         virtual void asignarDocente() = 0;
 
         virtual void cancelar() = 0;
+
+        virtual void cargarDatos() = 0;
 };
 
 #endif

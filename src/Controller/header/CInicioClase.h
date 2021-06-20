@@ -29,6 +29,8 @@ class CInicioClase : public IinicioClase
 
         void iniciarClase();
         void cancelar();
+
+        void cargarDatos();
 };
 
 #endif

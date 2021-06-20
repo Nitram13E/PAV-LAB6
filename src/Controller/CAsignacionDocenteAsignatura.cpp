@@ -77,3 +77,42 @@ void CAsignacionDocenteAsignatura::asignarDocente()
 }
 
 void CAsignacionDocenteAsignatura::cancelar(){}
+
+void CAsignacionDocenteAsignatura::cargarDatos()
+{
+    docentesSinLaAsignatura("1");
+    selectDocente("mail-d1", TEORICO);
+    asignarDocente();
+
+    docentesSinLaAsignatura("1");
+    selectDocente("mail-d2", PRACTICO);
+    asignarDocente();
+
+    docentesSinLaAsignatura("2");
+    selectDocente("mail-d3", TEORICO);
+    asignarDocente();
+
+    docentesSinLaAsignatura("3");
+    selectDocente("mail-d4", PRACTICO);
+    asignarDocente();
+
+    docentesSinLaAsignatura("4");
+    selectDocente("mail-d3", TEORICO);
+    asignarDocente();
+
+    docentesSinLaAsignatura("4");
+    selectDocente("mail-d1", PRACTICO);
+    asignarDocente();
+
+    docentesSinLaAsignatura("5");
+    selectDocente("mail-d2", TEORICO);
+    asignarDocente();
+
+    docentesSinLaAsignatura("5");
+    selectDocente("mail-d1", MONITOREO);
+    asignarDocente();
+
+    docentesSinLaAsignatura("6");
+    selectDocente("mail-d3", PRACTICO);
+    asignarDocente();
+}

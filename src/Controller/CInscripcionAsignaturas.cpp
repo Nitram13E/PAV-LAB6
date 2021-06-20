@@ -5,7 +5,7 @@
 CInscripcionAsignaturas::CInscripcionAsignaturas(){}
 
 CInscripcionAsignaturas::~CInscripcionAsignaturas(){}
-
+//lista las asignaturas en las que el usuario no esta inscripto.
 std::list<std::string> CInscripcionAsignaturas::asignaturasNoInscriptos()
 {
     ManejadorAsignatura * asignaturas = ManejadorAsignatura::getInstancia();
@@ -50,7 +50,7 @@ std::list<std::string> CInscripcionAsignaturas::asignaturasNoInscriptos()
     
     return result;
 }
-
+//selecciona una asignatura y la setea en el Controlador.
 void CInscripcionAsignaturas::selectAsignatura(std::string asignatura)
 {
     this -> codigo = asignatura;
@@ -58,17 +58,17 @@ void CInscripcionAsignaturas::selectAsignatura(std::string asignatura)
 
 void CInscripcionAsignaturas::inscribir()
 {
-    ManejadorAsignatura * asignaturas = asignaturas -> getInstancia();
-    Sesion * sesion = sesion -> getInstancia();
+    ManejadorAsignatura * asignaturas = ManejadorAsignatura::getInstancia();
+    Sesion * sesion = Sesion::getInstancia();
 
     Asignatura * asignaturaAIncribir = asignaturas -> buscarAsignatura(this -> codigo);
 
     // Busco si existe un estudiante con ese mail
-    ManejadorPerfil *  usuarios = usuarios -> getInstancia();
+    ManejadorPerfil *  usuarios = ManejadorPerfil::getInstancia();
 
     Estudiante * estudiante = dynamic_cast<Estudiante*>(sesion -> getPerfil());
 
-    if(estudiante == NULL)  throw std::invalid_argument("Usuario no encontrado\n");
+    if(estudiante == NULL)  std::cout<<"Usuario no encontrado\n"<<std::endl;
 
     // Lo inscribo a esa asignatura
     estudiante -> addAsignaturas(asignaturaAIncribir);
@@ -76,3 +76,45 @@ void CInscripcionAsignaturas::inscribir()
 
 // En cancelar no se borra nada, ya que no se creo ninguna instancia de ningun objeto porque no paso por la funcion inscribir()
 void CInscripcionAsignaturas::cancelar(){}
+
+bool CInscripcionAsignaturas::esEstudiante()
+{   
+    ManejadorPerfil *  usuarios = ManejadorPerfil::getInstancia();
+    Sesion * sesion = sesion -> getInstancia();
+    Estudiante * estudiante = dynamic_cast<Estudiante*>(sesion -> getPerfil());
+    if (estudiante!=NULL)
+        return true;
+    else return false;
+}
+
+void CInscripcionAsignaturas::cargarDatos()
+{
+    ManejadorAsignatura * ma = ManejadorAsignatura::getInstancia();
+    ManejadorPerfil * mp = ManejadorPerfil::getInstancia();
+    Estudiante * estudiante;
+
+    estudiante = dynamic_cast<Estudiante*>(mp -> buscarPerfil("mail-e1"));
+    estudiante -> addAsignaturas(ma -> buscarAsignatura("1"));
+    estudiante -> addAsignaturas(ma -> buscarAsignatura("2"));
+    estudiante -> addAsignaturas(ma -> buscarAsignatura("3"));
+    estudiante -> addAsignaturas(ma -> buscarAsignatura("4"));
+    estudiante -> addAsignaturas(ma -> buscarAsignatura("5"));
+
+    estudiante = dynamic_cast<Estudiante*>(mp -> buscarPerfil("mail-e2"));
+    estudiante -> addAsignaturas(ma -> buscarAsignatura("1"));
+    estudiante -> addAsignaturas(ma -> buscarAsignatura("2"));
+    estudiante -> addAsignaturas(ma -> buscarAsignatura("3"));
+    estudiante -> addAsignaturas(ma -> buscarAsignatura("4"));
+
+    estudiante = dynamic_cast<Estudiante*>(mp -> buscarPerfil("mail-e3"));
+    estudiante -> addAsignaturas(ma -> buscarAsignatura("1"));
+    estudiante -> addAsignaturas(ma -> buscarAsignatura("2"));
+    estudiante -> addAsignaturas(ma -> buscarAsignatura("3"));
+
+    estudiante = dynamic_cast<Estudiante*>(mp -> buscarPerfil("mail-e4"));
+    estudiante -> addAsignaturas(ma -> buscarAsignatura("1"));
+    estudiante -> addAsignaturas(ma -> buscarAsignatura("4"));
+
+    estudiante = dynamic_cast<Estudiante*>(mp -> buscarPerfil("mail-e5"));
+    estudiante -> addAsignaturas(ma -> buscarAsignatura("1"));
+}

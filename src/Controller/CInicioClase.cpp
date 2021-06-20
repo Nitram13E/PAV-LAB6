@@ -109,3 +109,23 @@ void CInicioClase::cancelar()
     delete this -> doc;
     this -> listaHabilitados.clear();
 }
+//Carga Datos Predefinidos al Programa.
+void CInicioClase::cargarDatos()
+{
+    ManejadorPerfil* mp = ManejadorPerfil::getInstancia();
+
+    this -> doc = dynamic_cast<Docente*>(mp -> buscarPerfil("mail-d2"));
+    selectAsignatura(DtIniciarClase("1", "PAV practico 20-6-21", DtTimeStamp(DtFecha(20,6,2021), 10, 0, 0)));
+    datosIngresados();
+    iniciarClase();
+
+    this -> doc = dynamic_cast<Docente*>(mp -> buscarPerfil("mail-d3"));
+    selectAsignatura(DtIniciarClase("2", "COE teorico 20-6-21", DtTimeStamp(DtFecha(20,6,2021), 11, 0, 0)));
+    datosIngresados();
+    iniciarClase();
+
+    this -> doc = dynamic_cast<Docente*>(mp -> buscarPerfil("mail-d4"));
+    selectAsignatura(DtIniciarClase("3", "RC monitoreo 20-6-21", DtTimeStamp(DtFecha(20,6,2021), 12, 0, 0)));
+    datosIngresados();
+    iniciarClase();
+}

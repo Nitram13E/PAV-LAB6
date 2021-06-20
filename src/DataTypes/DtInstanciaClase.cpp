@@ -29,9 +29,9 @@ bool DtInstanciaClase::getMonitoreo()
 
 std::ostream& operator << (std::ostream& out, DtInstanciaClase dtInstClase)
 {
-    std::cout << "Teorico: " << dtInstClase.getTeorico() << std::endl;
-    std::cout << "Practico: " << dtInstClase.getPractico() << std::endl;
-    std::cout << "Monitoreo: " << dtInstClase.getMonitoreo();
+    if(dtInstClase.getTeorico()) std::cout << "   - Teorico" << std::endl;
+    if(dtInstClase.getPractico()) std::cout << "   - Practico" << std::endl;
+    if(dtInstClase.getMonitoreo()) std::cout << "   - Monitoreo" << std::endl;
 
     return out;
 }

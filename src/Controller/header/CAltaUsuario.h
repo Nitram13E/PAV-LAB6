@@ -20,6 +20,8 @@ class CAltaUsuario : public IAltaUsuario
         void ingresarDocente(std::string);
         void altaUsuario();
         void cancelar();
+
+        void cargarDatos();
 };
 
 #endif
