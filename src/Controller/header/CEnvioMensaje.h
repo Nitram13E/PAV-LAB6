@@ -14,6 +14,7 @@ class CEnvioMensaje : public IEnvioMensaje
 {
     private:
         int id_clase;
+        Perfil* perfil;
         int id_response;
         std::string txt;
 
@@ -34,6 +35,8 @@ class CEnvioMensaje : public IEnvioMensaje
         void enviarMensaje();
 
         void cancelar();
+
+        void cargarDatos();
 };
 
 #endif

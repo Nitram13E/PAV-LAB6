@@ -29,36 +29,9 @@ bool DtInstanciaClase::getMonitoreo()
 
 std::ostream& operator << (std::ostream& out, DtInstanciaClase dtInstClase)
 {
-    switch (dtInstClase.getTeorico())
-    {
-    case 0:
-        std::cout << "Teorico: No" << std::endl;
-        break;
-    case 1: 
-        std::cout << "Teorico: Si" << std::endl;
-        break;
-    }
-    switch (dtInstClase.getPractico())
-    {
-    case 0:
-        std::cout << "Practico: No" << std::endl;
-        break;
-    case 1: 
-        std::cout << "Practico: Si" << std::endl;
-        break;
-    }
-    switch(dtInstClase.getMonitoreo())
-    {
-    case 0:
-        std::cout << "Monitoreo: No" << std::endl;
-        break;
-    case 1: 
-        std::cout << "Monitoreo: Si" << std::endl;
-        break;
-    }
-    ///std::cout << "Teorico: " << dtInstClase.getTeorico() << std::endl;
-    //std::cout << "Practico: " << dtInstClase.getPractico() << std::endl;
-    //std::cout << "Monitoreo: " << dtInstClase.getMonitoreo();
+    if(dtInstClase.getTeorico()) std::cout << "   - Teorico" << std::endl;
+    if(dtInstClase.getPractico()) std::cout << "   - Practico" << std::endl;
+    if(dtInstClase.getMonitoreo()) std::cout << "   - Monitoreo" << std::endl;
 
     return out;
 }

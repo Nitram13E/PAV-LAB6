@@ -20,17 +20,18 @@ Clase::~Clase()
 {
     //Borrando participaciones de Clase
     std::list<Participacion*>::iterator itP;
-    for(itP = this -> participaciones.begin(); itP != participaciones.end(); itP++)
+    std::list<Participacion*> p = this -> participaciones;
+    
+    for(itP = p.begin(); itP != p.end(); itP++)
     {
-        this -> participaciones.remove(*itP);
         delete (*itP);
     }
 
     //Borrando AsisteVivo de Clase
     std::list<AsisteVivo*>::iterator itA;
-    for(itA = this -> asisteVivo.begin(); itA != asisteVivo.end(); itA++)
+    std::list<AsisteVivo*> a = this -> asisteVivo;
+    for(itA = a.begin(); itA != a.end(); itA++)
     {
-        this -> asisteVivo.remove(*itA);
         delete (*itA);
     }
 }

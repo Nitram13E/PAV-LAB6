@@ -21,7 +21,6 @@ void CEliminarAsignatura::eliminarAsignatura()
     Asignatura * asignatura = ma -> buscarAsignatura(this -> codigo);
 
     if(asignatura == NULL) return;
-
     std::list<Perfil*> perfiles = ManejadorPerfil::getInstancia() -> listarPerfiles();
 
     for(std::list<Perfil*>::iterator it = perfiles.begin(); it != perfiles.end(); it++)

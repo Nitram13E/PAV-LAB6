@@ -24,6 +24,10 @@ class CInscripcionAsignaturas : public IInscripcionesAsignaturas
         void inscribir();
 
         void cancelar();
+
+        bool esEstudiante();
+
+        void cargarDatos();
 };
 
 #endif

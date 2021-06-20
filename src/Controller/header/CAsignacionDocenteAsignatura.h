@@ -26,6 +26,8 @@ class CAsignacionDocenteAsignatura : public IAsignacionDocenteAsignatura
         void asignarDocente();
 
         void cancelar();
+
+        void cargarDatos();
 };
 
 #endif
