@@ -54,11 +54,12 @@ void Asignatura::setTipoClases(DtInstanciaClase* tipo)
 
 void Asignatura::addClases(Clase* clase)
 {//FIXME:
-    std::list<Clase*>::iterator it = this -> clases.begin();
+    /*std::list<Clase*>::iterator it = this -> clases.begin();
 
     while (it != this -> clases.end() && (*it) -> getID() != clase -> getID()) it++;
     
-    if(it != this -> clases.end()) this -> clases.push_back(clase);
+    if(it != this -> clases.end()) */
+    this -> clases.push_back(clase);
 }
 
 std::list<Clase*> Asignatura::getClases()
@@ -111,4 +112,13 @@ std::list<int> Asignatura::listarIdAsisteVivo()
         }
     }
     return lista;
+}
+std::list<int> Asignatura::listarClases()
+{
+    std::list<int> list;
+    std::list<Clase *>::iterator it; 
+    for(it = this->clases.begin(); it != this->clases.end(); it++)
+        list.push_back((*it)->getID());
+
+    return list;
 }

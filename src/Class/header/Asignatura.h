@@ -37,6 +37,8 @@ class Asignatura
         std::list<DtInfoClase*> getDtInfoClase();
 
         std::list<int> listarIdAsisteVivo();
+
+        std::list<int> listarClases();
 };
 
 #endif

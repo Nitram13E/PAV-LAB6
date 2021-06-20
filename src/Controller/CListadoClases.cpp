@@ -46,6 +46,11 @@ std::list<DtInfoClase*> CListadoClases::selectAsignatura(std::string codigoAsign
     if(a == NULL) return list;
 
     list = a -> getDtInfoClase();
-
+    
+    std::list<int> listaIDS = a -> listarClases();
+    std::list<int>::iterator it;
+    for(it = listaIDS.begin(); it != listaIDS.end(); it++)
+        std::cout << (*it) << std::endl;
+        
     return list;
 }

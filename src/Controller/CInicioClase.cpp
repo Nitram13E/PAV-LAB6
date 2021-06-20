@@ -32,10 +32,12 @@ std::list<std::string> CInicioClase::asignaturasAsignadas()
 bool CInicioClase::selectAsignatura(DtIniciarClase inicio)
 {
     this -> inicioClase = inicio;
+    std::list<Rol*> listroles = this->doc ->getRoles();
+    std::list<Rol*>:: iterator it = listroles.begin();
 
-    std::list<Rol*>:: iterator it = this -> doc -> getRoles().begin();
+    while( (it!= listroles.end()) && ((*it) -> getCodigoAsignatura() != inicio.getCodigo())) it++;
 
-    while((*it) -> getCodigoAsignatura() != inicio.getCodigo()) it++;
+    if(it  == listroles.end()) throw std::invalid_argument("Asignatura no encontrada en lista de roles");
 
     this -> rol = (*it) -> getTipoRol();
 
@@ -102,6 +104,7 @@ void CInicioClase::iniciarClase()
 
     Asignatura * asig = ManejadorAsignatura::getInstancia() -> buscarAsignatura(data -> getCodigo());
     asig -> addClases(clase);
+    
 }
 
 void CInicioClase::cancelar()

@@ -25,7 +25,6 @@
 #include "DataTypes/header/DtIniciarMonitoreo.h"
 #include "DataTypes/header/DtParticipacion.h"
 #include "Handlers/header/ManejadorPerfil.h"
-
 #include <unistd.h>
 
 void menu();
@@ -181,8 +180,8 @@ void pressEnter()
 void cargarDatos()
 {
     //Alta usuario
-    IAU = fabrica -> getIAltaUsuario();
-    IAU -> cargarDatos();
+    /*IAU = fabrica -> getIAltaUsuario();
+    IAU -> cargarDatos();*/
     //Alta asignatura
     IAA = fabrica -> getIAltaAsignatura();
     IAA -> cargarDatos();
@@ -577,7 +576,7 @@ void CUInicioClase()
             std::cout << "Desea confirmar los datos ingresados? [S/N o Cualquier letra (menos la s)]: ";
             std::cin >> op;
 
-            if(op == "S" || op == "s") IIC -> iniciarClase();
+            if(op == "S" || op == "s")IIC -> iniciarClase();
             else IIC -> cancelar();
         }
     }
@@ -847,25 +846,21 @@ void CUListadoClase()
 
         for(itClases = infoClases.begin(); itClases != infoClases.end(); itClases++) //hacer un dynamic cast sis DtInfoClaseMonitoreo o Teorico o Practico
         {
-            try
+            DtInfoTeorico* infoTeorico = dynamic_cast<DtInfoTeorico*>(*(itClases));
+            if(infoTeorico != NULL)
             {
-                DtInfoTeorico* infoTeorico = dynamic_cast<DtInfoTeorico*>(*itClases);
                 std::cout << *infoTeorico << std::endl;
             }
-            catch(const std::bad_cast* e)
-            {
-                try
+            else{
+                DtInfoMonitoreo* infoMonitoreo = dynamic_cast<DtInfoMonitoreo*>(*itClases);
+                if(infoMonitoreo != NULL)
                 {
-                    DtInfoMonitoreo* infoMonitoreo = dynamic_cast<DtInfoMonitoreo*>(*itClases);
                     std::cout << *infoMonitoreo << std::endl;
-                }
-                catch(const std::bad_cast* error)
-                {
-                std::cout << *(*itClases) << std::endl;
+                }else{
+                    std::cout << *(*itClases) << std::endl;
                 }
             }
         }
-
         pressEnter();
     }
     else
