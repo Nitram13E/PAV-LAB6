@@ -25,7 +25,7 @@ bool CIniciarSesion::validarContrasenia(std::string password)
     return false;
 }
 
-void CIniciarSesion::inciarSesion()
+void CIniciarSesion::iniciarSesion()
 {
     ManejadorPerfil* mp = ManejadorPerfil::getInstancia();
     

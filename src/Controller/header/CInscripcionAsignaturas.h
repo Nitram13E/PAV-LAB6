@@ -18,12 +18,10 @@ class CInscripcionAsignaturas : public IInscripcionesAsignaturas
         ~CInscripcionAsignaturas();
 
         std::list<std::string> asignaturasNoInscriptos();
-
         void selectAsignatura(std::string);
-
         void inscribir();
-
         void cancelar();
+        void cargarDatos();
 };
 
 #endif

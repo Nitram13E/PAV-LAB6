@@ -15,6 +15,8 @@ class CAltaAsignatura : public IAltaAsignatura
         DtAsignatura* ingresar(DtAsignatura*);
         void altaAsignatura();
         void cancelar();
+
+        void cargarDatos();
 };
 
 #endif

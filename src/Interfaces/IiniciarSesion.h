@@ -8,7 +8,7 @@ class IiniciarSesion
     public:
         virtual void ingresarEmail(std::string email) = 0;
         virtual bool validarContrasenia(std::string password) = 0;
-        virtual void inciarSesion() = 0;
+        virtual void iniciarSesion() = 0;
 };
 
 #endif

@@ -22,10 +22,11 @@ void CAltaUsuario::ingresarDocente(std::string ins)
     this -> instituto = ins;
 }
 
-
 void CAltaUsuario::altaUsuario()
 {
     ManejadorPerfil* mp = ManejadorPerfil::getInstancia();
+
+    if(mp -> existePerfil(this -> datosUsuario.getNombre())) throw std::invalid_argument("El perfil ya existe. ");
 
     if(this -> tipo_perfil == ESTUDIANTE)
     {
@@ -40,3 +41,47 @@ void CAltaUsuario::altaUsuario()
 }
 
 void CAltaUsuario::cancelar(){}
+
+void CAltaUsuario::cargarDatos()
+{
+    ingresarDatosPerfil(DtPerfil("EST1", "IMG1", "mail-e1", "123abc"), ESTUDIANTE);
+    ingresarEstudiante("342342");
+    altaUsuario();
+
+    ingresarDatosPerfil(DtPerfil("EST2", "IMG2", "mail-e2", "123abc"), ESTUDIANTE);
+    ingresarEstudiante("3878424");
+    altaUsuario();
+
+    ingresarDatosPerfil(DtPerfil("EST3", "IMG3", "mail-e3", "123abc"), ESTUDIANTE);
+    ingresarEstudiante("6565624");
+    altaUsuario(); 
+
+    ingresarDatosPerfil(DtPerfil("EST4", "IMG4", "mail-e4", "123abc"), ESTUDIANTE);
+    ingresarEstudiante("342342");
+    altaUsuario();
+
+    ingresarDatosPerfil(DtPerfil("EST5", "IMG5", "mail-e5", "123abc"), ESTUDIANTE);
+    ingresarEstudiante("3878424");
+    altaUsuario();
+
+    ingresarDatosPerfil(DtPerfil("EST6", "IMG6", "mail-e6", "123abc"), ESTUDIANTE);
+    ingresarEstudiante("6565624");
+    altaUsuario();
+
+
+    ingresarDatosPerfil(DtPerfil("DOC1", "IMG1", "mail-d1", "123abc"), DOCENTE);
+    ingresarDocente("ins1");
+    altaUsuario();
+
+    ingresarDatosPerfil(DtPerfil("DOC2", "IMG2", "mail-d2", "123abc"), DOCENTE);
+    ingresarDocente("ins2");
+    altaUsuario();
+
+    ingresarDatosPerfil(DtPerfil("DOC3", "IMG3", "mail-d3", "123abc"), DOCENTE);
+    ingresarDocente("ins1");
+    altaUsuario();
+
+    ingresarDatosPerfil(DtPerfil("DOC4", "IMG4", "mail-d4", "123abc"), DOCENTE);
+    ingresarDocente("ins2");
+    altaUsuario();
+}

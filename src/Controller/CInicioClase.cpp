@@ -11,12 +11,13 @@
 CInicioClase::CInicioClase(){}
 CInicioClase::~CInicioClase(){}
 
+//Lista las asignaturas a las que esta asignado el docente
 std::list<std::string> CInicioClase::asignaturasAsignadas()
 {
     Perfil* p = Sesion::getInstancia() -> getPerfil();
     Docente * d = dynamic_cast<Docente*>(p);
 
-    if(d == NULL) throw std::invalid_argument("El usuario logueado no es un docente");
+    if(d == NULL) throw std::invalid_argument("El usuario no es un docente.");
 
     this -> doc = d;
 
@@ -33,9 +34,13 @@ bool CInicioClase::selectAsignatura(DtIniciarClase inicio)
 {
     this -> inicioClase = inicio;
 
-    std::list<Rol*>:: iterator it = this -> doc -> getRoles().begin();
+    std::list<Rol*> roles = this -> doc -> getRoles();
 
-    while((*it) -> getCodigoAsignatura() != inicio.getCodigo()) it++;
+    std::list<Rol*>:: iterator it = roles.begin();
+
+    while(it != roles.end() && (*it) -> getCodigoAsignatura() != inicio.getCodigo()) it++;
+
+    if(it == roles.end()) throw std::invalid_argument("Asignatura no encontrada en lista de roles. ");
 
     this -> rol = (*it) -> getTipoRol();
 
@@ -54,6 +59,9 @@ std::list<std::string> CInicioClase::inscriptosAsignatura()
     
         if(est != NULL && est -> tieneAsignatura(this -> inicioClase.getCodigo())) listaEstudiantes.push_back(est -> getEmail());
     }
+
+    if(listaEstudiantes.empty()) throw std::invalid_argument("La asignatura no tiene estudiantes inscriptos.");
+
     return listaEstudiantes;
 }
 //Agrega un estudiante(Email) a la lista de habilitados
@@ -108,4 +116,24 @@ void CInicioClase::cancelar()
 {
     delete this -> doc;
     this -> listaHabilitados.clear();
+}
+//Carga Datos Predefinidos al Programa.
+void CInicioClase::cargarDatos()
+{
+    ManejadorPerfil* mp = ManejadorPerfil::getInstancia();
+
+    this -> doc = dynamic_cast<Docente*>(mp -> buscarPerfil("mail-d2"));
+    selectAsignatura(DtIniciarClase("1", "PAV practico 20-6-21", DtTimeStamp(DtFecha(20,6,2021), 10, 0, 0)));
+    datosIngresados();
+    iniciarClase();
+
+    this -> doc = dynamic_cast<Docente*>(mp -> buscarPerfil("mail-d3"));
+    selectAsignatura(DtIniciarClase("2", "COE teorico 20-6-21", DtTimeStamp(DtFecha(20,6,2021), 11, 0, 0)));
+    datosIngresados();
+    iniciarClase();
+
+    this -> doc = dynamic_cast<Docente*>(mp -> buscarPerfil("mail-d4"));
+    selectAsignatura(DtIniciarClase("3", "RC monitoreo 20-6-21", DtTimeStamp(DtFecha(20,6,2021), 12, 0, 0)));
+    datosIngresados();
+    iniciarClase();
 }

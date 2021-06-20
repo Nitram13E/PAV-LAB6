@@ -10,6 +10,8 @@ class IInscripcionesAsignaturas
         virtual void selectAsignatura(std::string) = 0;
         virtual void inscribir() = 0;
         virtual void cancelar() = 0;
+
+        virtual void cargarDatos() = 0;
 };
 
 #endif

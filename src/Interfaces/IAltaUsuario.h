@@ -12,6 +12,8 @@ class IAltaUsuario
         virtual void ingresarDocente(std::string) = 0;
         virtual void altaUsuario() = 0;
         virtual void cancelar() = 0;
+
+        virtual void cargarDatos() = 0;
 };
 
 #endif

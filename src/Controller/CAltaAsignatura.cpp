@@ -14,9 +14,11 @@ DtAsignatura* CAltaAsignatura::ingresar(DtAsignatura* datosAsignatura)
 
 void CAltaAsignatura::altaAsignatura()
 {
-    Asignatura* newAsignatura = new Asignatura(this -> datosAsignatura -> getCodigo(), this -> datosAsignatura -> getNombre(), this -> datosAsignatura -> getTipoClases());
-
     ManejadorAsignatura* handlerAsignatura = ManejadorAsignatura::getInstancia();
+
+    if(handlerAsignatura -> existeAsignatura(this -> datosAsignatura -> getCodigo())) throw std::invalid_argument("La asignatura ya existe. ");
+
+    Asignatura* newAsignatura = new Asignatura(this -> datosAsignatura -> getCodigo(), this -> datosAsignatura -> getNombre(), this -> datosAsignatura -> getTipoClases());
 
     handlerAsignatura -> agregarAsignatura(newAsignatura);
 }
@@ -24,4 +26,25 @@ void CAltaAsignatura::altaAsignatura()
 void CAltaAsignatura::cancelar()
 {
     delete this -> datosAsignatura;
+}
+
+void CAltaAsignatura::cargarDatos()
+{
+    ingresar(new DtAsignatura("1", "PAV", new DtInstanciaClase(true, true, true)));
+    altaAsignatura();
+
+    ingresar(new DtAsignatura("2", "COE", new DtInstanciaClase(true, true, false)));
+    altaAsignatura();
+
+    ingresar(new DtAsignatura("3", "CONT", new DtInstanciaClase(false, true, false)));
+    altaAsignatura();
+
+    ingresar(new DtAsignatura("4", "BD II", new DtInstanciaClase(true, true, false)));
+    altaAsignatura();
+
+    ingresar(new DtAsignatura("5", "RC", new DtInstanciaClase(true, false, true)));
+    altaAsignatura();
+
+    ingresar(new DtAsignatura("6", "BD I", new DtInstanciaClase(false, true, true)));
+    altaAsignatura();
 }

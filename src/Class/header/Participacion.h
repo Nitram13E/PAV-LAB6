@@ -10,16 +10,16 @@ class Participacion
         static int idActual;
 
         int id; 
+        Perfil * perfil;
         DtTimeStamp fecha;
         std::string mensaje;
         Participacion * responde;
-        Perfil * perfil;
 
         void incrementarIDActual();
 
     public:
         Participacion();
-        Participacion(DtTimeStamp, std::string, Participacion*);
+        Participacion(Perfil*, DtTimeStamp, std::string, Participacion*);
         ~Participacion();
         
 

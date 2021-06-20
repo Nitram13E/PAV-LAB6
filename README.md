@@ -11,9 +11,3 @@ Progreso:
 - [X] ➢ Envío de mensaje - Angel
 - [X] ➢ Eliminación de asignatura - Equipo
 - [X] ➢ Listado de Clases - Cristian
-
-### DUDAS Y COSAS POR HACER:
-
-- Controles de input de lado usuario(ej: CUInscripcionAsignatura, elegir una asignatura no existente en selectAsignatura)
-- Controles de id, Perfil asignatura clase - controlar
-- Carga de datos en Controllers

@@ -8,18 +8,18 @@
 CAsistenciaClaseVivo::CAsistenciaClaseVivo(){}
 CAsistenciaClaseVivo::~CAsistenciaClaseVivo(){}
 
+//Lista las asignaturas que esta inscripto el estudiante
 std::list<std::string> CAsistenciaClaseVivo::asignaturasInscriptos()
 {
     Sesion* session = Sesion::getInstancia();
     
-    if(session -> getTipoPerfil() == ESTUDIANTE)
+    if(session -> getTipoPerfil() != ESTUDIANTE) throw std::invalid_argument("El usuario no es un estudiante.");
+
+    Estudiante* est = dynamic_cast<Estudiante*>(session -> getPerfil());
+    
+    if(est != NULL)
     {
-        Estudiante* est = dynamic_cast<Estudiante*>(session -> getPerfil());
-        
-        if(est != NULL)
-        {
-            this -> estudiante = est;
-        }
+        this -> estudiante = est;
     }
 
     std::list<std::string> lista;
@@ -34,6 +34,7 @@ std::list<std::string> CAsistenciaClaseVivo::asignaturasInscriptos()
     return lista;
 }
 
+//Lista las clases que no terminaron de la asignatura anteriormente seleccionada
 std::list<int> CAsistenciaClaseVivo::clasesOnlineDisponibles(std::string codigoAsig)
 {
     this -> codAsig = codigoAsig;
@@ -55,6 +56,7 @@ std::list<int> CAsistenciaClaseVivo::clasesOnlineDisponibles(std::string codigoA
     return lista;
 }
 
+//Devuelve los datos ingresados, codigo de Asignatura e idClase
 DtAsistir* CAsistenciaClaseVivo::selectClase(int id)
 {
     this -> idClase = id;
@@ -64,6 +66,7 @@ DtAsistir* CAsistenciaClaseVivo::selectClase(int id)
     return datos;
 }
 
+//Se crea el objeto AsisteVivo y se guarda en la clase
 void CAsistenciaClaseVivo::asistirClaseVivo()
 {
     ManejadorClase* mc = ManejadorClase::getInstancia();
