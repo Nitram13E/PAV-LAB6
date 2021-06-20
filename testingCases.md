@@ -60,9 +60,9 @@ Eliminación de asignatura
 
 - Eliminar una asignatura habiendo un estudiante dentro de una clase OK
 
-- Eliminar una asignatura donde solo hay docente dictando clase pero sin estudiantes y que lleven la asignatura(estudiantes llevan la asignatura)
+- Eliminar una asignatura donde solo hay docente dictando clase con estudiantes que lleven la asignatura(estudiantes llevan la asignatura)  OK
 
-- Eliminar una asignatura donde solo hay docente dictando clase pero sin estudiantes llevando la asignatura
+- Eliminar una asignatura donde solo hay docente dictando clase pero sin estudiantes llevando la asignatura OK
 (estudiantes no estan asignados a asignatura)
 
 - Eliminar una asignatura donde solo hay docente dictando clase con estudiantes y que lleven la asignatura(estudiantes llevan la asignatura) OK
@@ -144,7 +144,7 @@ INCORRECTO:
 
 Inicio de clase (iniciar con docente)
 
-- Iniciar una clase teorico con docente teorico
+- Iniciar una clase teorico con docente teorico OK
 
 - Iniciar una clase practico con docente practico OK
 
@@ -166,11 +166,11 @@ INCORRECTO:
 
 Listado de Clases(iniciar con docente)
 
-- Listar clases del docente
+- Listar clases del docente OK
 
 INCORRECTO:
 
-- usar CU sin que se le hayan asignado asignaturas al docente
+- usar CU sin que se le hayan asignado asignaturas al docente OK
 
 - Seleccionar asignatura inexistente CONTROLAR
 

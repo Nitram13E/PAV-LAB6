@@ -4,6 +4,7 @@
 CAsignacionDocenteAsignatura::CAsignacionDocenteAsignatura(){}
 CAsignacionDocenteAsignatura::~CAsignacionDocenteAsignatura(){}
 
+//Controla que el rol selecc. corresponda con la instancia de clase de la asignatura 
 bool CAsignacionDocenteAsignatura::controlRol(DtInstanciaClase* tipoClases)
 {
     switch (this -> rol)
@@ -32,6 +33,7 @@ std::list<std::string> CAsignacionDocenteAsignatura::listarAsignaturas()
     return ManejadorAsignatura::getInstancia() -> listarAsignatura();
 }
 
+//Lista los docentes no asignados a la asignatura
 std::list<std::string> CAsignacionDocenteAsignatura::docentesSinLaAsignatura(std::string codigo)
 {
     this -> codigo = codigo;
@@ -49,7 +51,6 @@ std::list<std::string> CAsignacionDocenteAsignatura::docentesSinLaAsignatura(std
             lista.push_back((*it) -> getEmail());
         }
     }
-
     return lista;
 }
 
@@ -59,6 +60,7 @@ void CAsignacionDocenteAsignatura::selectDocente(std::string email, tipoRol rol)
     this -> rol = rol;
 }
 
+//Crea un objeto rol con la asignatura y el tipoRol selecc. y lo agrega al docente
 void CAsignacionDocenteAsignatura::asignarDocente()
 {
     Perfil * p = ManejadorPerfil::getInstancia() -> buscarPerfil(this -> email);
@@ -72,7 +74,7 @@ void CAsignacionDocenteAsignatura::asignarDocente()
     }
     else
     {
-        throw std::invalid_argument("El rol del docente no corresponde con el de la asignatura...");
+        throw std::invalid_argument("El rol del docente no corresponde con el de la asignatura.");
     }
 }
 

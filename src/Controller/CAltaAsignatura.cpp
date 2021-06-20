@@ -14,9 +14,11 @@ DtAsignatura* CAltaAsignatura::ingresar(DtAsignatura* datosAsignatura)
 
 void CAltaAsignatura::altaAsignatura()
 {
-    Asignatura* newAsignatura = new Asignatura(this -> datosAsignatura -> getCodigo(), this -> datosAsignatura -> getNombre(), this -> datosAsignatura -> getTipoClases());
-
     ManejadorAsignatura* handlerAsignatura = ManejadorAsignatura::getInstancia();
+
+    if(handlerAsignatura -> existeAsignatura(this -> datosAsignatura -> getCodigo())) throw std::invalid_argument("La asignatura ya existe. ");
+
+    Asignatura* newAsignatura = new Asignatura(this -> datosAsignatura -> getCodigo(), this -> datosAsignatura -> getNombre(), this -> datosAsignatura -> getTipoClases());
 
     handlerAsignatura -> agregarAsignatura(newAsignatura);
 }
@@ -43,6 +45,6 @@ void CAltaAsignatura::cargarDatos()
     ingresar(new DtAsignatura("5", "RC", new DtInstanciaClase(true, false, true)));
     altaAsignatura();
 
-    ingresar(new DtAsignatura("6", "BD I", new DtInstanciaClase(false, true, false)));
+    ingresar(new DtAsignatura("6", "BD I", new DtInstanciaClase(false, true, true)));
     altaAsignatura();
 }

@@ -11,12 +11,13 @@
 CInicioClase::CInicioClase(){}
 CInicioClase::~CInicioClase(){}
 
+//Lista las asignaturas a las que esta asignado el docente
 std::list<std::string> CInicioClase::asignaturasAsignadas()
 {
     Perfil* p = Sesion::getInstancia() -> getPerfil();
     Docente * d = dynamic_cast<Docente*>(p);
 
-    if(d == NULL) throw std::invalid_argument("El usuario logueado no es un docente");
+    if(d == NULL) throw std::invalid_argument("El usuario no es un docente.");
 
     this -> doc = d;
 
@@ -33,9 +34,13 @@ bool CInicioClase::selectAsignatura(DtIniciarClase inicio)
 {
     this -> inicioClase = inicio;
 
-    std::list<Rol*>:: iterator it = this -> doc -> getRoles().begin();
+    std::list<Rol*> roles = this -> doc -> getRoles();
 
-    while((*it) -> getCodigoAsignatura() != inicio.getCodigo()) it++;
+    std::list<Rol*>:: iterator it = roles.begin();
+
+    while(it != roles.end() && (*it) -> getCodigoAsignatura() != inicio.getCodigo()) it++;
+
+    if(it == roles.end()) throw std::invalid_argument("Asignatura no encontrada en lista de roles. ");
 
     this -> rol = (*it) -> getTipoRol();
 
@@ -54,6 +59,9 @@ std::list<std::string> CInicioClase::inscriptosAsignatura()
     
         if(est != NULL && est -> tieneAsignatura(this -> inicioClase.getCodigo())) listaEstudiantes.push_back(est -> getEmail());
     }
+
+    if(listaEstudiantes.empty()) throw std::invalid_argument("La asignatura no tiene estudiantes inscriptos.");
+
     return listaEstudiantes;
 }
 //Agrega un estudiante(Email) a la lista de habilitados

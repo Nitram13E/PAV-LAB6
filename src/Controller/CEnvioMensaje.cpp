@@ -13,7 +13,6 @@ CEnvioMensaje::~CEnvioMensaje(){}
 DtParticipacion * CEnvioMensaje::ctodtParticipacion(Participacion * par)
 {
     if(par == NULL) return NULL;
-    //acordarme de lo que me dijo el yona
     DtParticipacion * new_dtparticipacion = new DtParticipacion(par -> getId(),
                                                                 par -> getFecha(),
                                                                 par ->getMensaje(),
@@ -72,7 +71,7 @@ std::list<DtParticipacion*> CEnvioMensaje::selectClase(int id_clase)
     }
     else
     {
-        //se busca u devuelve la clase
+        //se busca y guarda la clase
         Clase * clase_seleccionada = ManejadorClase::getInstancia() -> buscarClase(id_clase);
         std::list<Participacion*> lista_participaciones = clase_seleccionada -> getParticipaciones();
 

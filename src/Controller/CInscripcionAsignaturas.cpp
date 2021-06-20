@@ -22,7 +22,7 @@ std::list<std::string> CInscripcionAsignaturas::asignaturasNoInscriptos()
     // Obtengo estudiante con asignaturas de sesion
     Estudiante * estudiante = dynamic_cast<Estudiante*>(sesion -> getPerfil());
 
-    if(estudiante == NULL)  throw std::invalid_argument("Usuario no encontrado\n");
+    if(estudiante == NULL) throw std::invalid_argument("El usuario no es un estudiante.");
 
     // Traigo las asignaturas en las cuales el estudiante esta inscripto
     std::list<Asignatura*> asignaturasEstudiante = estudiante -> getAsignaturas();
@@ -76,16 +76,6 @@ void CInscripcionAsignaturas::inscribir()
 
 // En cancelar no se borra nada, ya que no se creo ninguna instancia de ningun objeto porque no paso por la funcion inscribir()
 void CInscripcionAsignaturas::cancelar(){}
-
-bool CInscripcionAsignaturas::esEstudiante()
-{   
-    ManejadorPerfil *  usuarios = ManejadorPerfil::getInstancia();
-    Sesion * sesion = sesion -> getInstancia();
-    Estudiante * estudiante = dynamic_cast<Estudiante*>(sesion -> getPerfil());
-    if (estudiante!=NULL)
-        return true;
-    else return false;
-}
 
 void CInscripcionAsignaturas::cargarDatos()
 {

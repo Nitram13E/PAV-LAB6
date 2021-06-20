@@ -53,12 +53,8 @@ void Asignatura::setTipoClases(DtInstanciaClase* tipo)
 }
 
 void Asignatura::addClases(Clase* clase)
-{//FIXME:
-    std::list<Clase*>::iterator it = this -> clases.begin();
-
-    while (it != this -> clases.end() && (*it) -> getID() != clase -> getID()) it++;
-    
-    if(it != this -> clases.end()) this -> clases.push_back(clase);
+{
+    this -> clases.push_back(clase);
 }
 
 std::list<Clase*> Asignatura::getClases()

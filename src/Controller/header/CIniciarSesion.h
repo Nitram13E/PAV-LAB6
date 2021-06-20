@@ -18,7 +18,7 @@ class CIniciarSesion : public IiniciarSesion
         ~CIniciarSesion();
         void ingresarEmail(std::string email);
         bool validarContrasenia(std::string password);
-        void inciarSesion();
+        void iniciarSesion();
         
 };
 
