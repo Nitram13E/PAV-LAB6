@@ -110,11 +110,12 @@ void CEnvioMensaje::enviarMensaje()
     // se busca el mensaje y se lo guarda en to_response
     if (this -> id_response != -1)
     {
-        std::list<Participacion*>::iterator it = clase -> getParticipaciones().begin();
+        std::list<Participacion*> participaciones = clase -> getParticipaciones();
+        std::list<Participacion*>::iterator it = participaciones.begin();
 
-        while(it != clase -> getParticipaciones().end() && (*it) -> getId() != this -> id_response) it++;
+        while(it != participaciones.end() && (*it) -> getId() != this -> id_response) it++;
 
-        if(it != clase -> getParticipaciones().end()) to_response = (*it);
+        if(it != participaciones.end()) to_response = (*it);
     }
 
     std::time_t tt;
