@@ -114,7 +114,7 @@ void CEnvioMensaje::enviarMensaje()
 
         while(it != clase -> getParticipaciones().end() && (*it) -> getId() != this -> id_response) it++;
 
-        if ((*it) -> getId() == this -> id_response) to_response = (*it);
+        if(it != clase -> getParticipaciones().end()) to_response = (*it);
     }
 
     std::time_t tt;

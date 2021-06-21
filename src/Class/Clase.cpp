@@ -34,6 +34,8 @@ Clase::~Clase()
     {
         delete (*itA);
     }
+
+    idActual--;
 }
 
 void Clase::incrementarIdActual()

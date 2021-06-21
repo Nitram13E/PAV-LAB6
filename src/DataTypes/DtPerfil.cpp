@@ -27,7 +27,7 @@ std::string DtPerfil::getImagenURL()
 
 std::string DtPerfil::getEmail()
 {
-    return this -> email;   
+    return this -> email;
 }
 
 std::string DtPerfil::getPassword()
