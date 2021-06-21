@@ -17,7 +17,7 @@ int DtInfoTeorico::getCantAsist()
 std::ostream& operator << (std::ostream& out, DtInfoTeorico dtInfTeorico)
 {
     std::cout << (DtInfoClase)dtInfTeorico << std::endl;
-    std::cout << dtInfTeorico.getCantAsist();
+    std::cout << "Cantidad de alumnos asistiendo: " << dtInfTeorico.getCantAsist();
 
     return out;
 }

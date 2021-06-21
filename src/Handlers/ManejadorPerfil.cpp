@@ -9,16 +9,16 @@ ManejadorPerfil::~ManejadorPerfil(){}
 ManejadorPerfil* ManejadorPerfil::getInstancia()
 {
     if(instancia == NULL) instancia = new ManejadorPerfil();
-    
+
     return instancia;
 }
 
 Perfil* ManejadorPerfil::buscarPerfil(std::string email)
 {
     std::map<std::string,Perfil*>::iterator it = this -> perfiles.find(email);
-    
+
     if(it == this -> perfiles.end()) return NULL;
-    
+
     return it -> second;
 }
 
@@ -43,11 +43,10 @@ void ManejadorPerfil::removePerfil(std::string mail)
 std::list<Perfil*> ManejadorPerfil::listarPerfiles()
 {
     std::list<Perfil*> lista;
-    
-    for(std::map<std::string, Perfil*>::iterator it = this -> perfiles.begin(); it != perfiles.end(); ++it)
-    {
-       lista.push_back(it -> second); 
-    }
 
+    for(std::map<std::string, Perfil*>::iterator it = this -> perfiles.begin(); it != perfiles.end(); it++)
+    {
+       lista.push_back(it -> second);
+    }
     return lista;
 }

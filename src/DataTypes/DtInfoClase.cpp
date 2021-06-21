@@ -30,7 +30,7 @@ std::ostream& operator << (std::ostream& out, const DtInfoClase& info)
 {
     std::cout << "Codigo: " << info.id << std::endl;
     std::cout << "Nombre: " << info.nombre << std::endl;
-    std::cout << "Codigos de los Docentes: " << std::endl;
+    std::cout << "Codigos de los Docentes:" << std::endl;
 
     std::list<std::string> docentes = info.docentes;
 

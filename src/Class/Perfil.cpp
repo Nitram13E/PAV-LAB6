@@ -14,7 +14,7 @@ Perfil::~Perfil(){}
 
 void Perfil::setNombre(std::string nombre)
 {
-    this -> nombre = nombre;    
+    this -> nombre = nombre;
 }
 
 std::string Perfil::getNombre()
@@ -33,16 +33,16 @@ std::string Perfil::getImagenURL()
 
 void Perfil::setEmail(std::string email)
 {
-    this -> email = email;    
+    this -> email = email;
 }
 std::string Perfil::getEmail()
 {
-    return this -> email;   
+    return this -> email;
 }
 
 void Perfil::setPassword(std::string password)
 {
-    this->password = password;    
+    this->password = password;
 }
 
 std::string Perfil::getPassword()

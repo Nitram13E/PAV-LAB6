@@ -17,9 +17,10 @@ std::list<std::string> DtInfoMonitoreo::getEstudiantes()
 std::ostream& operator << (std::ostream& out, DtInfoMonitoreo dtInfMonitoreo)
 {
     std::cout << (DtInfoClase)dtInfMonitoreo << std::endl;
+    std::cout << "Alumnos habilitados:" << std::endl;
 
     std::list<std::string> estudiantes = dtInfMonitoreo.estudiantes;
-    
+
     for(std::list<std::string>::iterator it = estudiantes.begin(); it != estudiantes.end(); it++)
     {
         std::cout << " - " << (*it) << std::endl;

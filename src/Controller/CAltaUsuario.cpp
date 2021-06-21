@@ -26,7 +26,7 @@ void CAltaUsuario::altaUsuario()
 {
     ManejadorPerfil* mp = ManejadorPerfil::getInstancia();
 
-    if(mp -> existePerfil(this -> datosUsuario.getNombre())) throw std::invalid_argument("El perfil ya existe. ");
+    if(mp -> existePerfil(this -> datosUsuario.getEmail())) throw std::invalid_argument("El perfil ya existe. ");
 
     if(this -> tipo_perfil == ESTUDIANTE)
     {

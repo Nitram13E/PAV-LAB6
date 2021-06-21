@@ -5,8 +5,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Sun Jun 20 18:43:07 2021
+# Make data base, printed on Sun Jun 20 20:33:32 2021
 
 # Variables
 
@@ -55,7 +56,7 @@ XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-8c49c313-3d3c-4646-81b1-2e04a4d028c3.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-fbf35219-bbb9-417c-9f07-38002781eca5.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -63,7 +64,7 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = 172.31.192.1:0.0
+DISPLAY = 172.24.224.1:0.0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -262,13 +263,13 @@ src/DataTypes/DtIniciarClase.o: src/DataTypes/DtIniciarClase.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtIniciarClase'
 #  File does not exist.
- 
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/Handlers/ManejadorPerfil.cpp:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2021-06-19 18:42:49.5514626
 #  File has been updated.
 #  Successfully updated.
@@ -542,12 +543,12 @@ src/Controller/CAltaUsuario.cpp:
 #  Implicit rule search has been done.
 #  Last modified 2021-06-20 18:03:00.9212659
 #  File has been updated.
- 
 #  Successfully updated.
 
 src/DataTypes/DtIniciarClaseFull.o: src/DataTypes/DtIniciarClaseFull.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/DataTypes/DtIniciarClaseFull'
+ 
 #  File does not exist.
 #  File has been updated.
 #  Successfully updated.
@@ -605,7 +606,7 @@ src/Class/Docente.o: src/Class/Docente.cpp
 # Not a target:
 src/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-20 18:12:30.2502001
+#  Last modified 2021-06-20 18:57:40.906435
 #  File has been updated.
 #  Successfully updated.
 
@@ -640,7 +641,7 @@ src/Factory.cpp:
 # Not a target:
 src/Controller/CAsistenciaClaseVivo.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-20 16:50:00.161535
+#  Last modified 2021-06-20 18:56:45.122781
 #  File has been updated.
 #  Successfully updated.
 
@@ -745,7 +746,7 @@ src/Class/Sesion.o: src/Class/Sesion.cpp
 # Not a target:
 src/Controller/CInicioClase.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-20 18:00:55.2779121
+#  Last modified 2021-06-20 18:54:55.0684817
 #  File has been updated.
 #  Successfully updated.
 
@@ -805,6 +806,6 @@ src/DataTypes/DtTimeStamp.cpp:
 # strcache performance: lookups = 225 / hit rate = 39%
 # hash-table stats:
 # Load=137/8192=2%, Rehash=0, Collisions=15/225=7%
-# Finished Make data base on Sun Jun 20 18:43:07 2021
+# Finished Make data base on Sun Jun 20 20:33:32 2021
 
  
